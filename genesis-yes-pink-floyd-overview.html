@@ -2303,12 +2303,26 @@
       '</svg>';
       var __u='_'+(__N++); return __s.replace(/__(BG|SH|VS|TB)__/g,function(_m,_g){return _g+__u;});
     }
+    // --- real album art from local files in ./covers/<id>.jpg ---
+    // (downloaded once from the iTunes/Apple Music catalogue; falls back to the
+    //  generated SVG cover if a file is missing or fails to load)
+    function applyArt(el, url, alt){
+      if(!el || !url || el.querySelector('img')) return;
+      var img=new Image();
+      img.alt=alt;
+      img.style.cssText='width:100%;height:100%;object-fit:cover;display:block;';
+      function swap(){ if(el.querySelector('img')) return; el.innerHTML=''; el.appendChild(img); }
+      img.onload=swap;
+      img.src=url; // on error, the generated SVG stays in place
+      if(img.complete && img.naturalWidth){ swap(); } // data URIs may be ready immediately
+    }
+
     document.querySelectorAll('.album-block').forEach(function(b){
       var det = b.querySelector('.detail'); if(!det) return;
       var sp = SPEC[det.id]; if(!sp) return;
       var t = (b.querySelector('.t')||{}).textContent || '';
       var yr = (b.querySelector('.yr')||{}).textContent || '';
-      var band = det.id.charAt(0)==='y' ? 'YES' : 'GENESIS';
+      var band = {d:'GENESIS',y:'YES',p:'PINK FLOYD'}[det.id.charAt(0)] || 'GENESIS';
       var o = {t:t.trim(), yr:yr.trim(), hue:sp[0], motif:sp[1], band:band};
       var alb = b.querySelector('.alb');
       if(alb && !alb.classList.contains('has-art')){
@@ -2322,6 +2336,11 @@
         var md = document.createElement('div'); md.className='cover-med'; md.innerHTML = cover(o,true);
         cr.insertBefore(md, cr.firstChild);
       }
+      // swap in the cover: prefer the embedded base64 data (works from file://),
+      // else fall back to the external file (works when served over http)
+      var src = (window.__COVERS && window.__COVERS[det.id]) || ('covers/'+det.id+'.jpg');
+      applyArt(b.querySelector('.cover-thumb'), src, o.t+' cover');
+      applyArt(b.querySelector('.cover-med'),  src, o.t+' cover');
     });
     // portrait medallions on member cards
     function inits(s){ s=s.replace(/[\u2026.]/g,'').trim(); var p=s.split(/\s+/);
@@ -2378,22 +2397,48 @@
     var BAND={d:'Genesis', y:'Yes', p:'Pink Floyd'};
     var SP='<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1ED760"/><g fill="none" stroke="#0b0b0b" stroke-width="1.9" stroke-linecap="round"><path d="M5.8 9.3c4.3-1.25 8.6-0.85 11.9 1.1"/><path d="M6.7 12.6c3.5-1 7-0.65 9.6 0.95"/><path d="M7.4 15.6c2.7-0.75 5.4-0.45 7.5 0.8"/></g></svg>';
     var YT='<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#FF0033"/><circle cx="12" cy="12" r="6.8" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M10.2 8.9 L15.3 12 L10.2 15.1 Z" fill="#fff"/></svg>';
+    function svc(href, title, aria, svg, small){
+      var a=document.createElement('a'); a.className=small?'svc svc-sm':'svc';
+      a.target='_blank'; a.rel='noopener'; a.href=href;
+      a.title=title; a.setAttribute('aria-label', aria); a.innerHTML=svg;
+      return a;
+    }
     document.querySelectorAll('.album-block').forEach(function(b){
       var det=b.querySelector('.detail'); if(!det) return;
       var band=BAND[det.id.charAt(0)]; if(!band) return;
       var t=((b.querySelector('.t')||{}).textContent||'').trim();
-      var cr=b.querySelector('.credits'); if(!cr || cr.querySelector('.listen')) return;
       var q=encodeURIComponent(band+' '+t);
-      var w=document.createElement('div'); w.className='listen';
-      var lbl=document.createElement('span'); lbl.className='listen-lbl'; lbl.textContent='Listen';
-      var a1=document.createElement('a'); a1.className='svc'; a1.target='_blank'; a1.rel='noopener';
-      a1.title='Search on Spotify'; a1.setAttribute('aria-label', band+' \u2014 '+t+' on Spotify');
-      a1.href='https://open.spotify.com/search/'+q; a1.innerHTML=SP;
-      var a2=document.createElement('a'); a2.className='svc'; a2.target='_blank'; a2.rel='noopener';
-      a2.title='Search on YouTube Music'; a2.setAttribute('aria-label', band+' \u2014 '+t+' on YouTube Music');
-      a2.href='https://music.youtube.com/search?q='+q; a2.innerHTML=YT;
-      w.appendChild(lbl); w.appendChild(a1); w.appendChild(a2);
-      cr.appendChild(w);
+      var spU='https://open.spotify.com/search/'+q;
+      var ytU='https://music.youtube.com/search?q='+q;
+      var spA=band+' \u2014 '+t+' on Spotify';
+      var ytA=band+' \u2014 '+t+' on YouTube Music';
+
+      // icons inside the expanded detail (under credits)
+      var cr=b.querySelector('.credits');
+      if(cr && !cr.querySelector('.listen')){
+        var w=document.createElement('div'); w.className='listen';
+        var lbl=document.createElement('span'); lbl.className='listen-lbl'; lbl.textContent='Listen';
+        w.appendChild(lbl);
+        w.appendChild(svc(spU,'Search on Spotify',spA,SP,false));
+        w.appendChild(svc(ytU,'Search on YouTube Music',ytA,YT,false));
+        cr.appendChild(w);
+      }
+
+      // compact icons on the collapsed album row itself
+      var alb=b.querySelector('.alb');
+      var host=alb && (alb.querySelector('.alb-text')||alb);
+      if(host && !host.querySelector('.row-listen')){
+        var rw=document.createElement('div'); rw.className='row-listen';
+        var r1=svc(spU,'Search on Spotify',spA,SP,true);
+        var r2=svc(ytU,'Search on YouTube Music',ytA,YT,true);
+        [r1,r2].forEach(function(a){
+          // don't let an icon tap toggle the album row open/closed
+          a.addEventListener('click', function(e){ e.stopPropagation(); });
+          a.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' ') e.stopPropagation(); });
+        });
+        rw.appendChild(r1); rw.appendChild(r2);
+        host.appendChild(rw);
+      }
     });
   })();
 </script>
