@@ -223,6 +223,12 @@
   :root{--c-barrett:#b562a8;--c-waters:#c24d52;--c-wright:#3fa6b8;--c-mason:#d9a24a;--c-gilmour:#5277c4;}
   .hero-floyd{background:radial-gradient(120% 90% at 80% -10%, rgba(82,119,196,.22), transparent 55%),radial-gradient(90% 80% at 0% 110%, rgba(181,98,168,.26), transparent 60%),var(--ink);}
 
+  /* The Beatles member colours */
+  .c-lennon{background:#cf6b4a;} .c-mccartney{background:#4f93c4;} .c-harrison{background:#6fa06a;}
+  .c-starr{background:#d2a24b;} .c-best{background:#9a9087;} .c-sutcliffe{background:#9a7fc0;}
+  :root{--c-lennon:#cf6b4a;--c-mccartney:#4f93c4;--c-harrison:#6fa06a;--c-starr:#d2a24b;--c-best:#9a9087;--c-sutcliffe:#9a7fc0;}
+  .hero-beatles{background:radial-gradient(120% 90% at 80% -10%, rgba(207,107,74,.22), transparent 55%),radial-gradient(90% 80% at 0% 110%, rgba(79,147,196,.26), transparent 60%),var(--ink);}
+
   /* ===== member biography click-downs ===== */
   .roster{align-items:stretch;}
   .person{flex-direction:column;gap:0;cursor:pointer;transition:box-shadow .16s ease,transform .16s ease;}
@@ -287,6 +293,7 @@
     <button class="sw-btn active" id="tab-genesis" data-view="view-genesis" aria-pressed="true">Genesis</button>
     <button class="sw-btn" id="tab-yes" data-view="view-yes" aria-pressed="false">Yes</button>
     <button class="sw-btn" id="tab-floyd" data-view="view-floyd" aria-pressed="false">Pink Floyd</button>
+    <button class="sw-btn" id="tab-beatles" data-view="view-beatles" aria-pressed="false">The Beatles</button>
   </div>
 </nav>
 
@@ -2189,6 +2196,438 @@
 
 </div>
 
+
+
+<div class="band-view" id="view-beatles" hidden>
+
+<header class="hero hero-beatles">
+  <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#fbeede" opacity=".5"><circle cx="140" cy="90" r="1.7"/><circle cx="320" cy="150" r="1.3"/><circle cx="240" cy="320" r="1.4"/><circle cx="90" cy="430" r="1.5"/><circle cx="400" cy="70" r="1.3"/><circle cx="1010" cy="520" r="1.4"/><circle cx="1130" cy="430" r="1.6"/></g>
+    <g stroke-width="26" opacity=".7" stroke-linecap="butt">
+      <line x1="430" y1="80" x2="430" y2="430" stroke="#cf6b4a"/>
+      <line x1="470" y1="80" x2="470" y2="430" stroke="#f2f2f2"/>
+      <line x1="510" y1="80" x2="510" y2="430" stroke="#cf6b4a"/>
+      <line x1="550" y1="80" x2="550" y2="430" stroke="#f2f2f2"/>
+      <line x1="590" y1="80" x2="590" y2="430" stroke="#cf6b4a"/>
+      <line x1="630" y1="80" x2="630" y2="430" stroke="#f2f2f2"/>
+      <line x1="670" y1="80" x2="670" y2="430" stroke="#cf6b4a"/>
+    </g>
+    <circle cx="900" cy="200" r="120" fill="#f3ede1" opacity=".22"/>
+    <circle cx="900" cy="200" r="78" fill="#f3ede1" opacity=".3"/>
+  </svg></div>
+  <div class="wrap">
+    <p class="eyebrow">Liverpool, England · formed 1960</p>
+    <h1>THE BEATLES</h1>
+    <p class="thesis">In barely seven years of records, four musicians from Liverpool remade what popular music could be — and never changed their front line once they found it.</p>
+    <div class="meta">
+      <span><b>13</b> studio albums</span>
+      <span><b>6</b> members across the years</span>
+      <span><b>4</b> on every studio album: <b>Lennon</b>, <b>McCartney</b>, <b>Harrison</b> &amp; <b>Starr</b></span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The members</h2></div>
+    <p class="sec-intro">Unlike the other bands here, the Beatles found their line-up early and kept it. By the time of their 1963 debut the classic four were set, and they played on every studio album to the end. Two earlier members — drummer Pete Best and bassist Stuart Sutcliffe — belong to the Hamburg years, before the fame.</p>
+    <div class="roster">
+      <div class="person" style="--swatch:var(--c-lennon)"><div class="nm">John Lennon</div><div class="role">Rhythm guitar · Vocals</div><div class="yrs">1960 – 1970</div><span class="tag constant">Founder</span></div>
+      <div class="person" style="--swatch:var(--c-mccartney)"><div class="nm">Paul McCartney</div><div class="role">Bass · Vocals</div><div class="yrs">1960 – 1970</div><span class="tag constant">Constant member</span></div>
+      <div class="person" style="--swatch:var(--c-harrison)"><div class="nm">George Harrison</div><div class="role">Lead guitar · Vocals</div><div class="yrs">1960 – 1970</div><span class="tag constant">Constant member</span></div>
+      <div class="person" style="--swatch:var(--c-starr)"><div class="nm">Ringo Starr</div><div class="role">Drums · Vocals</div><div class="yrs">1962 – 1970</div><span class="tag">On every studio album</span></div>
+      <div class="person" style="--swatch:var(--c-best)"><div class="nm">Pete Best</div><div class="role">Drums</div><div class="yrs">1960 – 1962</div><span class="tag">Original drummer, pre-fame</span></div>
+      <div class="person" style="--swatch:var(--c-sutcliffe)"><div class="nm">Stuart Sutcliffe</div><div class="role">Bass</div><div class="yrs">1960 – 1961</div><span class="tag">Original bassist</span></div>
+    </div>
+    <p class="footnote"><b>Before the first album:</b> Pete Best drummed through the Hamburg and Cavern years until his abrupt dismissal in August 1962; Stuart Sutcliffe, an art-school friend of Lennon, played bass until 1961 and died in 1962. <b>In memoriam:</b> Stuart Sutcliffe (d. 1962), John Lennon (d. 1980) and George Harrison (d. 2001). <b>In the studio</b>, producer George Martin was so central to the band's sound he is often called "the fifth Beatle."</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Who played on what</h2></div>
+    <p class="sec-intro">All 13 UK studio albums in order. Because the line-up never changed, the same four names recorded every one — so the story here is the music itself, racing from the one-day debut to the studio inventions of <em>Revolver</em>, <em>Sgt. Pepper's</em> and <em>Abbey Road</em>. Click any album to open its tracklist, credits and a lyrics link.</p>
+
+    <p class="hint"><span class="pulse"></span> Click any album row to expand it&nbsp;&nbsp;▾&nbsp;&nbsp;<span style="color:var(--muted)">tracklist · who played on it · lyrics link</span></p>
+
+    <div class="matrix chips">
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b1">
+          <div class="yr">1963</div>
+          <div class="alb"><div class="t">Please Please Me</div><div class="annot">The debut — most of it cut in a single day</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b1"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>I Saw Her Standing There</li><li><span class="n">2</span>Misery</li><li><span class="n">3</span>Anna (Go to Him)</li><li><span class="n">4</span>Chains</li><li><span class="n">5</span>Boys</li><li><span class="n">6</span>Ask Me Why</li><li><span class="n">7</span>Please Please Me</li><li><span class="n">8</span>Love Me Do</li><li><span class="n">9</span>P.S. I Love You</li><li><span class="n">10</span>Baby It's You</li><li><span class="n">11</span>Do You Want to Know a Secret</li><li><span class="n">12</span>A Taste of Honey</li><li><span class="n">13</span>There's a Place</li><li><span class="n">14</span>Twist and Shout</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, vocals</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Please%20Please%20Me" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b2">
+          <div class="yr">1963</div>
+          <div class="alb"><div class="t">With the Beatles</div><div class="annot">Beatlemania takes hold</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b2"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>It Won't Be Long</li><li><span class="n">2</span>All I've Got to Do</li><li><span class="n">3</span>All My Loving</li><li><span class="n">4</span>Don't Bother Me</li><li><span class="n">5</span>Little Child</li><li><span class="n">6</span>Till There Was You</li><li><span class="n">7</span>Please Mister Postman</li><li><span class="n">8</span>Roll Over Beethoven</li><li><span class="n">9</span>Hold Me Tight</li><li><span class="n">10</span>You Really Got a Hold on Me</li><li><span class="n">11</span>I Wanna Be Your Man</li><li><span class="n">12</span>Devil in Her Heart</li><li><span class="n">13</span>Not a Second Time</li><li><span class="n">14</span>Money (That's What I Want)</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, vocals</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20With%20the%20Beatles" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b3">
+          <div class="yr">1964</div>
+          <div class="alb"><div class="t">A Hard Day's Night</div><div class="annot">Every song a Lennon–McCartney original</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b3"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>A Hard Day's Night</li><li><span class="n">2</span>I Should Have Known Better</li><li><span class="n">3</span>If I Fell</li><li><span class="n">4</span>I'm Happy Just to Dance with You</li><li><span class="n">5</span>And I Love Her</li><li><span class="n">6</span>Tell Me Why</li><li><span class="n">7</span>Can't Buy Me Love</li><li><span class="n">8</span>Any Time at All</li><li><span class="n">9</span>I'll Cry Instead</li><li><span class="n">10</span>Things We Said Today</li><li><span class="n">11</span>When I Get Home</li><li><span class="n">12</span>You Can't Do That</li><li><span class="n">13</span>I'll Be Back</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20A%20Hard%20Day%27s%20Night" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b4">
+          <div class="yr">1964</div>
+          <div class="alb"><div class="t">Beatles for Sale</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b4"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>No Reply</li><li><span class="n">2</span>I'm a Loser</li><li><span class="n">3</span>Baby's in Black</li><li><span class="n">4</span>Rock and Roll Music</li><li><span class="n">5</span>I'll Follow the Sun</li><li><span class="n">6</span>Mr. Moonlight</li><li><span class="n">7</span>Kansas City / Hey-Hey-Hey-Hey!</li><li><span class="n">8</span>Eight Days a Week</li><li><span class="n">9</span>Words of Love</li><li><span class="n">10</span>Honey Don't</li><li><span class="n">11</span>Every Little Thing</li><li><span class="n">12</span>I Don't Want to Spoil the Party</li><li><span class="n">13</span>What You're Doing</li><li><span class="n">14</span>Everybody's Trying to Be My Baby</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, vocals</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Beatles%20for%20Sale" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b5">
+          <div class="yr">1965</div>
+          <div class="alb"><div class="t">Help!</div><div class="annot">Soundtrack to their second film</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b5"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Help!</li><li><span class="n">2</span>The Night Before</li><li><span class="n">3</span>You've Got to Hide Your Love Away</li><li><span class="n">4</span>I Need You</li><li><span class="n">5</span>Another Girl</li><li><span class="n">6</span>You're Going to Lose That Girl</li><li><span class="n">7</span>Ticket to Ride</li><li><span class="n">8</span>Act Naturally</li><li><span class="n">9</span>It's Only Love</li><li><span class="n">10</span>You Like Me Too Much</li><li><span class="n">11</span>Tell Me What You See</li><li><span class="n">12</span>I've Just Seen a Face</li><li><span class="n">13</span>Yesterday</li><li><span class="n">14</span>Dizzy Miss Lizzy</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, vocals</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Help" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b6">
+          <div class="yr">1965</div>
+          <div class="alb"><div class="t">Rubber Soul</div><div class="annot">The turn toward the studio</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b6"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Drive My Car</li><li><span class="n">2</span>Norwegian Wood (This Bird Has Flown)</li><li><span class="n">3</span>You Won't See Me</li><li><span class="n">4</span>Nowhere Man</li><li><span class="n">5</span>Think for Yourself</li><li><span class="n">6</span>The Word</li><li><span class="n">7</span>Michelle</li><li><span class="n">8</span>What Goes On</li><li><span class="n">9</span>Girl</li><li><span class="n">10</span>I'm Looking Through You</li><li><span class="n">11</span>In My Life</li><li><span class="n">12</span>Wait</li><li><span class="n">13</span>If I Needed Someone</li><li><span class="n">14</span>Run for Your Life</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, sitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, vocals</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Rubber%20Soul" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b7">
+          <div class="yr">1966</div>
+          <div class="alb"><div class="t">Revolver</div><div class="annot">Studio experimentation begins in earnest</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b7"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Taxman</li><li><span class="n">2</span>Eleanor Rigby</li><li><span class="n">3</span>I'm Only Sleeping</li><li><span class="n">4</span>Love You To</li><li><span class="n">5</span>Here, There and Everywhere</li><li><span class="n">6</span>Yellow Submarine</li><li><span class="n">7</span>She Said She Said</li><li><span class="n">8</span>Good Day Sunshine</li><li><span class="n">9</span>And Your Bird Can Sing</li><li><span class="n">10</span>For No One</li><li><span class="n">11</span>Doctor Robert</li><li><span class="n">12</span>I Want to Tell You</li><li><span class="n">13</span>Got to Get You into My Life</li><li><span class="n">14</span>Tomorrow Never Knows</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, sitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, lead vocal on “Yellow Submarine”</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Revolver" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b8">
+          <div class="yr">1967</div>
+          <div class="alb"><div class="t">Sgt. Pepper's Lonely Hearts Club Band</div><div class="annot">The psychedelic landmark</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b8"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Sgt. Pepper's Lonely Hearts Club Band</li><li><span class="n">2</span>With a Little Help from My Friends</li><li><span class="n">3</span>Lucy in the Sky with Diamonds</li><li><span class="n">4</span>Getting Better</li><li><span class="n">5</span>Fixing a Hole</li><li><span class="n">6</span>She's Leaving Home</li><li><span class="n">7</span>Being for the Benefit of Mr. Kite!</li><li><span class="n">8</span>Within You Without You</li><li><span class="n">9</span>When I'm Sixty-Four</li><li><span class="n">10</span>Lovely Rita</li><li><span class="n">11</span>Good Morning Good Morning</li><li><span class="n">12</span>Sgt. Pepper's Lonely Hearts Club Band (Reprise)</li><li><span class="n">13</span>A Day in the Life</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, piano, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, sitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, lead vocal on “With a Little Help…”</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Sgt%20Pepper%27s%20Lonely%20Hearts%20Club%20Band" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b9">
+          <div class="yr">1967</div>
+          <div class="alb"><div class="t">Magical Mystery Tour</div><div class="annot">US LP gathering the 1967 singles &amp; EP</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b9"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Magical Mystery Tour</li><li><span class="n">2</span>The Fool on the Hill</li><li><span class="n">3</span>Flying</li><li><span class="n">4</span>Blue Jay Way</li><li><span class="n">5</span>Your Mother Should Know</li><li><span class="n">6</span>I Am the Walrus</li><li><span class="n">7</span>Hello, Goodbye</li><li><span class="n">8</span>Strawberry Fields Forever</li><li><span class="n">9</span>Penny Lane</li><li><span class="n">10</span>Baby, You're a Rich Man</li><li><span class="n">11</span>All You Need Is Love</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, piano, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Magical%20Mystery%20Tour" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b10">
+          <div class="yr">1968</div>
+          <div class="alb"><div class="t">The Beatles</div><div class="annot">The “White Album” — a double, 30 songs</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b10"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist <span style="color:#8f8678;font-weight:400">· double album, 4 sides</span></h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Back in the U.S.S.R.</li><li><span class="n">2</span>Dear Prudence</li><li><span class="n">3</span>Glass Onion</li><li><span class="n">4</span>Ob-La-Di, Ob-La-Da</li><li><span class="n">5</span>Wild Honey Pie</li><li><span class="n">6</span>The Continuing Story of Bungalow Bill</li><li><span class="n">7</span>While My Guitar Gently Weeps</li><li><span class="n">8</span>Happiness Is a Warm Gun</li><li><span class="n">9</span>Martha My Dear</li><li><span class="n">10</span>I'm So Tired</li><li><span class="n">11</span>Blackbird</li><li><span class="n">12</span>Piggies</li><li><span class="n">13</span>Rocky Raccoon</li><li><span class="n">14</span>Don't Pass Me By</li><li><span class="n">15</span>Why Don't We Do It in the Road?</li><li><span class="n">16</span>I Will</li><li><span class="n">17</span>Julia</li><li><span class="n">18</span>Birthday</li><li><span class="n">19</span>Yer Blues</li><li><span class="n">20</span>Mother Nature's Son</li><li><span class="n">21</span>Everybody's Got Something to Hide Except Me and My Monkey</li><li><span class="n">22</span>Sexy Sadie</li><li><span class="n">23</span>Helter Skelter</li><li><span class="n">24</span>Long, Long, Long</li><li><span class="n">25</span>Revolution 1</li><li><span class="n">26</span>Honey Pie</li><li><span class="n">27</span>Savoy Truffle</li><li><span class="n">28</span>Cry Baby Cry</li><li><span class="n">29</span>Revolution 9</li><li><span class="n">30</span>Good Night</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— guitar, piano, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, guitar, piano, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, lead vocal on “Good Night”</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20White%20Album" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b11">
+          <div class="yr">1969</div>
+          <div class="alb"><div class="t">Yellow Submarine</div><div class="annot">Soundtrack — side two is George Martin's score</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b11"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Yellow Submarine</li><li><span class="n">2</span>Only a Northern Song</li><li><span class="n">3</span>All Together Now</li><li><span class="n">4</span>Hey Bulldog</li><li><span class="n">5</span>It's All Too Much</li><li><span class="n">6</span>All You Need Is Love</li></ol><p class="tracknote">Side two is an orchestral score by producer George Martin: “Pepperland,” “Sea of Time,” “Sea of Holes,” “Sea of Monsters,” “March of the Meanies,” “Pepperland Laid Waste” and “Yellow Submarine in Pepperland.”</p>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— rhythm guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, lead vocal on “Yellow Submarine”</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Yellow%20Submarine" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b12">
+          <div class="yr">1969</div>
+          <div class="alb"><div class="t">Abbey Road</div><div class="annot">The last album they recorded together</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b12"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Come Together</li><li><span class="n">2</span>Something</li><li><span class="n">3</span>Maxwell's Silver Hammer</li><li><span class="n">4</span>Oh! Darling</li><li><span class="n">5</span>Octopus's Garden</li><li><span class="n">6</span>I Want You (She's So Heavy)</li><li><span class="n">7</span>Here Comes the Sun</li><li><span class="n">8</span>Because</li><li><span class="n">9</span>You Never Give Me Your Money</li><li><span class="n">10</span>Sun King</li><li><span class="n">11</span>Mean Mr. Mustard</li><li><span class="n">12</span>Polythene Pam</li><li><span class="n">13</span>She Came In Through the Bathroom Window</li><li><span class="n">14</span>Golden Slumbers</li><li><span class="n">15</span>Carry That Weight</li><li><span class="n">16</span>The End</li><li><span class="n">17</span>Her Majesty</li></ol>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— guitar, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, piano, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals on “Something” &amp; “Here Comes the Sun”</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums, lead vocal on “Octopus's Garden”</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Abbey%20Road" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="album-block">
+        <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b13">
+          <div class="yr">1970</div>
+          <div class="alb"><div class="t">Let It Be</div><div class="annot">Released last; mostly recorded before Abbey Road</div>
+            <div class="mlineup"><span class="chip"><span class="cd c-lennon"></span>Lennon</span><span class="chip"><span class="cd c-mccartney"></span>McCartney</span><span class="chip"><span class="cd c-harrison"></span>Harrison</span><span class="chip"><span class="cd c-starr"></span>Starr</span></div>
+          </div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="detail" id="b13"><div class="detail-inner">
+          <div class="tracks"><h4>Tracklist</h4>
+            <ol class="tracklist two"><li><span class="n">1</span>Two of Us</li><li><span class="n">2</span>Dig a Pony</li><li><span class="n">3</span>Across the Universe</li><li><span class="n">4</span>I Me Mine</li><li><span class="n">5</span>Dig It</li><li><span class="n">6</span>Let It Be</li><li><span class="n">7</span>Maggie Mae</li><li><span class="n">8</span>I've Got a Feeling</li><li><span class="n">9</span>One After 909</li><li><span class="n">10</span>The Long and Winding Road</li><li><span class="n">11</span>For You Blue</li><li><span class="n">12</span>Get Back</li></ol><p class="tracknote">Augmented by keyboardist Billy Preston, whose contributions were prominent enough to be credited on the “Get Back” single.</p>
+          </div>
+          <div class="credits"><h4>Who played on it</h4>
+            <ul class="personnel">
+              <li><span class="cd c-lennon"></span><span><span class="pn">John Lennon</span> <span class="pr">— guitar, bass, vocals</span></span></li>
+              <li><span class="cd c-mccartney"></span><span><span class="pn">Paul McCartney</span> <span class="pr">— bass, piano, vocals</span></span></li>
+              <li><span class="cd c-harrison"></span><span><span class="pn">George Harrison</span> <span class="pr">— lead guitar, vocals</span></span></li>
+              <li><span class="cd c-starr"></span><span><span class="pn">Ringo Starr</span> <span class="pr">— drums</span></span></li>
+            </ul>
+            <a class="lyrics-link" href="https://genius.com/search?q=The%20Beatles%20Let%20It%20Be" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+          </div>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Life beyond the band</h2></div>
+    <p class="sec-intro">All four went on to solo careers — Lennon's raw confessionals, McCartney's restless tunefulness across five decades, Harrison's spiritual rock and Starr's good-time records and long-running All-Starr Band. A selection below.</p>
+    <div class="solo-grid">
+      <div class="solo-card" style="--swatch:var(--c-lennon)">
+        <h3>John Lennon</h3><div class="sub">Solo · 1940 – 1980</div>
+        <ul class="disc">
+          <li><span class="y">1970</span><span class="ttl">John Lennon/Plastic Ono Band</span></li>
+          <li><span class="y">1971</span><span class="ttl">Imagine</span></li>
+          <li><span class="y">1974</span><span class="ttl">Walls and Bridges</span></li>
+          <li><span class="y">1980</span><span class="ttl">Double Fantasy <em>(with Yoko Ono)</em></span></li>
+        </ul>
+      </div>
+
+      <div class="solo-card" style="--swatch:var(--c-mccartney)">
+        <h3>Paul McCartney</h3><div class="sub">Solo &amp; Wings · since 1970</div>
+        <ul class="disc">
+          <li><span class="y">1970</span><span class="ttl">McCartney</span></li>
+          <li><span class="y">1971</span><span class="ttl">Ram <em>(with Linda McCartney)</em></span></li>
+          <li><span class="y">1973</span><span class="ttl">Band on the Run <em>(Wings)</em></span></li>
+          <li><span class="y">2005</span><span class="ttl">Chaos and Creation in the Backyard</span></li>
+          <li><span class="y">2020</span><span class="ttl">McCartney III</span></li>
+        </ul>
+      </div>
+
+      <div class="solo-card" style="--swatch:var(--c-harrison)">
+        <h3>George Harrison</h3><div class="sub">Solo · 1943 – 2001</div>
+        <ul class="disc">
+          <li><span class="y">1970</span><span class="ttl">All Things Must Pass <em>(triple album)</em></span></li>
+          <li><span class="y">1973</span><span class="ttl">Living in the Material World</span></li>
+          <li><span class="y">1987</span><span class="ttl">Cloud Nine</span></li>
+          <li><span class="y">1988</span><span class="ttl">Traveling Wilburys Vol. 1</span></li>
+          <li><span class="y">2002</span><span class="ttl">Brainwashed <em>(posthumous)</em></span></li>
+        </ul>
+      </div>
+
+      <div class="solo-card" style="--swatch:var(--c-starr)">
+        <h3>Ringo Starr</h3><div class="sub">Solo · since 1970</div>
+        <ul class="disc">
+          <li><span class="y">1970</span><span class="ttl">Sentimental Journey</span></li>
+          <li><span class="y">1973</span><span class="ttl">Ringo</span></li>
+          <li><span class="y">1992</span><span class="ttl">Time Takes Time</span></li>
+          <li><span class="y">2019</span><span class="ttl">What's My Name</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>The Beatles — at a glance.</b> Formed Liverpool, 1960 · 13 UK studio albums, from <em>Please Please Me</em> (1963) to <em>Let It Be</em> (1970) · disbanded 1970.<br>
+    The classic line-up — Lennon, McCartney, Harrison, Starr — played on every studio album.<br>
+    Scope: UK studio albums (<em>Magical Mystery Tour</em> is the US LP, gathering the 1967 singles and EP). Lyrics links open a search on Genius. Solo lists show selected studio albums.
+  </div>
+</footer>
+
+</div>
+
 <script>
   (function(){
     var els = document.querySelectorAll('.reveal');
@@ -2244,7 +2683,8 @@
       y11:[195,'prism'], y12:[35,'prism'], y13:[300,'bloom'], y14:[320,'prism'], y15:[220,'islands'],
       y16:[250,'islands'], y17:[205,'orbit'], y18:[150,'islands'], y19:[230,'orbit'], y20:[200,'horizon'],
       y21:[185,'islands'], y22:[195,'islands'], y23:[220,'islands'], y24:[265,'orbit'],
-      p1:[290,'bloom'], p2:[265,'orbit'], p3:[130,'horizon'], p4:[30,'portal'], p5:[90,'horizon'], p6:[200,'waves'], p7:[25,'prism'], p8:[250,'prism'], p9:[20,'horizon'], p10:[210,'monolith'], p11:[0,'monolith'], p12:[5,'monolith'], p13:[205,'horizon'], p14:[195,'monolith'], p15:[215,'waves']
+      p1:[290,'bloom'], p2:[265,'orbit'], p3:[130,'horizon'], p4:[30,'portal'], p5:[90,'horizon'], p6:[200,'waves'], p7:[25,'prism'], p8:[250,'prism'], p9:[20,'horizon'], p10:[210,'monolith'], p11:[0,'monolith'], p12:[5,'monolith'], p13:[205,'horizon'], p14:[195,'monolith'], p15:[215,'waves'],
+      b1:[20,'horizon'], b2:[265,'monolith'], b3:[40,'portal'], b4:[200,'horizon'], b5:[190,'prism'], b6:[30,'islands'], b7:[280,'orbit'], b8:[335,'bloom'], b9:[210,'waves'], b10:[0,'monolith'], b11:[195,'waves'], b12:[150,'horizon'], b13:[230,'portal']
     };
     function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
     var __N=0;
@@ -2322,7 +2762,7 @@
       var sp = SPEC[det.id]; if(!sp) return;
       var t = (b.querySelector('.t')||{}).textContent || '';
       var yr = (b.querySelector('.yr')||{}).textContent || '';
-      var band = {d:'GENESIS',y:'YES',p:'PINK FLOYD'}[det.id.charAt(0)] || 'GENESIS';
+      var band = {d:'GENESIS',y:'YES',p:'PINK FLOYD',b:'THE BEATLES'}[det.id.charAt(0)] || 'GENESIS';
       var o = {t:t.trim(), yr:yr.trim(), hue:sp[0], motif:sp[1], band:band};
       var alb = b.querySelector('.alb');
       if(alb && !alb.classList.contains('has-art')){
@@ -2356,7 +2796,7 @@
   })();
 
   (function(){
-    var BIOS = {"Tony Banks": ["Born in 1950, Tony Banks met his future bandmates at Charterhouse School and became Genesis's keyboardist and — alongside Mike Rutherford — one of only two members present on every album the band ever made. His lush organ, piano and analogue-synth textures were the harmonic foundation of Genesis across both their sprawling progressive era and their later pop incarnation, and he co-wrote a huge share of the catalogue.", "Famously private and reserved, Banks was the quiet architect behind the scenes rather than a frontman. Away from Genesis he recorded several solo rock albums in the 1980s before turning, in later years, to orchestral and classical composition with works such as Seven, Six and Five."], "Mike Rutherford": ["Mike Rutherford, born in 1950, was a founding member and, with Tony Banks, the band's other ever-present. A schoolmate of Banks and Peter Gabriel at Charterhouse, he anchored Genesis on bass and twelve-string guitar in the early years before shifting increasingly to lead guitar as the line-up shrank.", "In the mid-1980s he launched the parallel band Mike + The Mechanics, which scored major hits including 'The Living Years' — a song tied to the loss of his father, the subject of his later memoir of the same name. He has remained one of rock's most understated and dependable craftsmen."], "Peter Gabriel": ["Peter Gabriel, born in 1950, was Genesis's original lead singer and a master of theatrical performance, donning elaborate costumes and spinning surreal stories on stage in the early 1970s. He left the band in 1975 after the ambitious concept album The Lamb Lies Down on Broadway.", "His solo career proved enormously influential, moving from art rock into world music and producing landmark records like So and groundbreaking videos such as 'Sledgehammer.' Beyond music he founded the WOMAD festival and Real World Studios and co-founded the human-rights organisation Witness, cementing a reputation as one of rock's restless innovators."], "Anthony Phillips": ["Anthony Phillips, born in 1951, was a founding guitarist of Genesis and, with Rutherford, co-wrote much of the band's earliest material. He left in 1970 following the album Trespass, worn down in part by severe stage fright.", "Rather than chase the spotlight he built a quietly prolific solo career rooted in acoustic and pastoral instrumental music — most notably the long-running Private Parts & Pieces series — and composed extensively for television and library music, becoming a respected craftsman well away from the rock mainstream."], "Phil Collins": ["Phil Collins, born in 1951, joined Genesis as its drummer in 1970 and stepped up to become lead singer in 1975 after Gabriel's exit. A child actor before he turned to music, he possessed a distinctive voice and formidable drumming chops admired across rock and jazz alike.", "Through the 1980s he became one of the biggest pop stars in the world, both with Genesis and as a solo artist behind songs such as 'In the Air Tonight' and 'Against All Odds.' Serious health problems later limited his playing, and on the band's farewell tour his son Nic took over the drum stool."], "Steve Hackett": ["Steve Hackett, born in 1950, was Genesis's lead guitarist from 1971 to 1977 and an early innovator of techniques like tapping and sweep picking. His melodic, atmospheric playing helped define the classic-era albums from Nursery Cryme to Wind & Wuthering.", "After leaving he embarked on a remarkably prolific solo career spanning rock, classical guitar and world music — some thirty albums in all — and he continues to tour Genesis material to devoted audiences. In 1986 he briefly formed the supergroup GTR with Yes guitarist Steve Howe."], "Ray Wilson": ["Ray Wilson, born in Scotland in 1968, became Genesis's third lead singer for their final studio album, Calling All Stations, in 1997, after Phil Collins departed. He had already found success fronting the band Stiltskin and its chart-topping single 'Inside.'", "When that incarnation of Genesis wound down, Wilson returned to solo and band projects, touring widely across Europe and frequently performing Genesis songs in his own arrangements for a loyal following."], "Early drummers": ["Three drummers passed through Genesis before Phil Collins settled the role for good — none of them lasting more than a single album.", "Chris Stewart, a schoolfriend of the founders, played on the band's 1968 debut single 'The Silent Sun' and left soon after; he went on to become a best-selling travel writer, most famously with Driving Over Lemons, about life on a farm in southern Spain.", "John Silver drummed on the first album, From Genesis to Revelation (1969), before leaving to study in the United States.", "John Mayhew played on Trespass (1970) and departed just as Collins arrived; he later worked as a carpenter in Australia and died in 2009."], "Chris Squire": ["Chris Squire (1948–2015) was Yes's bassist, a co-founder, and the only musician to appear on every one of the band's studio albums up to his death. His bright, trebly, intensely melodic bass playing — often on a Rickenbacker — was a cornerstone of the Yes sound and proved hugely influential on rock bassists everywhere.", "Beyond his playing, Squire was the band's organisational anchor through decades of line-up upheaval, and he co-wrote much of its material. He released one solo album, the well-regarded Fish Out of Water (1975). He died of leukaemia in 2015, the first break in a constant that had held since 1968."], "Jon Anderson": ["Jon Anderson, born in 1944, is the soaring high tenor and co-founder whose mystical, cosmic lyrics did much to shape Yes's identity. He came and went from the band across several decades, his voice remaining one of its most recognisable signatures.", "Alongside Yes he recorded a celebrated run of albums with Vangelis as Jon & Vangelis, and built a deep solo catalogue stretching from Olias of Sunhillow (1976) to recent collaborations with The Band Geeks. He recovered from a serious respiratory illness in 2008 to keep performing."], "Steve Howe": ["Steve Howe, born in 1947, joined Yes in 1970 and brought an extraordinary stylistic range — rock, classical, country and jazz all folded into one guitarist. His playing on The Yes Album and the records that followed became some of progressive rock's most admired.", "He was also a founding member of the chart-conquering Asia and the supergroup GTR, and has released a large body of solo work. As the longest-serving member of the current line-up, he has become the principal keeper of the Yes legacy."], "Rick Wakeman": ["Rick Wakeman, born in 1949, is the flamboyant, cape-wearing keyboard virtuoso who joined Yes in 1971. Classically trained and a natural showman, he surrounded the band with banks of synthesisers, organ and Mellotron.", "He is equally famous for extravagant solo concept albums such as The Six Wives of Henry VIII and Journey to the Centre of the Earth — part of a catalogue numbering well over a hundred records — and for a second career as a witty, much-loved British television and radio raconteur."], "Bill Bruford": ["Bill Bruford, born in 1949, was Yes's founding drummer, his crisp, jazz-informed style shaping the band's earliest records. In 1972, at the very height of their success, he made the daring choice to leave and join King Crimson, putting musical adventure ahead of stardom.", "He later led his own jazz group, Earthworks, and is widely regarded as one of progressive rock's most intelligent and influential drummers. He retired from public performance in 2009 to write and study."], "Alan White": ["Alan White (1949–2022) replaced Bruford in 1972 and went on to hold the drum stool for fifty years. Before Yes he had played with John Lennon's Plastic Ono Band and with George Harrison, lending him a pedigree few rock drummers could match.", "His powerful, song-serving style anchored the band from Tales from Topographic Oceans onward through every era that followed. He remained a member until his death in 2022, which came just days before a planned anniversary tour."], "Tony Kaye": ["Tony Kaye, born in 1945, was Yes's founding keyboardist, favouring the warm growl of the Hammond organ over the synthesiser arsenals that later defined the band. He left in 1971 as the music grew more elaborate.", "He returned a decade later for the blockbuster 90125 era of the 1980s, and over the years also played in the bands Badger and Circa, remaining a quietly important figure in the Yes story."], "Peter Banks": ["Peter Banks (1947–2013) was Yes's founding guitarist, appearing on the first two albums before being replaced by Steve Howe in 1970. An inventive, exploratory player, he has sometimes been called 'the architect of progressive music.'", "After Yes he led the band Flash and pursued numerous other projects, though wide commercial success largely eluded him. He died in 2013."], "Trevor Rabin": ["Trevor Rabin, born in South Africa in 1954, is the guitarist, singer and songwriter who reinvented Yes for the 1980s, writing their biggest hit, 'Owner of a Lonely Heart.' He joined for the album 90125 in 1983 and steered the band to its greatest commercial success.", "He later became a sought-after Hollywood film composer, scoring blockbusters such as Armageddon, Remember the Titans and National Treasure, and in the 2010s reunited with Anderson and Wakeman in the trio ARW."], "Geoff Downes": ["Geoff Downes, born in 1952, first joined Yes for the album Drama in 1980 alongside Trevor Horn — the pair having already topped charts worldwide as The Buggles with 'Video Killed the Radio Star.'", "He went on to co-found the hugely successful Asia, and returned to Yes in 2011, where he has been a keyboard mainstay ever since across the band's recent run of albums."], "Trevor Horn": ["Trevor Horn, born in 1949, joined Yes as bassist and singer for Drama in 1980. He is, however, far better known as one of the most influential record producers of the 1980s.", "Behind the desk he shaped era-defining records for Frankie Goes to Hollywood, ABC, Seal and many others — and produced Yes's own comeback smash 90125 — earning a reputation as a defining architect of modern pop production."], "Patrick Moraz": ["Patrick Moraz, born in Switzerland in 1948, is the keyboard virtuoso who replaced Rick Wakeman for the album Relayer in 1974, bringing pronounced jazz and Latin influences to the band's sound.", "After leaving Yes he spent many years as a member of The Moody Blues and recorded a long series of adventurous solo keyboard albums."], "Billy Sherwood": ["Billy Sherwood, born in 1965, is an American multi-instrumentalist and producer who was a member of Yes in the late 1990s and again from 2015 onward. Chris Squire personally chose him to take over on bass after Squire's death.", "A tireless collaborator and producer within the progressive-rock world, he has anchored the band's low end through its most recent studio albums."], "Jon Davison": ["Jon Davison is the American singer who became Yes's lead vocalist in 2012, reportedly recommended in part by Foo Fighters drummer Taylor Hawkins. His clear, high voice carries an obvious kinship with Jon Anderson's.", "He also fronts the band Glass Hammer, and has sung on Yes's recent sequence of studio albums from Heaven & Earth onward."], "Also featured": ["Three more musicians left their mark on Yes across its modern decades.", "Benoît David, a Canadian singer discovered fronting a Yes tribute act, led the band from 2008 to 2012 and sang on Fly from Here (2011) before throat trouble ended his tenure.", "Igor Khoroshev, a Russian keyboardist, played with Yes in the late 1990s, appearing on Open Your Eyes and The Ladder.", "Jay Schellen, an American drummer, supported and then shared drumming duties with the band from the late 2010s, becoming its studio drummer after Alan White's death."], "Nick Mason": ["Nick Mason, born in 1944, is the drummer and the only constant member of Pink Floyd, present on every album since 1967. Within a band famous for its feuds, he was often the steady peacemaker who kept the others talking.", "A devoted motor-racing enthusiast and collector of historic cars, he also wrote the warm, candid band memoir Inside Out. In recent years he has toured the earliest, most experimental Floyd material with his own group, Saucerful of Secrets."], "Roger Waters": ["Roger Waters, born in 1943, was the bassist and singer who, from the early 1970s, became Pink Floyd's conceptual driving force and chief lyricist — the architect of The Dark Side of the Moon, Wish You Were Here, Animals and The Wall.", "He left the band in 1985 amid bitter acrimony and a legal battle over the rights to the name. Since then he has pursued a substantial solo career built around large-scale political rock operas, and has become a prominent and frequently controversial political activist."], "David Gilmour": ["David Gilmour, born in 1946, joined Pink Floyd in early 1968 to cover for the faltering Syd Barrett. His soaring, intensely melodic guitar and warm voice became the defining sound of the band's most successful years.", "After Waters departed, Gilmour led Pink Floyd onward through albums and tours, and has sustained an acclaimed solo career, from On an Island to Luck and Strange in 2024. He is widely revered as one of rock's great guitarists and is married to the novelist Polly Samson, who often writes his lyrics."], "Richard Wright": ["Richard Wright (1943–2008) was Pink Floyd's keyboardist and a founding member, whose lush chords and atmospheric textures were essential to the band's identity — heard at their most beautiful on 'The Great Gig in the Sky' and 'Us and Them.'", "Pushed out during the making of The Wall, he later returned, and was restored as a full member for The Division Bell in 1994. He died of cancer in 2008; the band's final album, The Endless River, stands partly as a tribute to him."], "Syd Barrett": ["Syd Barrett (1946–2006) was Pink Floyd's founder, original singer, guitarist and primary songwriter. He gave the band its name and shaped its early psychedelic sound, full of whimsical, childlike and surreal imagery.", "Heavy drug use and deteriorating mental health led to his departure in 1968. After two strange, fragile solo albums he withdrew from music entirely, living quietly in Cambridge until his death in 2006. His memory haunts much of the band's later work, above all 'Shine On You Crazy Diamond.'"]};
+    var BIOS = {"Tony Banks": ["Born in 1950, Tony Banks met his future bandmates at Charterhouse School and became Genesis's keyboardist and — alongside Mike Rutherford — one of only two members present on every album the band ever made. His lush organ, piano and analogue-synth textures were the harmonic foundation of Genesis across both their sprawling progressive era and their later pop incarnation, and he co-wrote a huge share of the catalogue.", "Famously private and reserved, Banks was the quiet architect behind the scenes rather than a frontman. Away from Genesis he recorded several solo rock albums in the 1980s before turning, in later years, to orchestral and classical composition with works such as Seven, Six and Five."], "Mike Rutherford": ["Mike Rutherford, born in 1950, was a founding member and, with Tony Banks, the band's other ever-present. A schoolmate of Banks and Peter Gabriel at Charterhouse, he anchored Genesis on bass and twelve-string guitar in the early years before shifting increasingly to lead guitar as the line-up shrank.", "In the mid-1980s he launched the parallel band Mike + The Mechanics, which scored major hits including 'The Living Years' — a song tied to the loss of his father, the subject of his later memoir of the same name. He has remained one of rock's most understated and dependable craftsmen."], "Peter Gabriel": ["Peter Gabriel, born in 1950, was Genesis's original lead singer and a master of theatrical performance, donning elaborate costumes and spinning surreal stories on stage in the early 1970s. He left the band in 1975 after the ambitious concept album The Lamb Lies Down on Broadway.", "His solo career proved enormously influential, moving from art rock into world music and producing landmark records like So and groundbreaking videos such as 'Sledgehammer.' Beyond music he founded the WOMAD festival and Real World Studios and co-founded the human-rights organisation Witness, cementing a reputation as one of rock's restless innovators."], "Anthony Phillips": ["Anthony Phillips, born in 1951, was a founding guitarist of Genesis and, with Rutherford, co-wrote much of the band's earliest material. He left in 1970 following the album Trespass, worn down in part by severe stage fright.", "Rather than chase the spotlight he built a quietly prolific solo career rooted in acoustic and pastoral instrumental music — most notably the long-running Private Parts & Pieces series — and composed extensively for television and library music, becoming a respected craftsman well away from the rock mainstream."], "Phil Collins": ["Phil Collins, born in 1951, joined Genesis as its drummer in 1970 and stepped up to become lead singer in 1975 after Gabriel's exit. A child actor before he turned to music, he possessed a distinctive voice and formidable drumming chops admired across rock and jazz alike.", "Through the 1980s he became one of the biggest pop stars in the world, both with Genesis and as a solo artist behind songs such as 'In the Air Tonight' and 'Against All Odds.' Serious health problems later limited his playing, and on the band's farewell tour his son Nic took over the drum stool."], "Steve Hackett": ["Steve Hackett, born in 1950, was Genesis's lead guitarist from 1971 to 1977 and an early innovator of techniques like tapping and sweep picking. His melodic, atmospheric playing helped define the classic-era albums from Nursery Cryme to Wind & Wuthering.", "After leaving he embarked on a remarkably prolific solo career spanning rock, classical guitar and world music — some thirty albums in all — and he continues to tour Genesis material to devoted audiences. In 1986 he briefly formed the supergroup GTR with Yes guitarist Steve Howe."], "Ray Wilson": ["Ray Wilson, born in Scotland in 1968, became Genesis's third lead singer for their final studio album, Calling All Stations, in 1997, after Phil Collins departed. He had already found success fronting the band Stiltskin and its chart-topping single 'Inside.'", "When that incarnation of Genesis wound down, Wilson returned to solo and band projects, touring widely across Europe and frequently performing Genesis songs in his own arrangements for a loyal following."], "Early drummers": ["Three drummers passed through Genesis before Phil Collins settled the role for good — none of them lasting more than a single album.", "Chris Stewart, a schoolfriend of the founders, played on the band's 1968 debut single 'The Silent Sun' and left soon after; he went on to become a best-selling travel writer, most famously with Driving Over Lemons, about life on a farm in southern Spain.", "John Silver drummed on the first album, From Genesis to Revelation (1969), before leaving to study in the United States.", "John Mayhew played on Trespass (1970) and departed just as Collins arrived; he later worked as a carpenter in Australia and died in 2009."], "Chris Squire": ["Chris Squire (1948–2015) was Yes's bassist, a co-founder, and the only musician to appear on every one of the band's studio albums up to his death. His bright, trebly, intensely melodic bass playing — often on a Rickenbacker — was a cornerstone of the Yes sound and proved hugely influential on rock bassists everywhere.", "Beyond his playing, Squire was the band's organisational anchor through decades of line-up upheaval, and he co-wrote much of its material. He released one solo album, the well-regarded Fish Out of Water (1975). He died of leukaemia in 2015, the first break in a constant that had held since 1968."], "Jon Anderson": ["Jon Anderson, born in 1944, is the soaring high tenor and co-founder whose mystical, cosmic lyrics did much to shape Yes's identity. He came and went from the band across several decades, his voice remaining one of its most recognisable signatures.", "Alongside Yes he recorded a celebrated run of albums with Vangelis as Jon & Vangelis, and built a deep solo catalogue stretching from Olias of Sunhillow (1976) to recent collaborations with The Band Geeks. He recovered from a serious respiratory illness in 2008 to keep performing."], "Steve Howe": ["Steve Howe, born in 1947, joined Yes in 1970 and brought an extraordinary stylistic range — rock, classical, country and jazz all folded into one guitarist. His playing on The Yes Album and the records that followed became some of progressive rock's most admired.", "He was also a founding member of the chart-conquering Asia and the supergroup GTR, and has released a large body of solo work. As the longest-serving member of the current line-up, he has become the principal keeper of the Yes legacy."], "Rick Wakeman": ["Rick Wakeman, born in 1949, is the flamboyant, cape-wearing keyboard virtuoso who joined Yes in 1971. Classically trained and a natural showman, he surrounded the band with banks of synthesisers, organ and Mellotron.", "He is equally famous for extravagant solo concept albums such as The Six Wives of Henry VIII and Journey to the Centre of the Earth — part of a catalogue numbering well over a hundred records — and for a second career as a witty, much-loved British television and radio raconteur."], "Bill Bruford": ["Bill Bruford, born in 1949, was Yes's founding drummer, his crisp, jazz-informed style shaping the band's earliest records. In 1972, at the very height of their success, he made the daring choice to leave and join King Crimson, putting musical adventure ahead of stardom.", "He later led his own jazz group, Earthworks, and is widely regarded as one of progressive rock's most intelligent and influential drummers. He retired from public performance in 2009 to write and study."], "Alan White": ["Alan White (1949–2022) replaced Bruford in 1972 and went on to hold the drum stool for fifty years. Before Yes he had played with John Lennon's Plastic Ono Band and with George Harrison, lending him a pedigree few rock drummers could match.", "His powerful, song-serving style anchored the band from Tales from Topographic Oceans onward through every era that followed. He remained a member until his death in 2022, which came just days before a planned anniversary tour."], "Tony Kaye": ["Tony Kaye, born in 1945, was Yes's founding keyboardist, favouring the warm growl of the Hammond organ over the synthesiser arsenals that later defined the band. He left in 1971 as the music grew more elaborate.", "He returned a decade later for the blockbuster 90125 era of the 1980s, and over the years also played in the bands Badger and Circa, remaining a quietly important figure in the Yes story."], "Peter Banks": ["Peter Banks (1947–2013) was Yes's founding guitarist, appearing on the first two albums before being replaced by Steve Howe in 1970. An inventive, exploratory player, he has sometimes been called 'the architect of progressive music.'", "After Yes he led the band Flash and pursued numerous other projects, though wide commercial success largely eluded him. He died in 2013."], "Trevor Rabin": ["Trevor Rabin, born in South Africa in 1954, is the guitarist, singer and songwriter who reinvented Yes for the 1980s, writing their biggest hit, 'Owner of a Lonely Heart.' He joined for the album 90125 in 1983 and steered the band to its greatest commercial success.", "He later became a sought-after Hollywood film composer, scoring blockbusters such as Armageddon, Remember the Titans and National Treasure, and in the 2010s reunited with Anderson and Wakeman in the trio ARW."], "Geoff Downes": ["Geoff Downes, born in 1952, first joined Yes for the album Drama in 1980 alongside Trevor Horn — the pair having already topped charts worldwide as The Buggles with 'Video Killed the Radio Star.'", "He went on to co-found the hugely successful Asia, and returned to Yes in 2011, where he has been a keyboard mainstay ever since across the band's recent run of albums."], "Trevor Horn": ["Trevor Horn, born in 1949, joined Yes as bassist and singer for Drama in 1980. He is, however, far better known as one of the most influential record producers of the 1980s.", "Behind the desk he shaped era-defining records for Frankie Goes to Hollywood, ABC, Seal and many others — and produced Yes's own comeback smash 90125 — earning a reputation as a defining architect of modern pop production."], "Patrick Moraz": ["Patrick Moraz, born in Switzerland in 1948, is the keyboard virtuoso who replaced Rick Wakeman for the album Relayer in 1974, bringing pronounced jazz and Latin influences to the band's sound.", "After leaving Yes he spent many years as a member of The Moody Blues and recorded a long series of adventurous solo keyboard albums."], "Billy Sherwood": ["Billy Sherwood, born in 1965, is an American multi-instrumentalist and producer who was a member of Yes in the late 1990s and again from 2015 onward. Chris Squire personally chose him to take over on bass after Squire's death.", "A tireless collaborator and producer within the progressive-rock world, he has anchored the band's low end through its most recent studio albums."], "Jon Davison": ["Jon Davison is the American singer who became Yes's lead vocalist in 2012, reportedly recommended in part by Foo Fighters drummer Taylor Hawkins. His clear, high voice carries an obvious kinship with Jon Anderson's.", "He also fronts the band Glass Hammer, and has sung on Yes's recent sequence of studio albums from Heaven & Earth onward."], "Also featured": ["Three more musicians left their mark on Yes across its modern decades.", "Benoît David, a Canadian singer discovered fronting a Yes tribute act, led the band from 2008 to 2012 and sang on Fly from Here (2011) before throat trouble ended his tenure.", "Igor Khoroshev, a Russian keyboardist, played with Yes in the late 1990s, appearing on Open Your Eyes and The Ladder.", "Jay Schellen, an American drummer, supported and then shared drumming duties with the band from the late 2010s, becoming its studio drummer after Alan White's death."], "Nick Mason": ["Nick Mason, born in 1944, is the drummer and the only constant member of Pink Floyd, present on every album since 1967. Within a band famous for its feuds, he was often the steady peacemaker who kept the others talking.", "A devoted motor-racing enthusiast and collector of historic cars, he also wrote the warm, candid band memoir Inside Out. In recent years he has toured the earliest, most experimental Floyd material with his own group, Saucerful of Secrets."], "Roger Waters": ["Roger Waters, born in 1943, was the bassist and singer who, from the early 1970s, became Pink Floyd's conceptual driving force and chief lyricist — the architect of The Dark Side of the Moon, Wish You Were Here, Animals and The Wall.", "He left the band in 1985 amid bitter acrimony and a legal battle over the rights to the name. Since then he has pursued a substantial solo career built around large-scale political rock operas, and has become a prominent and frequently controversial political activist."], "David Gilmour": ["David Gilmour, born in 1946, joined Pink Floyd in early 1968 to cover for the faltering Syd Barrett. His soaring, intensely melodic guitar and warm voice became the defining sound of the band's most successful years.", "After Waters departed, Gilmour led Pink Floyd onward through albums and tours, and has sustained an acclaimed solo career, from On an Island to Luck and Strange in 2024. He is widely revered as one of rock's great guitarists and is married to the novelist Polly Samson, who often writes his lyrics."], "Richard Wright": ["Richard Wright (1943–2008) was Pink Floyd's keyboardist and a founding member, whose lush chords and atmospheric textures were essential to the band's identity — heard at their most beautiful on 'The Great Gig in the Sky' and 'Us and Them.'", "Pushed out during the making of The Wall, he later returned, and was restored as a full member for The Division Bell in 1994. He died of cancer in 2008; the band's final album, The Endless River, stands partly as a tribute to him."], "Syd Barrett": ["Syd Barrett (1946–2006) was Pink Floyd's founder, original singer, guitarist and primary songwriter. He gave the band its name and shaped its early psychedelic sound, full of whimsical, childlike and surreal imagery.", "Heavy drug use and deteriorating mental health led to his departure in 1968. After two strange, fragile solo albums he withdrew from music entirely, living quietly in Cambridge until his death in 2006. His memory haunts much of the band's later work, above all 'Shine On You Crazy Diamond.'"], "John Lennon": ["John Lennon (1940–1980) founded the band that became the Beatles and, with Paul McCartney, formed one of the most successful songwriting partnerships in history. He played rhythm guitar and shared lead vocals, his sharp wit and restless, confessional voice shaping classics from 'Help!' to 'Strawberry Fields Forever' to 'A Day in the Life.'", "After the Beatles he made bold, raw solo records — Plastic Ono Band and Imagine among them — and, with Yoko Ono, became a tireless if controversial peace activist. He was shot and killed outside his New York home in December 1980, aged 40."], "Paul McCartney": ["Paul McCartney, born in 1942, was the Beatles' bassist and a melodic genius whose songs — 'Yesterday,' 'Hey Jude,' 'Let It Be' and countless more — are among the best known ever written. A natural multi-instrumentalist, he supplied much of the band's tunefulness and drive, and shared the writing credit with Lennon on nearly everything either wrote.", "After the break-up he formed Wings, scoring a string of 1970s hits including 'Band on the Run,' and built one of the most enduring solo careers in popular music, still touring stadiums into his eighties. He was knighted in 1997."], "George Harrison": ["George Harrison (1943–2001), the youngest Beatle, was the lead guitarist often called 'the quiet one.' Initially overshadowed as a songwriter by Lennon and McCartney, he grew into a major one, contributing 'Taxman,' 'Here Comes the Sun' and 'Something' — and pioneering the use of the sitar and Indian music in Western pop.", "His first post-Beatles solo album, the triple set All Things Must Pass (1970), was a landmark. He organised the pioneering Concert for Bangladesh, co-founded the Traveling Wilburys, and became a film producer. He died of cancer in 2001."], "Ringo Starr": ["Ringo Starr, born Richard Starkey in 1940, joined the Beatles in 1962, replacing Pete Best, and gave the band its steady, inventive and instantly recognisable drumming. His relaxed feel and distinctive fills underpinned the group's wildest studio experiments, and he took the occasional lead vocal on songs like 'Yellow Submarine' and 'With a Little Help from My Friends.'", "After the Beatles he enjoyed solo hits in the 1970s and, from 1989, has toured almost continuously with his rotating All-Starr Band. Warm and good-humoured, he was knighted in 2018."], "Pete Best": ["Pete Best, born in 1941, was the Beatles' drummer from 1960, through their formative residencies in Hamburg and the Cavern Club in Liverpool. He was, for two crucial years, part of the group as it sharpened into a tight live band.", "In August 1962, on the eve of their fame, he was abruptly dismissed and replaced by Ringo Starr — one of rock's most famous sackings. After years out of music he eventually returned to drumming, and the 1990s Anthology releases brought him belated recognition and royalties."], "Stuart Sutcliffe": ["Stuart Sutcliffe (1940–1962) was the Beatles' original bass player and a close art-school friend of John Lennon. A gifted painter more than a musician, he is often credited with helping shape the band's early image and even suggesting its name.", "He left the group in 1961 to stay in Hamburg with his fiancée and pursue painting, and died suddenly of a brain haemorrhage in April 1962, aged just 21 — a loss that haunted Lennon for years."]};
     // section hint above each roster
     document.querySelectorAll('.roster').forEach(function(r){
       if(r.previousElementSibling && r.previousElementSibling.classList && r.previousElementSibling.classList.contains('bio-hint')) return;
@@ -2394,7 +2834,7 @@
   })();
 
   (function(){
-    var BAND={d:'Genesis', y:'Yes', p:'Pink Floyd'};
+    var BAND={d:'Genesis', y:'Yes', p:'Pink Floyd', b:'The Beatles'};
     var SP='<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1ED760"/><g fill="none" stroke="#0b0b0b" stroke-width="1.9" stroke-linecap="round"><path d="M5.8 9.3c4.3-1.25 8.6-0.85 11.9 1.1"/><path d="M6.7 12.6c3.5-1 7-0.65 9.6 0.95"/><path d="M7.4 15.6c2.7-0.75 5.4-0.45 7.5 0.8"/></g></svg>';
     var YT='<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#FF0033"/><circle cx="12" cy="12" r="6.8" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M10.2 8.9 L15.3 12 L10.2 15.1 Z" fill="#fff"/></svg>';
     function svc(href, title, aria, svg, small){
