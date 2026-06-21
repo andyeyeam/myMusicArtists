@@ -126,8 +126,13 @@
   .detail h4{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 13px;font-weight:700;}
   .tracklist{list-style:none;margin:0;padding:0;}
   .tracklist.two{columns:2;column-gap:32px;}
-  .tracklist li{display:flex;gap:11px;padding:4px 0;font-size:14px;color:#e3d9c8;break-inside:avoid;}
+  .tracklist li{display:flex;gap:10px;align-items:baseline;padding:4px 0;font-size:14px;color:#e3d9c8;break-inside:avoid;}
   .tracklist .n{font-family:var(--mono);font-size:11px;color:#8f8678;min-width:20px;text-align:right;flex-shrink:0;}
+  .tname{flex:1;min-width:0;color:#e3d9c8;text-decoration:none;border-bottom:1px solid transparent;transition:color .14s ease,border-color .14s ease;}
+  a.tname:hover,a.tname:focus-visible{color:#fff;border-bottom-color:rgba(201,162,75,.65);outline:none;}
+  a.tname::after{content:"\2197";font-size:10px;color:var(--gold);opacity:0;margin-left:5px;transition:opacity .14s ease;}
+  a.tname:hover::after,a.tname:focus-visible::after{opacity:.85;}
+  .tdur{font-family:var(--mono);font-size:11px;color:#8f8678;flex-shrink:0;font-variant-numeric:tabular-nums;letter-spacing:.02em;}
   .personnel{list-style:none;margin:0;padding:0;}
   .personnel li{display:flex;gap:10px;align-items:baseline;padding:5px 0;font-size:13.5px;}
   .personnel .cd{width:9px;height:9px;border-radius:50%;flex-shrink:0;position:relative;top:5px;}
@@ -303,15 +308,21 @@
     <defs>
       <radialGradient id="gmoon" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f3ede1"/><stop offset="70%" stop-color="#d9c79a" stop-opacity=".8"/><stop offset="100%" stop-color="#d9c79a" stop-opacity="0"/></radialGradient>
       <linearGradient id="ghill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a2733"/><stop offset="1" stop-color="#2a1622"/></linearGradient>
+      <linearGradient id="gmist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9c79a" stop-opacity="0"/><stop offset="1" stop-color="#7a2e3a" stop-opacity=".32"/></linearGradient>
     </defs>
-    <g fill="#f3ede1" opacity=".5"><circle cx="200" cy="90" r="2"/><circle cx="420" cy="60" r="1.5"/><circle cx="980" cy="120" r="2"/><circle cx="1100" cy="70" r="1.5"/><circle cx="640" cy="48" r="1.5"/><circle cx="540" cy="120" r="1.4"/></g>
-    <circle cx="300" cy="200" r="220" fill="url(#gmoon)"/>
-    <circle cx="300" cy="200" r="96" fill="#f3ede1" opacity=".85"/>
-    <circle cx="342" cy="174" r="96" fill="#2a1622" opacity=".55"/>
-    <g transform="rotate(-8 860 290)"><rect x="820" y="206" width="80" height="150" rx="4" fill="#3a2230" stroke="#c9a24b" stroke-width="2" opacity=".9"/><circle cx="888" cy="288" r="3" fill="#c9a24b"/></g>
+    <g fill="#f3ede1"><g opacity=".55"><circle cx="200" cy="90" r="2"/><circle cx="420" cy="60" r="1.5"/><circle cx="980" cy="120" r="2"/><circle cx="1100" cy="70" r="1.5"/><circle cx="640" cy="48" r="1.5"/><circle cx="540" cy="120" r="1.4"/><circle cx="760" cy="92" r="1.3"/><circle cx="120" cy="150" r="1.2"/><circle cx="1040" cy="40" r="1.2"/><circle cx="860" cy="156" r="1.1"/><circle cx="300" cy="40" r="1.2"/></g><g opacity=".3"><circle cx="500" cy="200" r="1"/><circle cx="700" cy="168" r="1"/><circle cx="900" cy="232" r="1"/><circle cx="1140" cy="180" r="1"/><circle cx="160" cy="250" r="1"/></g></g>
+    <circle cx="300" cy="200" r="250" fill="url(#gmoon)"/>
+    <circle cx="300" cy="200" r="98" fill="none" stroke="#f3ede1" stroke-width="1" opacity=".4"/>
+    <circle cx="300" cy="200" r="96" fill="#f3ede1" opacity=".88"/>
+    <circle cx="342" cy="174" r="96" fill="#2a1622" opacity=".6"/>
+    <path d="M0 408 Q180 372 360 396 T720 388 T1200 396 V520 H0Z" fill="#3a1f29" opacity=".55"/>
     <path d="M0 470 Q300 410 600 460 T1200 440 V600 H0Z" fill="#5a2733" opacity=".85"/>
+    <g stroke="#1a0f16" stroke-width="2.2" fill="none" opacity=".7" transform="translate(150 472)"><path d="M0 0 V-110"/><g stroke-width="1.3"><path d="M0 -110 L-18 -126 M0 -110 L18 -126 M0 -110 L0 -134 M0 -110 L-30 -120 M0 -110 L30 -120 M0 -110 L-12 -132 M0 -110 L12 -132"/></g><circle cx="-18" cy="-128" r="2" fill="#c9a24b" stroke="none"/><circle cx="18" cy="-128" r="2" fill="#c9a24b" stroke="none"/><circle cx="0" cy="-136" r="2" fill="#c9a24b" stroke="none"/></g>
+    <g fill="#170d13" opacity=".82" transform="translate(560 512)"><ellipse cx="0" cy="2" rx="26" ry="6" opacity=".5"/><path d="M-9 0 V-44 H9 V0 Z"/><circle cx="0" cy="-54" r="9"/><rect x="-13" y="-66" width="26" height="5" rx="2"/><rect x="-8" y="-82" width="16" height="18" rx="2"/><path d="M9 -40 L22 -8" stroke="#170d13" stroke-width="2.4" fill="none"/></g>
     <path d="M0 520 Q360 470 720 510 T1200 500 V600 H0Z" fill="url(#ghill)"/>
-    <g stroke="#1a0f16" stroke-width="3" fill="none" opacity=".8" transform="translate(1010 520)"><path d="M0 0 V-120"/><path d="M0 -70 L-26 -104 M0 -70 L24 -100 M0 -90 L-18 -120 M0 -90 L20 -118 M0 -50 L-22 -74 M0 -50 L20 -72"/></g>
+    <rect x="0" y="430" width="1200" height="170" fill="url(#gmist)"/>
+    <g stroke="#120a10" stroke-width="3" fill="none" opacity=".85" transform="translate(1010 520)"><path d="M0 0 V-120"/><path d="M0 -70 L-26 -104 M0 -70 L24 -100 M0 -90 L-18 -120 M0 -90 L20 -118 M0 -50 L-22 -74 M0 -50 L20 -72"/><g stroke-width="1.6"><path d="M-26 -104 L-38 -118 M24 -100 L36 -112 M-18 -120 L-26 -134 M20 -118 L30 -130"/></g></g>
+    <g stroke="#1a0f16" stroke-width="1.6" fill="none" opacity=".5"><path d="M520 120 q8 -7 16 0 q8 -7 16 0"/><path d="M582 100 q6 -5 12 0 q6 -5 12 0"/><path d="M470 140 q6 -5 12 0 q6 -5 12 0"/></g>
   </svg></div>
   <div class="wrap">
     <p class="eyebrow">Godalming, England · formed 1967</p>
@@ -906,15 +917,20 @@
         <stop offset="0" stop-color="#cdeee8" stop-opacity=".95"/><stop offset="45%" stop-color="#4fa6a2" stop-opacity=".65"/><stop offset="100%" stop-color="#4fa6a2" stop-opacity="0"/>
       </radialGradient>
       <linearGradient id="yisle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd0c8"/><stop offset="1" stop-color="#1d4d52"/></linearGradient>
+      <linearGradient id="yarch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fb8b2"/><stop offset="1" stop-color="#1a3f47"/></linearGradient>
+      <linearGradient id="ywater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cdeee8" stop-opacity=".8"/><stop offset="1" stop-color="#8fd0c8" stop-opacity="0"/></linearGradient>
       <linearGradient id="yhaze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f86c4" stop-opacity="0"/><stop offset="1" stop-color="#3a4f8a" stop-opacity=".5"/></linearGradient>
     </defs>
-    <circle cx="940" cy="200" r="300" fill="url(#ysun)"/>
-    <circle cx="940" cy="200" r="120" fill="#cdeee8" opacity=".45"/>
-    <g stroke="#bfe9e2" fill="none" opacity=".22"><ellipse cx="940" cy="200" rx="210" ry="62" transform="rotate(-18 940 200)"/><ellipse cx="940" cy="200" rx="270" ry="82" transform="rotate(-18 940 200)"/></g>
-    <g fill="#1d4d52" opacity=".5"><path d="M120 600 L150 360 L180 600Z"/><path d="M168 600 L205 300 L242 600Z"/></g>
-    <g><ellipse cx="320" cy="430" rx="162" ry="34" fill="#8fd0c8" opacity=".9"/><path d="M158 430 Q320 600 482 430 Q400 470 320 470 Q240 470 158 430Z" fill="url(#yisle)"/></g>
-    <g><ellipse cx="760" cy="468" rx="120" ry="26" fill="#7ec0d8" opacity=".85"/><path d="M640 468 Q760 588 880 468 Q820 500 760 500 Q700 500 640 468Z" fill="#235a6b"/></g>
+    <g fill="#dff3ef" opacity=".4"><circle cx="160" cy="90" r="1.4"/><circle cx="360" cy="60" r="1.2"/><circle cx="600" cy="110" r="1.3"/><circle cx="1120" cy="120" r="1.3"/><circle cx="520" cy="46" r="1.1"/><circle cx="80" cy="180" r="1.1"/></g>
+    <g transform="rotate(-18 940 200)"><circle cx="940" cy="200" r="300" fill="url(#ysun)"/><circle cx="940" cy="200" r="120" fill="#cdeee8" opacity=".5"/><ellipse cx="940" cy="200" rx="210" ry="60" fill="none" stroke="#bfe9e2" stroke-width="3" opacity=".3"/><ellipse cx="940" cy="200" rx="262" ry="78" fill="none" stroke="#bfe9e2" stroke-width="2" opacity=".2"/></g>
+    <circle cx="650" cy="120" r="34" fill="#bfe9e2" opacity=".3"/><circle cx="662" cy="112" r="34" fill="#1d4d52" opacity=".3"/>
+    <g fill="#1d4d52" opacity=".45"><path d="M120 600 L150 360 L180 600Z"/><path d="M168 600 L205 300 L242 600Z"/><path d="M70 600 L95 430 L120 600Z"/></g>
+    <path d="M40 600 Q70 300 180 250 Q150 320 150 600 Z" fill="url(#yarch)" opacity=".9"/>
+    <path d="M180 250 Q300 230 330 600 L250 600 Q250 330 180 320 Z" fill="url(#yarch)" opacity=".8"/>
+    <g><ellipse cx="320" cy="430" rx="162" ry="34" fill="#8fd0c8" opacity=".9"/><path d="M158 430 Q320 600 482 430 Q400 470 320 470 Q240 470 158 430Z" fill="url(#yisle)"/><rect x="312" y="452" width="16" height="120" fill="url(#ywater)" opacity=".7"/></g>
+    <g><ellipse cx="760" cy="468" rx="120" ry="26" fill="#7ec0d8" opacity=".85"/><path d="M640 468 Q760 588 880 468 Q820 500 760 500 Q700 500 640 468Z" fill="#235a6b"/><rect x="754" y="486" width="12" height="90" fill="url(#ywater)" opacity=".6"/></g>
     <g><ellipse cx="1048" cy="398" rx="92" ry="20" fill="#9fd6cd" opacity=".8"/><path d="M956 398 Q1048 486 1140 398 Q1094 424 1048 424 Q1002 424 956 398Z" fill="#27575a"/></g>
+    <g stroke="#1a3f47" stroke-width="3" fill="none" opacity=".55"><path d="M470 180 q34 -26 68 0 q34 -26 68 0"/></g>
     <rect x="0" y="430" width="1200" height="170" fill="url(#yhaze)"/>
   </svg></div>
   <div class="wrap">
@@ -1706,10 +1722,13 @@
 
 <header class="hero hero-floyd">
   <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <g fill="#e7ecff" opacity=".5"><circle cx="120" cy="90" r="1.7"/><circle cx="300" cy="140" r="1.3"/><circle cx="220" cy="320" r="1.4"/><circle cx="80" cy="430" r="1.5"/><circle cx="380" cy="60" r="1.3"/><circle cx="1000" cy="520" r="1.4"/><circle cx="1120" cy="430" r="1.6"/></g>
+    <defs><radialGradient id="psun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd9c0" stop-opacity=".9"/><stop offset="55%" stop-color="#c24d52" stop-opacity=".5"/><stop offset="100%" stop-color="#c24d52" stop-opacity="0"/></radialGradient></defs>
+    <g fill="#e7ecff" opacity=".5"><circle cx="120" cy="90" r="1.7"/><circle cx="300" cy="140" r="1.3"/><circle cx="220" cy="320" r="1.4"/><circle cx="80" cy="430" r="1.5"/><circle cx="380" cy="60" r="1.3"/><circle cx="1000" cy="120" r="1.4"/><circle cx="1120" cy="80" r="1.6"/><circle cx="640" cy="70" r="1.2"/><circle cx="900" cy="58" r="1.2"/></g>
+    <circle cx="980" cy="150" r="180" fill="url(#psun)"/><circle cx="980" cy="150" r="92" fill="#ffd9c0" opacity=".18"/>
     <line x1="0" y1="150" x2="500" y2="318" stroke="#ffffff" stroke-width="5" opacity=".8"/>
     <line x1="0" y1="150" x2="500" y2="318" stroke="#ffffff" stroke-width="14" opacity=".18"/>
-    <polygon points="520,228 466,404 574,404" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
+    <polygon points="520,228 466,404 574,404" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.6)" stroke-width="2"/>
+    <polygon points="520,228 520,404 574,404" fill="rgba(255,255,255,.05)"/>
     <g stroke-width="6" opacity=".82" stroke-linecap="round">
       <line x1="552" y1="332" x2="1200" y2="120" stroke="#ff4d4d"/>
       <line x1="552" y1="332" x2="1200" y2="190" stroke="#ff9a3d"/>
@@ -1719,7 +1738,13 @@
       <line x1="552" y1="332" x2="1200" y2="478" stroke="#5277e0"/>
       <line x1="552" y1="332" x2="1200" y2="548" stroke="#9a5cff"/>
     </g>
+    <g stroke-width="15" opacity=".12" stroke-linecap="round"><line x1="552" y1="332" x2="1200" y2="120" stroke="#ff4d4d"/><line x1="552" y1="332" x2="1200" y2="334" stroke="#54d06a"/><line x1="552" y1="332" x2="1200" y2="548" stroke="#9a5cff"/></g>
     <circle cx="552" cy="332" r="10" fill="#fff" opacity=".55"/>
+    <g stroke="#1a2440" stroke-width="2" opacity=".4">
+      <line x1="0" y1="556" x2="1200" y2="556"/><line x1="0" y1="578" x2="1200" y2="578"/>
+      <g><line x1="40" y1="556" x2="40" y2="578"/><line x1="120" y1="556" x2="120" y2="578"/><line x1="200" y1="556" x2="200" y2="578"/><line x1="280" y1="556" x2="280" y2="578"/><line x1="360" y1="556" x2="360" y2="578"/><line x1="440" y1="556" x2="440" y2="578"/><line x1="520" y1="556" x2="520" y2="578"/><line x1="600" y1="556" x2="600" y2="578"/><line x1="680" y1="556" x2="680" y2="578"/><line x1="760" y1="556" x2="760" y2="578"/><line x1="840" y1="556" x2="840" y2="578"/><line x1="920" y1="556" x2="920" y2="578"/><line x1="1000" y1="556" x2="1000" y2="578"/><line x1="1080" y1="556" x2="1080" y2="578"/><line x1="1160" y1="556" x2="1160" y2="578"/></g>
+      <g><line x1="0" y1="578" x2="0" y2="600"/><line x1="80" y1="578" x2="80" y2="600"/><line x1="160" y1="578" x2="160" y2="600"/><line x1="240" y1="578" x2="240" y2="600"/><line x1="320" y1="578" x2="320" y2="600"/><line x1="400" y1="578" x2="400" y2="600"/><line x1="480" y1="578" x2="480" y2="600"/><line x1="560" y1="578" x2="560" y2="600"/><line x1="640" y1="578" x2="640" y2="600"/><line x1="720" y1="578" x2="720" y2="600"/><line x1="800" y1="578" x2="800" y2="600"/><line x1="880" y1="578" x2="880" y2="600"/><line x1="960" y1="578" x2="960" y2="600"/><line x1="1040" y1="578" x2="1040" y2="600"/><line x1="1120" y1="578" x2="1120" y2="600"/></g>
+    </g>
   </svg></div>
   <div class="wrap">
     <p class="eyebrow">London, England · formed 1965</p>
@@ -2202,18 +2227,27 @@
 
 <header class="hero hero-beatles">
   <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <g fill="#fbeede" opacity=".5"><circle cx="140" cy="90" r="1.7"/><circle cx="320" cy="150" r="1.3"/><circle cx="240" cy="320" r="1.4"/><circle cx="90" cy="430" r="1.5"/><circle cx="400" cy="70" r="1.3"/><circle cx="1010" cy="520" r="1.4"/><circle cx="1130" cy="430" r="1.6"/></g>
-    <g stroke-width="26" opacity=".7" stroke-linecap="butt">
-      <line x1="430" y1="80" x2="430" y2="430" stroke="#cf6b4a"/>
-      <line x1="470" y1="80" x2="470" y2="430" stroke="#f2f2f2"/>
-      <line x1="510" y1="80" x2="510" y2="430" stroke="#cf6b4a"/>
-      <line x1="550" y1="80" x2="550" y2="430" stroke="#f2f2f2"/>
-      <line x1="590" y1="80" x2="590" y2="430" stroke="#cf6b4a"/>
-      <line x1="630" y1="80" x2="630" y2="430" stroke="#f2f2f2"/>
-      <line x1="670" y1="80" x2="670" y2="430" stroke="#cf6b4a"/>
+    <defs><radialGradient id="bsun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffe7c4" stop-opacity=".95"/><stop offset="50%" stop-color="#cf6b4a" stop-opacity=".55"/><stop offset="100%" stop-color="#cf6b4a" stop-opacity="0"/></radialGradient></defs>
+    <g fill="#fbeede" opacity=".5"><circle cx="140" cy="90" r="1.7"/><circle cx="320" cy="150" r="1.3"/><circle cx="90" cy="320" r="1.4"/><circle cx="400" cy="70" r="1.3"/><circle cx="1010" cy="90" r="1.4"/><circle cx="1130" cy="150" r="1.6"/><circle cx="700" cy="60" r="1.2"/></g>
+    <g transform="translate(600 250)">
+      <g stroke="#f2c14e" stroke-width="3" opacity=".4"><line x1="0" y1="0" x2="0" y2="-230"/><line x1="0" y1="0" x2="60" y2="-222"/><line x1="0" y1="0" x2="118" y2="-198"/><line x1="0" y1="0" x2="168" y2="-158"/><line x1="0" y1="0" x2="208" y2="-100"/><line x1="0" y1="0" x2="228" y2="-30"/><line x1="0" y1="0" x2="-60" y2="-222"/><line x1="0" y1="0" x2="-118" y2="-198"/><line x1="0" y1="0" x2="-168" y2="-158"/><line x1="0" y1="0" x2="-208" y2="-100"/><line x1="0" y1="0" x2="-228" y2="-30"/></g>
+      <circle cx="0" cy="0" r="120" fill="url(#bsun)"/><circle cx="0" cy="0" r="66" fill="#ffe7c4" opacity=".3"/>
     </g>
-    <circle cx="900" cy="200" r="120" fill="#f3ede1" opacity=".22"/>
-    <circle cx="900" cy="200" r="78" fill="#f3ede1" opacity=".3"/>
+    <g fill="#f3ede1" opacity=".55">
+      <polygon points="407,432 433,432 99,600 21,600"/>
+      <polygon points="467,432 493,432 279,600 201,600"/>
+      <polygon points="527,432 553,432 459,600 381,600"/>
+      <polygon points="587,432 613,432 639,600 561,600"/>
+      <polygon points="647,432 673,432 819,600 741,600"/>
+      <polygon points="707,432 733,432 999,600 921,600"/>
+      <polygon points="767,432 793,432 1179,600 1101,600"/>
+    </g>
+    <g fill="#1a1117" opacity=".82">
+      <g transform="translate(468 560)"><ellipse cx="0" cy="3" rx="16" ry="4" opacity=".4"/><path d="M-6 0 V-44 H6 V0Z"/><circle cx="0" cy="-54" r="8"/><rect x="-7" y="-64" width="14" height="5" rx="2"/><path d="M-6 -32 L-13 -8 M6 -32 L14 -10" stroke="#1a1117" stroke-width="3" fill="none"/></g>
+      <g transform="translate(558 560)"><ellipse cx="0" cy="3" rx="16" ry="4" opacity=".4"/><path d="M-6 0 V-50 H6 V0Z"/><circle cx="0" cy="-60" r="8"/><path d="M-6 -36 L-13 -8 M6 -36 L14 -10" stroke="#1a1117" stroke-width="3" fill="none"/></g>
+      <g transform="translate(648 560)"><ellipse cx="0" cy="3" rx="16" ry="4" opacity=".4"/><path d="M-6 0 V-48 H6 V0Z"/><circle cx="0" cy="-58" r="8"/><path d="M-6 -34 L-13 -8 M6 -34 L14 -10" stroke="#1a1117" stroke-width="3" fill="none"/></g>
+      <g transform="translate(738 560)"><ellipse cx="0" cy="3" rx="16" ry="4" opacity=".4"/><path d="M-6 0 V-46 H6 V0Z"/><circle cx="0" cy="-56" r="8"/><rect x="-9" y="-58" width="18" height="4" rx="2"/><path d="M-6 -32 L-13 -8 M6 -32 L14 -10" stroke="#1a1117" stroke-width="3" fill="none"/></g>
+    </g>
   </svg></div>
   <div class="wrap">
     <p class="eyebrow">Liverpool, England · formed 1960</p>
@@ -2628,6 +2662,9 @@
 
 </div>
 
+<!--DURATIONS-START-->
+<script>window.__DURATIONS={"d1":["3:16","3:45","4:18","4:39","3:33","3:27","3:27","2:38","3:21","3:34","3:30","3:30","1:59"],"d2":["7:08","6:46","6:55","8:51","4:14","9:00"],"d3":["10:26","1:45","8:10","5:10","2:59","2:55","7:53"],"d4":["7:22","4:47","8:36","5:46","1:43","22:50"],"d5":["8:04","4:08","9:37","3:11","11:48","4:16","11:05","1:32"],"d6":["4:50","4:22","0:33","2:11","8:13","2:45","5:24","2:31","3:40","5:15","5:41","2:42","5:24","3:07","2:59","6:56","3:06","8:13","2:04","3:32","3:56","2:26","4:15"],"d7":["5:58","6:27","6:30","7:35","6:19","8:05","4:35","5:52"],"d8":["7:45","10:01","6:18","3:20","6:39","5:28","2:24","4:50","4:13"],"d9":["5:26","4:46","4:50","4:31","7:10","5:15","3:31","3:30","4:21","6:08","3:59"],"d10":["5:32","6:38","1:21","5:37","3:15","4:59","3:45","3:57","5:06","4:04","8:40","2:09"],"d11":["6:58","4:39","6:00","4:31","7:30","3:25","4:25","4:53","4:21"],"d12":["4:37","6:53","11:59","5:19","3:59","4:10","3:32","10:50","3:53"],"d13":["3:29","8:54","4:46","5:03","4:09","10:45","3:51","4:51"],"d14":["6:42","4:18","10:11","4:03","3:53","7:17","5:00","5:43","4:40","5:40","4:12","10:16"],"d15":["5:46","4:52","4:24","7:52","4:39","5:13","7:46","5:30","5:03","7:55","8:46"],"y1":["4:52","6:47","2:49","3:58","5:40","5:41","4:31","6:18"],"y2":["4:51","5:47","6:10","3:52","6:37","2:08","5:55","4:30"],"y3":["9:42","3:18","9:35","6:56","3:19","8:55"],"y4":["8:35","1:43","1:40","7:57","0:38","3:30","2:42","3:02","11:24"],"y5":["18:36","10:13","8:57"],"y6":["20:23","20:33","18:32","21:31"],"y7":["21:52","9:29","9:09"],"y8":["5:32","7:37","6:12","3:50","15:27"],"y9":["6:46","3:55","2:27","5:44","6:07","4:31","4:05","7:47"],"y10":["10:26","1:23","6:36","8:35","4:45","5:17"],"y11":["4:29","5:18","5:29","6:20","2:07","4:14","4:19","4:52","7:36"],"y12":["4:51","4:33","7:04","5:02","4:50","6:28","7:37","3:21"],"y13":["6:33","5:09","2:17","6:30","5:19","4:42","7:30","4:00","4:54","5:24","3:38","5:25","0:52","3:12","4:29"],"y14":["6:56","7:26","8:49","5:01","4:57","6:09","15:44"],"y15":["10:16","20:32"],"y16":["18:39","9:09","7:25","19:41","3:28"],"y17":["6:00","5:14","6:17","4:56","5:01","4:41","6:08","2:43","4:38","4:47","23:47"],"y18":["9:36","4:22","4:36","1:34","5:05","5:45","5:09","6:03","5:15","9:21","3:20"],"y19":["7:16","6:02","4:27","7:44","2:59","6:30","2:17","10:46","10:24","2:09"],"y20":["1:53","6:00","6:41","5:16","2:15","1:44","5:07","5:01","3:07","3:30","6:54"],"y21":["8:02","6:52","5:34","4:44","5:20","7:41","4:13","9:03"],"y22":["7:03","5:58","5:35","8:08","4:25","5:10","4:41","6:51","4:50","3:35","5:19"],"y23":["5:27","9:03","9:02","4:46","13:55","4:56","8:16","4:05","4:10"],"y24":["7:26","5:49","3:05","13:47","6:16","3:32","4:24","4:41"],"p1":["4:12","3:08","3:09","2:46","4:27","3:06","9:41","2:14","3:42","2:11","3:22"],"p2":["5:39","4:33","5:27","4:12","12:00","4:37","3:00"],"p3":["5:15","3:25","3:32","2:11","2:57","4:48","1:07","5:28","3:17","2:13","7:13","1:05","2:16"],"p4":["8:30","7:27","4:58","12:50","1:08"],"p5":["23:45","4:31","5:28","5:23","13:01"],"p6":["5:56","5:13","6:08","3:43","2:15","23:35"],"p7":["3:05","2:31","3:30","3:08","5:09","4:19","4:38","4:17","4:07","5:54"],"p8":["1:08","2:49","3:51","6:50","4:44","6:23","7:50","3:26","3:47","2:12"],"p9":["20:21","12:35","18:12","6:11","7:11"],"p10":["1:26","17:07","11:27","10:17","1:35"],"p11":["4:18","2:32","3:19","1:24","4:20","5:43","2:42","5:39","2:03","1:40","4:19","1:21","1:04","4:44","2:45","3:22","1:39","1:20","6:31","1:37","4:18","4:20","4:06","0:31","5:21","1:47"],"p12":["3:04","4:23","1:22","2:58","5:06","3:43","1:16","4:12","2:08","4:49","5:02","5:20"],"p13":["4:24","4:52","6:04","5:09","5:42","6:13","1:13","1:46","6:15","0:39","8:47"],"p14":["5:59","4:22","7:05","5:28","4:18","6:49","6:12","6:19","6:11","5:15","7:58"],"p15":["4:27","6:17","1:55","4:48","2:37","1:07","3:17","1:43","1:42","1:42","1:57","1:35","1:32","3:29","3:38","1:51","2:46","6:37"],"b1":["2:52","1:50","2:58","2:26","2:28","2:28","2:03","2:23","2:08","2:38","1:59","2:05","1:53","2:33"],"b2":["2:13","2:05","2:10","2:29","1:48","2:17","2:35","2:48","2:33","3:03","1:59","2:28","2:08","2:48"],"b3":["2:33","2:44","2:22","1:59","2:31","2:10","2:15","2:13","1:48","2:39","2:18","2:38","2:21"],"b4":["2:18","2:34","2:08","2:34","1:51","2:37","2:33","2:45","2:15","3:00","2:05","2:36","2:35","2:24"],"b5":["2:21","2:37","2:11","2:32","2:08","2:20","3:13","2:33","1:59","2:39","2:40","2:07","2:07","2:54"],"b6":["2:27","2:02","3:20","2:41","2:16","2:42","2:42","2:45","2:28","2:23","2:23","2:12","2:20","2:20"],"b7":["2:40","2:08","3:03","3:01","2:26","2:41","2:39","2:11","2:02","2:02","2:17","2:30","2:31","3:01"],"b8":["2:02","2:44","3:28","2:48","2:37","3:35","2:37","5:05","2:38","2:42","2:41","1:19","5:34"],"b9":["2:52","3:00","2:17","3:57","2:30","4:37","3:31","4:10","3:03","3:04","3:48"],"b10":["2:55","2:03","2:22","2:06","2:04","2:36","2:07","2:35","2:49","2:28","2:30","2:21","2:31","2:10","2:14","2:37","2:37","2:02","2:23","2:11","2:17","2:32","2:07","1:50","2:33","2:45","2:32","2:20","2:42","3:02"],"b11":["2:39","3:24","2:11","3:11","6:25","3:51"],"b12":["4:21","3:03","3:27","3:27","2:51","7:47","3:06","2:46","4:02","2:26","1:06","1:13","1:58","1:32","1:37","2:20","0:23"],"b13":["3:37","3:55","3:48","2:26","0:50","4:03","0:40","3:38","2:54","3:38","2:32","3:09"]};</script>
+<!--DURATIONS-END-->
 <script>
   (function(){
     var els = document.querySelectorAll('.reveal');
@@ -2879,6 +2916,39 @@
         rw.appendChild(r1); rw.appendChild(r2);
         host.appendChild(rw);
       }
+    });
+  })();
+
+  // per-track lyrics links (to Genius) + track durations (from __DURATIONS)
+  (function(){
+    var BAND={d:'Genesis', y:'Yes', p:'Pink Floyd', b:'The Beatles'};
+    var DUR = window.__DURATIONS || {};
+    document.querySelectorAll('.album-block').forEach(function(b){
+      var det=b.querySelector('.detail'); if(!det) return;
+      var band=BAND[det.id.charAt(0)]; if(!band) return;
+      var durs=DUR[det.id]||[];
+      var lis=b.querySelectorAll('.tracklist > li');
+      lis.forEach(function(li, i){
+        if(li.querySelector('.tname')) return; // already enhanced
+        var num=li.querySelector('.n');
+        // the track title is everything after the number span
+        var nameNodes=[], passed=false;
+        [].slice.call(li.childNodes).forEach(function(nd){
+          if(nd===num){ passed=true; return; }
+          if(passed) nameNodes.push(nd);
+        });
+        var name=nameNodes.map(function(nd){return nd.textContent;}).join('').trim();
+        if(!name) return;
+        nameNodes.forEach(function(nd){ li.removeChild(nd); });
+        var a=document.createElement('a');
+        a.className='tname'; a.textContent=name;
+        a.href='https://genius.com/search?q='+encodeURIComponent(band+' '+name);
+        a.target='_blank'; a.rel='noopener';
+        a.title='Lyrics for “'+name+'” on Genius';
+        li.appendChild(a);
+        var d=durs[i];
+        if(d){ var s=document.createElement('span'); s.className='tdur'; s.textContent=d; li.appendChild(s); }
+      });
     });
   })();
 </script>
