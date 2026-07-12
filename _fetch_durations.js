@@ -4,7 +4,7 @@ const fs = require('fs');
 const https = require('https');
 
 const html = fs.readFileSync('genesis-yes-pink-floyd-overview.html', 'utf8');
-const BAND = { d: 'Genesis', y: 'Yes', p: 'Pink Floyd', b: 'The Beatles' };
+const BAND = { d: 'Genesis', y: 'Yes', p: 'Pink Floyd', b: 'The Beatles', t: 'Jethro Tull' };
 const UA = 'myMusicArtists/1.0 (track durations for personal project; andyeyeam@gmail.com)';
 
 function decode(s) {

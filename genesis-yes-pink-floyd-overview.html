@@ -234,6 +234,11 @@
   :root{--c-lennon:#cf6b4a;--c-mccartney:#4f93c4;--c-harrison:#6fa06a;--c-starr:#d2a24b;--c-best:#9a9087;--c-sutcliffe:#9a7fc0;}
   .hero-beatles{background:radial-gradient(120% 90% at 80% -10%, rgba(207,107,74,.22), transparent 55%),radial-gradient(90% 80% at 0% 110%, rgba(79,147,196,.26), transparent 60%),var(--ink);}
 
+  /* Jethro Tull member colours */
+  .c-ian{background:#c9a24b;} .c-barre{background:#4f93c4;} .c-abrahams{background:#cf6b4a;} .c-cornick{background:#7fa088;} .c-bunker{background:#9a9087;} .c-evan{background:#d2a24b;} .c-hammond{background:#6fa06a;} .c-barlow{background:#9a7fc0;} .c-palmer{background:#cf5d72;} .c-glascock{background:#d98b8b;} .c-pegg{background:#5f9bd0;} .c-vettese{background:#8a6fc0;} .c-giddings{background:#6fae6a;} .c-noyce{background:#d9b86a;} .c-perry{background:#7d8fd0;} .c-ohara{background:#c77b9e;} .c-goodier{background:#e0738a;} .c-shammond{background:#a3927d;} .c-guest{background:#6f6678;}
+  :root{--c-ian:#c9a24b;--c-barre:#4f93c4;--c-abrahams:#cf6b4a;--c-cornick:#7fa088;--c-bunker:#9a9087;--c-evan:#d2a24b;--c-hammond:#6fa06a;--c-barlow:#9a7fc0;--c-palmer:#cf5d72;--c-glascock:#d98b8b;--c-pegg:#5f9bd0;--c-vettese:#8a6fc0;--c-giddings:#6fae6a;--c-noyce:#d9b86a;--c-perry:#7d8fd0;--c-ohara:#c77b9e;--c-goodier:#e0738a;--c-shammond:#a3927d;--c-guest:#6f6678;}
+  .hero-tull{background:radial-gradient(120% 90% at 80% -10%, rgba(201,162,75,.20), transparent 55%),radial-gradient(90% 80% at 0% 110%, rgba(63,107,70,.28), transparent 60%),var(--ink);}
+
   /* ===== member biography click-downs ===== */
   .roster{align-items:stretch;}
   .person{flex-direction:column;gap:0;cursor:pointer;transition:box-shadow .16s ease,transform .16s ease;}
@@ -299,6 +304,7 @@
     <button class="sw-btn" id="tab-yes" data-view="view-yes" aria-pressed="false">Yes</button>
     <button class="sw-btn" id="tab-floyd" data-view="view-floyd" aria-pressed="false">Pink Floyd</button>
     <button class="sw-btn" id="tab-beatles" data-view="view-beatles" aria-pressed="false">The Beatles</button>
+    <button class="sw-btn" id="tab-tull" data-view="view-tull" aria-pressed="false">Jethro Tull</button>
   </div>
 </nav>
 
@@ -2662,8 +2668,771 @@
 
 </div>
 
+
+<div class="band-view" id="view-tull" hidden>
+
+<header class="hero hero-tull">
+  <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="tsun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f3e6b8" stop-opacity=".95"/><stop offset="50%" stop-color="#c9a24b" stop-opacity=".55"/><stop offset="100%" stop-color="#c9a24b" stop-opacity="0"/></radialGradient>
+      <linearGradient id="tfield" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a8f4a"/><stop offset="1" stop-color="#2c3a1e"/></linearGradient>
+      <linearGradient id="tfield2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5c6f38"/><stop offset="1" stop-color="#243018"/></linearGradient>
+      <linearGradient id="tmist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3e6b8" stop-opacity="0"/><stop offset="1" stop-color="#3f6b46" stop-opacity=".34"/></linearGradient>
+    </defs>
+    <g fill="#f6efd8" opacity=".5"><circle cx="150" cy="80" r="1.6"/><circle cx="340" cy="54" r="1.3"/><circle cx="1030" cy="96" r="1.5"/><circle cx="1140" cy="60" r="1.3"/><circle cx="620" cy="42" r="1.3"/><circle cx="760" cy="86" r="1.1"/><circle cx="90" cy="140" r="1.1"/></g>
+    <circle cx="900" cy="150" r="230" fill="url(#tsun)"/>
+    <path d="M0 380 Q220 340 440 368 T900 358 T1200 366 V520 H0Z" fill="url(#tfield2)" opacity=".85"/>
+    <path d="M0 440 Q260 392 520 430 T1000 412 T1200 424 V600 H0Z" fill="url(#tfield)"/>
+    <g stroke="#d9c98a" stroke-width="1.4" opacity=".55"><path d="M60 600 V500 M90 600 V492 M120 600 V504 M150 600 V486 M180 600 V498 M210 600 V490"/><path d="M980 600 V510 M1010 600 V498 M1040 600 V512 M1070 600 V494 M1100 600 V506 M1130 600 V496"/></g>
+    <g fill="#1c2412" opacity=".85" transform="translate(600 470)">
+      <ellipse cx="0" cy="4" rx="15" ry="4" opacity=".4"/>
+      <path d="M-5 0 V-52 H5 V0 Z"/>
+      <circle cx="0" cy="-64" r="9"/>
+      <path d="M-2 -60 Q18 -66 22 -50" stroke="#1c2412" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <path d="M-5 -30 L-14 6 M5 -30 L2 8" stroke="#1c2412" stroke-width="3" fill="none"/>
+    </g>
+    <rect x="0" y="410" width="1200" height="150" fill="url(#tmist)"/>
+    <g stroke="#2c3a1e" stroke-width="2" fill="none" opacity=".5"><path d="M420 130 q9 -8 18 0 q9 -8 18 0"/><path d="M470 108 q7 -6 14 0 q7 -6 14 0"/></g>
+  </svg></div>
+  <div class="wrap">
+    <p class="eyebrow">Blackpool → Luton, England · formed 1967</p>
+    <h1>JETHRO TULL</h1>
+    <p class="thesis">Named for a dead farmer, fronted by a man playing flute on one leg — one restless leader has kept reinventing this band across six decades and twenty-four albums.</p>
+    <div class="meta">
+      <span><b>24</b> studio albums</span>
+      <span><b>19</b> players across them</span>
+      <span><b>1</b> constant: <b>Ian Anderson</b>, on every album since 1968</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The members</h2></div>
+    <p class="sec-intro">Where Genesis and Yes each anchored around two or three constants, Tull effectively had one. Ian Anderson is the only musician present across every era — the original blues-rock quartet, the folk-prog behemoth of the mid-1970s, the synth-and-drum-machine detour of the 1980s, and the entirely rebuilt band that returned from hiatus in 2017. Nineteen other players have passed through along the way.</p>
+
+    <div class="roster">
+      <div class="person" style="--swatch:var(--c-ian)"><div class="nm">Ian Anderson</div><div class="role">Lead vocals · Flute · Acoustic guitar</div><div class="yrs">1967 – present</div><span class="tag constant">Founder &amp; sole constant member</span></div>
+      <div class="person" style="--swatch:var(--c-barre)"><div class="nm">Martin Barre</div><div class="role">Lead guitar</div><div class="yrs">1968 – 2011</div><span class="tag">Longest-serving member after Anderson</span></div>
+      <div class="person" style="--swatch:var(--c-abrahams)"><div class="nm">Mick Abrahams</div><div class="role">Guitar · Vocals</div><div class="yrs">1967 – 1968</div><span class="tag">Original guitarist</span></div>
+      <div class="person" style="--swatch:var(--c-cornick)"><div class="nm">Glenn Cornick</div><div class="role">Bass</div><div class="yrs">1967 – 1970</div><span class="tag">Original bassist</span></div>
+      <div class="person" style="--swatch:var(--c-bunker)"><div class="nm">Clive Bunker</div><div class="role">Drums</div><div class="yrs">1967 – 1971</div><span class="tag">Original drummer</span></div>
+      <div class="person" style="--swatch:var(--c-evan)"><div class="nm">John Evan</div><div class="role">Keyboards</div><div class="yrs">1970 – 1980</div><span class="tag">Piano on “Locomotive Breath”</span></div>
+      <div class="person" style="--swatch:var(--c-hammond)"><div class="nm">Jeffrey Hammond</div><div class="role">Bass</div><div class="yrs">1971 – 1975</div><span class="tag">Aqualung &amp; Thick as a Brick era</span></div>
+      <div class="person" style="--swatch:var(--c-barlow)"><div class="nm">Barriemore Barlow</div><div class="role">Drums · Percussion</div><div class="yrs">1971 – 1980</div><span class="tag">Classic-lineup drummer</span></div>
+      <div class="person" style="--swatch:var(--c-palmer)"><div class="nm">Dee Palmer</div><div class="role">Keyboards · Orchestral arranger</div><div class="yrs">Arranger from 1967 · full member 1976 – 1980</div><span class="tag">Orchestrated the band’s classic run</span></div>
+      <div class="person" style="--swatch:var(--c-glascock)"><div class="nm">John Glascock</div><div class="role">Bass · Vocals</div><div class="yrs">1976 – 1979</div><span class="tag">Died in post, aged 28</span></div>
+      <div class="person" style="--swatch:var(--c-pegg)"><div class="nm">Dave Pegg</div><div class="role">Bass · Mandolin · Vocals</div><div class="yrs">1979 – 1995</div><span class="tag">Also Fairport Convention, throughout</span></div>
+      <div class="person" style="--swatch:var(--c-vettese)"><div class="nm">Peter-John Vettese</div><div class="role">Keyboards</div><div class="yrs">1982 – 1989</div><span class="tag">Architect of Under Wraps</span></div>
+      <div class="person" style="--swatch:var(--c-giddings)"><div class="nm">Andrew Giddings</div><div class="role">Keyboards</div><div class="yrs">1991 – 2003</div><span class="tag">The 1990s &amp; Y2K-era keyboardist</span></div>
+      <div class="person" style="--swatch:var(--c-noyce)"><div class="nm">Jonathan Noyce</div><div class="role">Bass</div><div class="yrs">1995 – 2007</div><span class="tag">Bass through the turn of the millennium</span></div>
+      <div class="person" style="--swatch:var(--c-perry)"><div class="nm">Doane Perry</div><div class="role">Drums · Percussion</div><div class="yrs">1984 – 2011</div><span class="tag">27 years behind the kit</span></div>
+      <div class="person" style="--swatch:var(--c-ohara)"><div class="nm">John O’Hara</div><div class="role">Keyboards · Accordion</div><div class="yrs">2007 – 2012 · 2017 – present</div><span class="tag">Carried over into the 2017 revival</span></div>
+      <div class="person" style="--swatch:var(--c-goodier)"><div class="nm">David Goodier</div><div class="role">Bass · Double bass</div><div class="yrs">2007 – 2012 · 2017 – present</div><span class="tag">Carried over into the 2017 revival</span></div>
+      <div class="person" style="--swatch:var(--c-shammond)"><div class="nm">Scott Hammond</div><div class="role">Drums · Percussion</div><div class="yrs">2010 (touring) · 2017 – present</div><span class="tag">Current drummer</span></div>
+      <div class="person" style="--swatch:var(--c-guest)"><div class="nm">Also featured</div><div class="role">Guitar · Keys · Bass · Drums</div><div class="yrs">Assorted session &amp; touring years</div><span class="tag">Session &amp; touring contributors</span></div>
+    </div>
+
+    <p class="footnote"><b>In memoriam:</b> John Glascock died in post in 1979, aged 28; Glenn Cornick died in 2014; Mick Abrahams died in December 2025; Dee Palmer died in June 2026. <b>The 2011/2012 hiatus</b> ended Doane Perry's 27-year run and Martin Barre's 43-year association with the band; when Jethro Tull returned to touring and recording in 2017 as "Ian Anderson's Jethro Tull," only keyboardist John O'Hara and bassist David Goodier carried over from the pre-hiatus lineup. <b>Producer/arranger note:</b> Dee Palmer's orchestral arrangements shaped the band's sound from its very first sessions, years before she became an official member.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Who played on what</h2></div>
+    <p class="sec-intro">All 24 studio albums in order, from the one-day-famous blues quartet of <em>This Was</em> to 2025's <em>Curious Ruminant</em>. With so many hands passing through over six decades, personnel are shown as colour-coded chips rather than a fixed grid — click any album to open its tracklist, credits and a lyrics link.</p>
+
+    <p class="hint"><span class="pulse"></span> Click any album row to expand it&nbsp;&nbsp;▾&nbsp;&nbsp;<span style="color:var(--muted)">tracklist · who played on it · lyrics link</span></p>
+
+    <div class="matrix chips">
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t1">
+      <div class="yr">1968</div>
+      <div class="alb"><div class="t">This Was</div><div class="annot">The blues-rock prototype, gone before it properly began</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-abrahams"></span>Abrahams</span><span class="chip"><span class="cd c-cornick"></span>Cornick</span><span class="chip"><span class="cd c-bunker"></span>Bunker</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t1"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>My Sunday Feeling</li><li><span class="n">2</span>Some Day the Sun Won’t Shine for You</li><li><span class="n">3</span>Beggar’s Farm</li><li><span class="n">4</span>Move on Alone</li><li><span class="n">5</span>Serenade to a Cuckoo</li><li><span class="n">6</span>Dharma for One</li><li><span class="n">7</span>It’s Breaking Me Up</li><li><span class="n">8</span>Cat’s Squirrel</li><li><span class="n">9</span>A Song for Jeffrey</li><li><span class="n">10</span>Round</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-abrahams"></span><span><span class="pn">Mick Abrahams</span> <span class="pr">— guitar · vocals</span></span></li>
+              <li><span class="cd c-cornick"></span><span><span class="pn">Glenn Cornick</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-bunker"></span><span><span class="pn">Clive Bunker</span> <span class="pr">— drums</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+This+Was" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t2">
+      <div class="yr">1969</div>
+      <div class="alb"><div class="t">Stand Up</div><div class="annot">Martin Barre joins; the album goes to No. 1 in the UK</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-cornick"></span>Cornick</span><span class="chip"><span class="cd c-bunker"></span>Bunker</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t2"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>A New Day Yesterday</li><li><span class="n">2</span>Jeffrey Goes to Leicester Square</li><li><span class="n">3</span>Bourée</li><li><span class="n">4</span>Back to the Family</li><li><span class="n">5</span>Look into the Sun</li><li><span class="n">6</span>Nothing Is Easy</li><li><span class="n">7</span>Fat Man</li><li><span class="n">8</span>We Used to Know</li><li><span class="n">9</span>Reasons for Waiting</li><li><span class="n">10</span>For a Thousand Mothers</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-cornick"></span><span><span class="pn">Glenn Cornick</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-bunker"></span><span><span class="pn">Clive Bunker</span> <span class="pr">— drums</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Stand+Up" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t3">
+      <div class="yr">1970</div>
+      <div class="alb"><div class="t">Benefit</div><div class="annot">John Evan joins on keyboards, darker and heavier</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-cornick"></span>Cornick</span><span class="chip"><span class="cd c-bunker"></span>Bunker</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t3"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>With You There to Help Me</li><li><span class="n">2</span>Nothing to Say</li><li><span class="n">3</span>Alive and Well and Living In</li><li><span class="n">4</span>Son</li><li><span class="n">5</span>For Michael Collins, Jeffrey and Me</li><li><span class="n">6</span>To Cry You a Song</li><li><span class="n">7</span>A Time for Everything?</li><li><span class="n">8</span>Inside</li><li><span class="n">9</span>Play in Time</li><li><span class="n">10</span>Sossity; You’re a Woman</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-cornick"></span><span><span class="pn">Glenn Cornick</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-bunker"></span><span><span class="pn">Clive Bunker</span> <span class="pr">— drums</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Benefit" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t4">
+      <div class="yr">1971</div>
+      <div class="alb"><div class="t">Aqualung</div><div class="annot">The breakthrough that became the band’s burden and its legend</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-hammond"></span>Hammond</span><span class="chip"><span class="cd c-bunker"></span>Bunker</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t4"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Aqualung</li><li><span class="n">2</span>Cross-Eyed Mary</li><li><span class="n">3</span>Cheap Day Return</li><li><span class="n">4</span>Mother Goose</li><li><span class="n">5</span>Wond’ring Aloud</li><li><span class="n">6</span>Up to Me</li><li><span class="n">7</span>My God</li><li><span class="n">8</span>Hymn 43</li><li><span class="n">9</span>Slipstream</li><li><span class="n">10</span>Locomotive Breath</li><li><span class="n">11</span>Wind-Up</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-hammond"></span><span><span class="pn">Jeffrey Hammond</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-bunker"></span><span><span class="pn">Clive Bunker</span> <span class="pr">— drums</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Aqualung" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t5">
+      <div class="yr">1972</div>
+      <div class="alb"><div class="t">Thick as a Brick</div><div class="annot">One song, two sides — a concept-album parody that swallowed the genre whole</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-hammond"></span>Hammond</span><span class="chip"><span class="cd c-barlow"></span>Barlow</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t5"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist"><li><span class="n">1</span>Thick as a Brick, Pt. 1</li><li><span class="n">2</span>Thick as a Brick, Pt. 2</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-hammond"></span><span><span class="pn">Jeffrey Hammond</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-barlow"></span><span><span class="pn">Barriemore Barlow</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Thick+as+a+Brick" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t6">
+      <div class="yr">1973</div>
+      <div class="alb"><div class="t">A Passion Play</div><div class="annot">The critics revolt; a dead man’s afterlife set to prog</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-hammond"></span>Hammond</span><span class="chip"><span class="cd c-barlow"></span>Barlow</span><span class="chip"><span class="cd c-palmer"></span>Palmer</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t6"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Lifebeats</li><li><span class="n">2</span>Prelude</li><li><span class="n">3</span>The Silver Cord</li><li><span class="n">4</span>Re-Assuring Tune</li><li><span class="n">5</span>Memory Bank</li><li><span class="n">6</span>Best Friends</li><li><span class="n">7</span>Critique Oblique</li><li><span class="n">8</span>Forest Dance #1</li><li><span class="n">9</span>The Story of the Hare Who Lost His Spectacles, Pt. 1</li><li><span class="n">10</span>The Story of the Hare Who Lost His Spectacles, Pt. 2</li><li><span class="n">11</span>Forest Dance #2</li><li><span class="n">12</span>The Foot of Our Stairs</li><li><span class="n">13</span>Overseer Overture</li><li><span class="n">14</span>Flight from Lucifer</li><li><span class="n">15</span>10:08 to Paddington</li><li><span class="n">16</span>Magus Perdé</li><li><span class="n">17</span>Epilogue</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-hammond"></span><span><span class="pn">Jeffrey Hammond</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-barlow"></span><span><span class="pn">Barriemore Barlow</span> <span class="pr">— drums · percussion</span></span></li>
+              <li><span class="cd c-palmer"></span><span><span class="pn">Dee Palmer</span> <span class="pr">— Orchestral arrangements</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+A+Passion+Play" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t7">
+      <div class="yr">1974</div>
+      <div class="alb"><div class="t">War Child</div><div class="annot">Orchestras and whimsy return after the backlash</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-hammond"></span>Hammond</span><span class="chip"><span class="cd c-barlow"></span>Barlow</span><span class="chip"><span class="cd c-palmer"></span>Palmer</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t7"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>War Child</li><li><span class="n">2</span>Queen and Country</li><li><span class="n">3</span>Ladies</li><li><span class="n">4</span>Back-Door Angels</li><li><span class="n">5</span>Sealion</li><li><span class="n">6</span>Skating Away on the Thin Ice of the New Day</li><li><span class="n">7</span>Bungle in the Jungle</li><li><span class="n">8</span>Only Solitaire</li><li><span class="n">9</span>The Third Hoorah</li><li><span class="n">10</span>Two Fingers</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-hammond"></span><span><span class="pn">Jeffrey Hammond</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-barlow"></span><span><span class="pn">Barriemore Barlow</span> <span class="pr">— drums · percussion</span></span></li>
+              <li><span class="cd c-palmer"></span><span><span class="pn">Dee Palmer</span> <span class="pr">— Orchestral arrangements</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+War+Child" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t8">
+      <div class="yr">1975</div>
+      <div class="alb"><div class="t">Minstrel in the Gallery</div><div class="annot">Acoustic intimacy collides with electric bite</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-hammond"></span>Hammond</span><span class="chip"><span class="cd c-barlow"></span>Barlow</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t8"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist"><li><span class="n">1</span>Minstrel in the Gallery</li><li><span class="n">2</span>Cold Wind to Valhalla</li><li><span class="n">3</span>Black Satin Dancer</li><li><span class="n">4</span>Requiem</li><li><span class="n">5</span>One White Duck / 010 = Nothing at All</li><li><span class="n">6</span>Baker St. Muse</li><li><span class="n">7</span>Grace</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-hammond"></span><span><span class="pn">Jeffrey Hammond</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-barlow"></span><span><span class="pn">Barriemore Barlow</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Minstrel+in+the+Gallery" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t9">
+      <div class="yr">1976</div>
+      <div class="alb"><div class="t">Too Old to Rock ’n’ Roll: Too Young to Die!</div><div class="annot">An aging rocker’s concept album, decades ahead of its own irony</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-barlow"></span>Barlow</span><span class="chip"><span class="cd c-glascock"></span>Glascock</span><span class="chip"><span class="cd c-palmer"></span>Palmer</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t9"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Quizz Kid</li><li><span class="n">2</span>Crazed Institution</li><li><span class="n">3</span>Salamander</li><li><span class="n">4</span>Taxi Grab</li><li><span class="n">5</span>From a Dead Beat to an Old Greaser</li><li><span class="n">6</span>Bad-Eyed and Loveless</li><li><span class="n">7</span>Big Dipper</li><li><span class="n">8</span>Too Old to Rock ’n’ Roll: Too Young to Die</li><li><span class="n">9</span>Pied Piper</li><li><span class="n">10</span>The Chequered Flag (Dead or Alive)</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-barlow"></span><span><span class="pn">Barriemore Barlow</span> <span class="pr">— drums · percussion</span></span></li>
+              <li><span class="cd c-glascock"></span><span><span class="pn">John Glascock</span> <span class="pr">— bass · vocals</span></span></li>
+              <li><span class="cd c-palmer"></span><span><span class="pn">Dee Palmer</span> <span class="pr">— keyboards · orchestral arranger</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Too+Old+to+Rock+%27n%27+Roll%3A+Too+Young+to+Die%21" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t10">
+      <div class="yr">1977</div>
+      <div class="alb"><div class="t">Songs from the Wood</div><div class="annot">English folklore, fully electrified</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-barlow"></span>Barlow</span><span class="chip"><span class="cd c-glascock"></span>Glascock</span><span class="chip"><span class="cd c-palmer"></span>Palmer</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t10"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Songs from the Wood</li><li><span class="n">2</span>Jack-in-the-Green</li><li><span class="n">3</span>Cup of Wonder</li><li><span class="n">4</span>Hunting Girl</li><li><span class="n">5</span>Ring Out, Solstice Bells</li><li><span class="n">6</span>Velvet Green</li><li><span class="n">7</span>The Whistler</li><li><span class="n">8</span>Pibroch (Cap in Hand)</li><li><span class="n">9</span>Fire at Midnight</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-barlow"></span><span><span class="pn">Barriemore Barlow</span> <span class="pr">— drums · percussion</span></span></li>
+              <li><span class="cd c-glascock"></span><span><span class="pn">John Glascock</span> <span class="pr">— bass · vocals</span></span></li>
+              <li><span class="cd c-palmer"></span><span><span class="pn">Dee Palmer</span> <span class="pr">— keyboards · orchestral arranger</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Songs+from+the+Wood" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t11">
+      <div class="yr">1978</div>
+      <div class="alb"><div class="t">Heavy Horses</div><div class="annot">A hymn to the working animals of a vanishing countryside</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-barlow"></span>Barlow</span><span class="chip"><span class="cd c-glascock"></span>Glascock</span><span class="chip"><span class="cd c-palmer"></span>Palmer</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t11"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>...And the Mouse Police Never Sleeps</li><li><span class="n">2</span>Acres Wild</li><li><span class="n">3</span>No Lullaby</li><li><span class="n">4</span>Moths</li><li><span class="n">5</span>Journeyman</li><li><span class="n">6</span>Rover</li><li><span class="n">7</span>One Brown Mouse</li><li><span class="n">8</span>Heavy Horses</li><li><span class="n">9</span>Weathercock</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-barlow"></span><span><span class="pn">Barriemore Barlow</span> <span class="pr">— drums · percussion</span></span></li>
+              <li><span class="cd c-glascock"></span><span><span class="pn">John Glascock</span> <span class="pr">— bass · vocals</span></span></li>
+              <li><span class="cd c-palmer"></span><span><span class="pn">Dee Palmer</span> <span class="pr">— keyboards · orchestral arranger</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Heavy+Horses" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t12">
+      <div class="yr">1979</div>
+      <div class="alb"><div class="t">Stormwatch</div><div class="annot">The classic 1970s lineup’s last stand, shadowed by tragedy</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-evan"></span>Evan</span><span class="chip"><span class="cd c-barlow"></span>Barlow</span><span class="chip"><span class="cd c-glascock"></span>Glascock</span><span class="chip"><span class="cd c-palmer"></span>Palmer</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t12"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>North Sea Oil</li><li><span class="n">2</span>Orion</li><li><span class="n">3</span>Home</li><li><span class="n">4</span>Dark Ages</li><li><span class="n">5</span>Warm Sporran</li><li><span class="n">6</span>Something’s on the Move</li><li><span class="n">7</span>Old Ghosts</li><li><span class="n">8</span>Dun Ringill</li><li><span class="n">9</span>Flying Dutchman</li><li><span class="n">10</span>Elegy</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-evan"></span><span><span class="pn">John Evan</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-barlow"></span><span><span class="pn">Barriemore Barlow</span> <span class="pr">— drums · percussion</span></span></li>
+              <li><span class="cd c-glascock"></span><span><span class="pn">John Glascock</span> <span class="pr">— bass · vocals</span></span></li>
+              <li><span class="cd c-palmer"></span><span><span class="pn">Dee Palmer</span> <span class="pr">— keyboards · orchestral arranger</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Stormwatch" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t13">
+      <div class="yr">1980</div>
+      <div class="alb"><div class="t">A</div><div class="annot">The synthesizers arrive, the folk recedes — a solo album turned Tull record</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-pegg"></span>Pegg</span><span class="chip"><span class="cd c-guest"></span>Craney</span><span class="chip"><span class="cd c-guest"></span>Jobson</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t13"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Crossfire</li><li><span class="n">2</span>Fylingdale Flyer</li><li><span class="n">3</span>Working John, Working Joe</li><li><span class="n">4</span>Black Sunday</li><li><span class="n">5</span>Protect and Survive</li><li><span class="n">6</span>Batteries Not Included</li><li><span class="n">7</span>Uniform</li><li><span class="n">8</span>4.W.D. (Low Ratio)</li><li><span class="n">9</span>The Pine Marten’s Jig</li><li><span class="n">10</span>And Further On</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-pegg"></span><span><span class="pn">Dave Pegg</span> <span class="pr">— bass · mandolin · vocals</span></span></li>
+              <li><span class="cd c-guest"></span><span><span class="pn">Mark Craney</span> <span class="pr">— drums</span></span></li>
+              <li><span class="cd c-guest"></span><span><span class="pn">Eddie Jobson</span> <span class="pr">— keyboards, electric violin</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+A" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t14">
+      <div class="yr">1982</div>
+      <div class="alb"><div class="t">The Broadsword and the Beast</div><div class="annot">Viking imagery meets vocoders</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-pegg"></span>Pegg</span><span class="chip"><span class="cd c-vettese"></span>Vettese</span><span class="chip"><span class="cd c-guest"></span>Conway</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t14"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Beastie</li><li><span class="n">2</span>Clasp</li><li><span class="n">3</span>Fallen on Hard Times</li><li><span class="n">4</span>Flying Colours</li><li><span class="n">5</span>Slow Marching Band</li><li><span class="n">6</span>Broadsword</li><li><span class="n">7</span>Pussy Willow</li><li><span class="n">8</span>Watching Me, Watching You</li><li><span class="n">9</span>Seal Driver</li><li><span class="n">10</span>Cheerio</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-pegg"></span><span><span class="pn">Dave Pegg</span> <span class="pr">— bass · mandolin · vocals</span></span></li>
+              <li><span class="cd c-vettese"></span><span><span class="pn">Peter-John Vettese</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-guest"></span><span><span class="pn">Gerry Conway</span> <span class="pr">— drums</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+The+Broadsword+and+the+Beast" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t15">
+      <div class="yr">1984</div>
+      <div class="alb"><div class="t">Under Wraps</div><div class="annot">Cold War espionage, set entirely to drum machines</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-pegg"></span>Pegg</span><span class="chip"><span class="cd c-vettese"></span>Vettese</span><span class="chip"><span class="cd c-perry"></span>Perry</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t15"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Lap of Luxury</li><li><span class="n">2</span>Under Wraps #1</li><li><span class="n">3</span>European Legacy</li><li><span class="n">4</span>Later, That Same Evening</li><li><span class="n">5</span>Saboteur</li><li><span class="n">6</span>Radio Free Moscow</li><li><span class="n">7</span>Nobody’s Car</li><li><span class="n">8</span>Heat</li><li><span class="n">9</span>Under Wraps #2</li><li><span class="n">10</span>Paparazzi</li><li><span class="n">11</span>Apogee</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-pegg"></span><span><span class="pn">Dave Pegg</span> <span class="pr">— bass · mandolin · vocals</span></span></li>
+              <li><span class="cd c-vettese"></span><span><span class="pn">Peter-John Vettese</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-perry"></span><span><span class="pn">Doane Perry</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Under+Wraps" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t16">
+      <div class="yr">1987</div>
+      <div class="alb"><div class="t">Crest of a Knave</div><div class="annot">The Grammy upset heard round the world — Tull over Metallica</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-pegg"></span>Pegg</span><span class="chip"><span class="cd c-perry"></span>Perry</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t16"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist"><li><span class="n">1</span>Steel Monkey</li><li><span class="n">2</span>Farm on the Freeway</li><li><span class="n">3</span>Jump Start</li><li><span class="n">4</span>Said She Was a Dancer</li><li><span class="n">5</span>Budapest</li><li><span class="n">6</span>Mountain Men</li><li><span class="n">7</span>Raising Steam</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-pegg"></span><span><span class="pn">Dave Pegg</span> <span class="pr">— bass · mandolin · vocals</span></span></li>
+              <li><span class="cd c-perry"></span><span><span class="pn">Doane Perry</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Crest+of+a+Knave" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t17">
+      <div class="yr">1989</div>
+      <div class="alb"><div class="t">Rock Island</div><div class="annot">Back to blues-rock basics, back on American radio</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-pegg"></span>Pegg</span><span class="chip"><span class="cd c-perry"></span>Perry</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t17"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Kissing Willie</li><li><span class="n">2</span>The Rattlesnake Trail</li><li><span class="n">3</span>Ears of Tin</li><li><span class="n">4</span>Undressed to Kill</li><li><span class="n">5</span>Rock Island</li><li><span class="n">6</span>Heavy Water</li><li><span class="n">7</span>Another Christmas Song</li><li><span class="n">8</span>The Whaler’s Dues</li><li><span class="n">9</span>Big Riff and Mando</li><li><span class="n">10</span>Strange Avenues</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-pegg"></span><span><span class="pn">Dave Pegg</span> <span class="pr">— bass · mandolin · vocals</span></span></li>
+              <li><span class="cd c-perry"></span><span><span class="pn">Doane Perry</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Rock+Island" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t18">
+      <div class="yr">1991</div>
+      <div class="alb"><div class="t">Catfish Rising</div><div class="annot">Bar-band grit after the arena years</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-pegg"></span>Pegg</span><span class="chip"><span class="cd c-giddings"></span>Giddings</span><span class="chip"><span class="cd c-perry"></span>Perry</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t18"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>This Is Not Love</li><li><span class="n">2</span>Occasional Demons</li><li><span class="n">3</span>Rocks on the Road</li><li><span class="n">4</span>Thinking Round Corners</li><li><span class="n">5</span>Still Loving You Tonight</li><li><span class="n">6</span>Doctor to My Disease</li><li><span class="n">7</span>Like a Tall Thin Girl</li><li><span class="n">8</span>Sparrow on the Schoolyard Wall</li><li><span class="n">9</span>Roll Yer Own</li><li><span class="n">10</span>Gold-Tipped Boots, Black Jacket and Tie</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-pegg"></span><span><span class="pn">Dave Pegg</span> <span class="pr">— bass · mandolin · vocals</span></span></li>
+              <li><span class="cd c-giddings"></span><span><span class="pn">Andrew Giddings</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-perry"></span><span><span class="pn">Doane Perry</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Catfish+Rising" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t19">
+      <div class="yr">1995</div>
+      <div class="alb"><div class="t">Roots to Branches</div><div class="annot">Eastern scales grafted onto English prog</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-noyce"></span>Noyce</span><span class="chip"><span class="cd c-giddings"></span>Giddings</span><span class="chip"><span class="cd c-perry"></span>Perry</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t19"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Roots to Branches</li><li><span class="n">2</span>Rare and Precious Chain</li><li><span class="n">3</span>Out of the Noise</li><li><span class="n">4</span>This Free Will</li><li><span class="n">5</span>Valley</li><li><span class="n">6</span>Dangerous Veils</li><li><span class="n">7</span>Beside Myself</li><li><span class="n">8</span>Wounded, Old and Treacherous</li><li><span class="n">9</span>At Last, Forever</li><li><span class="n">10</span>Stuck in the August Rain</li><li><span class="n">11</span>Another Harry’s Bar</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-noyce"></span><span><span class="pn">Jonathan Noyce</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-giddings"></span><span><span class="pn">Andrew Giddings</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-perry"></span><span><span class="pn">Doane Perry</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Roots+to+Branches" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t20">
+      <div class="yr">1999</div>
+      <div class="alb"><div class="t">J-Tull Dot Com</div><div class="annot">The dawn of the internet age, filtered through flute</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-noyce"></span>Noyce</span><span class="chip"><span class="cd c-giddings"></span>Giddings</span><span class="chip"><span class="cd c-perry"></span>Perry</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t20"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Spiral</li><li><span class="n">2</span>Dot Com</li><li><span class="n">3</span>AWOL</li><li><span class="n">4</span>Nothing @ All</li><li><span class="n">5</span>Wicked Windows</li><li><span class="n">6</span>Hunt by Numbers</li><li><span class="n">7</span>Hot Mango Flush</li><li><span class="n">8</span>El Niño</li><li><span class="n">9</span>Black Mamba</li><li><span class="n">10</span>Mango Surprise</li><li><span class="n">11</span>Bends Like a Willow</li><li><span class="n">12</span>Far Alaska</li><li><span class="n">13</span>The Dog-Ear Years</li><li><span class="n">14</span>A Gift of Roses</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-noyce"></span><span><span class="pn">Jonathan Noyce</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-giddings"></span><span><span class="pn">Andrew Giddings</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-perry"></span><span><span class="pn">Doane Perry</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+J-Tull+Dot+Com" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t21">
+      <div class="yr">2003</div>
+      <div class="alb"><div class="t">The Jethro Tull Christmas Album</div><div class="annot">Old carols and older songs — Barre’s last studio bow before a 19-year silence</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-barre"></span>Barre</span><span class="chip"><span class="cd c-noyce"></span>Noyce</span><span class="chip"><span class="cd c-giddings"></span>Giddings</span><span class="chip"><span class="cd c-perry"></span>Perry</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t21"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Birthday Card at Christmas</li><li><span class="n">2</span>Holly Herald</li><li><span class="n">3</span>A Christmas Song</li><li><span class="n">4</span>Another Christmas Song</li><li><span class="n">5</span>God Rest Ye Merry, Gentlemen</li><li><span class="n">6</span>Jack Frost and the Hooded Crow</li><li><span class="n">7</span>Last Man at the Party</li><li><span class="n">8</span>Weathercock</li><li><span class="n">9</span>Pavane</li><li><span class="n">10</span>First Snow on Brooklyn</li><li><span class="n">11</span>Greensleeved</li><li><span class="n">12</span>Fire at Midnight</li><li><span class="n">13</span>We Five Kings</li><li><span class="n">14</span>Ring Out Solstice Bells</li><li><span class="n">15</span>Bourée</li><li><span class="n">16</span>A Winter Snowscape</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-barre"></span><span><span class="pn">Martin Barre</span> <span class="pr">— lead guitar</span></span></li>
+              <li><span class="cd c-noyce"></span><span><span class="pn">Jonathan Noyce</span> <span class="pr">— bass</span></span></li>
+              <li><span class="cd c-giddings"></span><span><span class="pn">Andrew Giddings</span> <span class="pr">— keyboards</span></span></li>
+              <li><span class="cd c-perry"></span><span><span class="pn">Doane Perry</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+The+Jethro+Tull+Christmas+Album" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t22">
+      <div class="yr">2022</div>
+      <div class="alb"><div class="t">The Zealot Gene</div><div class="annot">The silence broken; scripture reworked as songbook</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-goodier"></span>Goodier</span><span class="chip"><span class="cd c-ohara"></span>O’Hara</span><span class="chip"><span class="cd c-shammond"></span>Hammond</span><span class="chip"><span class="cd c-guest"></span>Parrish-James</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t22"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Mrs. Tibbets</li><li><span class="n">2</span>Jacob’s Tales</li><li><span class="n">3</span>Mine Is the Mountain</li><li><span class="n">4</span>The Zealot Gene</li><li><span class="n">5</span>Shoshana Sleeping</li><li><span class="n">6</span>Sad City Sisters</li><li><span class="n">7</span>Barren Beth, Wild Desert John</li><li><span class="n">8</span>The Betrayal of Joshua Kynde</li><li><span class="n">9</span>Where Did Saturday Go?</li><li><span class="n">10</span>Three Loves, Three</li><li><span class="n">11</span>In Brief Visitation</li><li><span class="n">12</span>The Fisherman of Ephesus</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-goodier"></span><span><span class="pn">David Goodier</span> <span class="pr">— bass · double bass</span></span></li>
+              <li><span class="cd c-ohara"></span><span><span class="pn">John O’Hara</span> <span class="pr">— keyboards · accordion</span></span></li>
+              <li><span class="cd c-shammond"></span><span><span class="pn">Scott Hammond</span> <span class="pr">— drums · percussion</span></span></li>
+              <li><span class="cd c-guest"></span><span><span class="pn">Joe Parrish-James</span> <span class="pr">— guitar</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+The+Zealot+Gene" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t23">
+      <div class="yr">2023</div>
+      <div class="alb"><div class="t">RökFlöte</div><div class="annot">Norse gods reclaim the rock flute</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-goodier"></span>Goodier</span><span class="chip"><span class="cd c-ohara"></span>O’Hara</span><span class="chip"><span class="cd c-shammond"></span>Hammond</span><span class="chip"><span class="cd c-guest"></span>Parrish-James</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t23"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Voluspo</li><li><span class="n">2</span>Ginnungagap</li><li><span class="n">3</span>Allfather</li><li><span class="n">4</span>The Feathered Consort</li><li><span class="n">5</span>Hammer on Hammer</li><li><span class="n">6</span>Wolf Unchained</li><li><span class="n">7</span>The Perfect One</li><li><span class="n">8</span>Trickster (And the Mistletoe)</li><li><span class="n">9</span>Cornucopia</li><li><span class="n">10</span>The Navigators</li><li><span class="n">11</span>Guardian’s Watch</li><li><span class="n">12</span>Ithavoll</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— lead vocals · flute · acoustic guitar</span></span></li>
+              <li><span class="cd c-goodier"></span><span><span class="pn">David Goodier</span> <span class="pr">— bass · double bass</span></span></li>
+              <li><span class="cd c-ohara"></span><span><span class="pn">John O’Hara</span> <span class="pr">— keyboards · accordion</span></span></li>
+              <li><span class="cd c-shammond"></span><span><span class="pn">Scott Hammond</span> <span class="pr">— drums · percussion</span></span></li>
+              <li><span class="cd c-guest"></span><span><span class="pn">Joe Parrish-James</span> <span class="pr">— guitar</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+R%C3%B6kFl%C3%B6te" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="album-block">
+    <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t24">
+      <div class="yr">2025</div>
+      <div class="alb"><div class="t">Curious Ruminant</div><div class="annot">The elder statesman, still chewing over new ideas — and playing most of it himself</div>
+        <div class="mlineup"><span class="chip"><span class="cd c-ian"></span>Anderson</span><span class="chip"><span class="cd c-goodier"></span>Goodier</span><span class="chip"><span class="cd c-ohara"></span>O’Hara</span><span class="chip"><span class="cd c-shammond"></span>Hammond</span></div>
+      </div>
+      <span class="chev">▾</span>
+    </div>
+    <div class="detail" id="t24"><div class="detail-inner">
+      <div class="tracks"><h4>Tracklist</h4>
+        <ol class="tracklist two"><li><span class="n">1</span>Puppet and the Puppet Master</li><li><span class="n">2</span>Curious Ruminant</li><li><span class="n">3</span>Dunsinane Hill</li><li><span class="n">4</span>The Tipu House</li><li><span class="n">5</span>Savannah of Paddington Green</li><li><span class="n">6</span>Stygian Hand</li><li><span class="n">7</span>Over Jerusalem</li><li><span class="n">8</span>Drink from the Same Well</li><li><span class="n">9</span>Interim Sleep</li></ol>
+      </div>
+      <div class="credits"><h4>Who played on it</h4>
+        <ul class="personnel">
+              <li><span class="cd c-ian"></span><span><span class="pn">Ian Anderson</span> <span class="pr">— vocals, flute, guitars, keyboards</span></span></li>
+              <li><span class="cd c-goodier"></span><span><span class="pn">David Goodier</span> <span class="pr">— bass · double bass</span></span></li>
+              <li><span class="cd c-ohara"></span><span><span class="pn">John O’Hara</span> <span class="pr">— keyboards · accordion</span></span></li>
+              <li><span class="cd c-shammond"></span><span><span class="pn">Scott Hammond</span> <span class="pr">— drums · percussion</span></span></li>
+        </ul>
+        <a class="lyrics-link" href="https://genius.com/search?q=Jethro+Tull+Curious+Ruminant" target="_blank" rel="noopener">Lyrics on Genius ↗</a>
+      </div>
+    </div></div>
+  </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Solo careers &amp; side projects</h2></div>
+    <p class="sec-intro">Anderson's solo work sits alongside a band history, released under his own name since 1983; several other alumni built long careers of their own well outside Tull.</p>
+
+    <div class="solo-grid">
+      <div class="solo-card" style="--swatch:var(--c-ian)">
+        <h3>Ian Anderson</h3><div class="sub">Solo &amp; orchestral · since 1983</div>
+        <ul class="disc">
+          <li><span class="y">1983</span><span class="ttl">Walk into Light</span></li>
+          <li><span class="y">1995</span><span class="ttl">Divinities: Twelve Dances with God</span></li>
+          <li><span class="y">2000</span><span class="ttl">The Secret Language of Birds</span></li>
+          <li><span class="y">2003</span><span class="ttl">Rupi's Dance</span></li>
+          <li><span class="y">2012</span><span class="ttl">Thick as a Brick 2</span></li>
+          <li><span class="y">2014</span><span class="ttl">Homo Erraticus</span></li>
+        </ul>
+      </div>
+
+      <div class="solo-card" style="--swatch:var(--c-barre)">
+        <h3>Martin Barre</h3><div class="sub">Solo band · since leaving Tull</div>
+        <ul class="disc">
+          <li><span class="y">1994</span><span class="ttl">A Trick of Memory</span></li>
+          <li><span class="y">2015</span><span class="ttl">Back to Steel</span></li>
+          <li><span class="y">2018</span><span class="ttl">Roads Less Travelled</span></li>
+          <li><span class="y">2019</span><span class="ttl">Order of Play</span></li>
+        </ul>
+      </div>
+
+      <div class="solo-card" style="--swatch:var(--c-abrahams)">
+        <h3>Mick Abrahams</h3><div class="sub">Blodwyn Pig &amp; solo · 1943 – 2025</div>
+        <span class="group-label">Blodwyn Pig</span>
+        <ul class="disc">
+          <li><span class="y">1969</span><span class="ttl">Ahead Rings Out</span></li>
+          <li><span class="y">1970</span><span class="ttl">Getting to This</span></li>
+        </ul>
+        <span class="group-label">Solo</span>
+        <ul class="disc">
+          <li><span class="y">2015</span><span class="ttl">Revived! <em>(feat. Martin Barre)</em></span></li>
+        </ul>
+      </div>
+
+      <div class="solo-card" style="--swatch:var(--c-pegg)">
+        <h3>Dave Pegg</h3><div class="sub">Fairport Convention · 1969 – present</div>
+        <ul class="disc">
+          <li><span class="y">1970</span><span class="ttl">Full House <em>(first with Fairport)</em></span></li>
+          <li><span class="y">—</span><span class="ttl">Co-founded Woodworm Records</span></li>
+          <li><span class="y">1979+</span><span class="ttl">Helped build Fairport's Cropredy Festival</span></li>
+        </ul>
+      </div>
+
+      <div class="solo-card" style="--swatch:var(--c-palmer)">
+        <h3>Dee Palmer</h3><div class="sub">Composer &amp; arranger · 1937 – 2026</div>
+        <ul class="disc">
+          <li><span class="y">2018</span><span class="ttl">Through Darkened Glass <em>(solo album)</em></span></li>
+          <li><span class="y">—</span><span class="ttl">Orchestral arrangements for Pink Floyd, Genesis, Yes, the Beatles &amp; Queen material</span></li>
+        </ul>
+      </div>
+
+      <div class="solo-card" style="--swatch:var(--ink-line)">
+        <h3>Other members &amp; offshoots</h3><div class="sub">Key projects</div>
+        <ul class="disc">
+          <li><span class="y">Barlow</span><span class="ttl">Session drummer for Robert Plant, Jimmy Page &amp; Yngwie Malmsteen</span></li>
+          <li><span class="y">Bunker</span><span class="ttl">Aviator · Blodwyn Pig sessions</span></li>
+          <li><span class="y">Cornick</span><span class="ttl">Wild Turkey · Paris</span></li>
+          <li><span class="y">Vettese</span><span class="ttl">Producer — Bee Gees · Simple Minds · Annie Lennox</span></li>
+          <li><span class="y">Glascock</span><span class="ttl">The Gods · Toe Fat · Carmen <em>(pre-Tull)</em></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Jethro Tull — at a glance.</b> Formed Blackpool → Luton, 1967 · 24 studio albums, from <em>This Was</em> (1968) to <em>Curious Ruminant</em> (2025) · a 2011/2012 hiatus was followed by a 2017 relaunch as "Ian Anderson's Jethro Tull."<br>
+    Constant member throughout: Ian Anderson.<br>
+    Scope: studio albums only. <em>Thick as a Brick</em> and <em>A Passion Play</em> are single continuous pieces, split here into their original side/movement titles. Lyrics links open a search on Genius.
+  </div>
+</footer>
+
+</div>
+
 <!--DURATIONS-START-->
-<script>window.__DURATIONS={"d1":["3:16","3:45","4:18","4:39","3:33","3:27","3:27","2:38","3:21","3:34","3:30","3:30","1:59"],"d2":["7:08","6:46","6:55","8:51","4:14","9:00"],"d3":["10:26","1:45","8:10","5:10","2:59","2:55","7:53"],"d4":["7:22","4:47","8:36","5:46","1:43","22:50"],"d5":["8:04","4:08","9:37","3:11","11:48","4:16","11:05","1:32"],"d6":["4:50","4:22","0:33","2:11","8:13","2:45","5:24","2:31","3:40","5:15","5:41","2:42","5:24","3:07","2:59","6:56","3:06","8:13","2:04","3:32","3:56","2:26","4:15"],"d7":["5:58","6:27","6:30","7:35","6:19","8:05","4:35","5:52"],"d8":["7:45","10:01","6:18","3:20","6:39","5:28","2:24","4:50","4:13"],"d9":["5:26","4:46","4:50","4:31","7:10","5:15","3:31","3:30","4:21","6:08","3:59"],"d10":["5:32","6:38","1:21","5:37","3:15","4:59","3:45","3:57","5:06","4:04","8:40","2:09"],"d11":["6:58","4:39","6:00","4:31","7:30","3:25","4:25","4:53","4:21"],"d12":["4:37","6:53","11:59","5:19","3:59","4:10","3:32","10:50","3:53"],"d13":["3:29","8:54","4:46","5:03","4:09","10:45","3:51","4:51"],"d14":["6:42","4:18","10:11","4:03","3:53","7:17","5:00","5:43","4:40","5:40","4:12","10:16"],"d15":["5:46","4:52","4:24","7:52","4:39","5:13","7:46","5:30","5:03","7:55","8:46"],"y1":["4:52","6:47","2:49","3:58","5:40","5:41","4:31","6:18"],"y2":["4:51","5:47","6:10","3:52","6:37","2:08","5:55","4:30"],"y3":["9:42","3:18","9:35","6:56","3:19","8:55"],"y4":["8:35","1:43","1:40","7:57","0:38","3:30","2:42","3:02","11:24"],"y5":["18:36","10:13","8:57"],"y6":["20:23","20:33","18:32","21:31"],"y7":["21:52","9:29","9:09"],"y8":["5:32","7:37","6:12","3:50","15:27"],"y9":["6:46","3:55","2:27","5:44","6:07","4:31","4:05","7:47"],"y10":["10:26","1:23","6:36","8:35","4:45","5:17"],"y11":["4:29","5:18","5:29","6:20","2:07","4:14","4:19","4:52","7:36"],"y12":["4:51","4:33","7:04","5:02","4:50","6:28","7:37","3:21"],"y13":["6:33","5:09","2:17","6:30","5:19","4:42","7:30","4:00","4:54","5:24","3:38","5:25","0:52","3:12","4:29"],"y14":["6:56","7:26","8:49","5:01","4:57","6:09","15:44"],"y15":["10:16","20:32"],"y16":["18:39","9:09","7:25","19:41","3:28"],"y17":["6:00","5:14","6:17","4:56","5:01","4:41","6:08","2:43","4:38","4:47","23:47"],"y18":["9:36","4:22","4:36","1:34","5:05","5:45","5:09","6:03","5:15","9:21","3:20"],"y19":["7:16","6:02","4:27","7:44","2:59","6:30","2:17","10:46","10:24","2:09"],"y20":["1:53","6:00","6:41","5:16","2:15","1:44","5:07","5:01","3:07","3:30","6:54"],"y21":["8:02","6:52","5:34","4:44","5:20","7:41","4:13","9:03"],"y22":["7:03","5:58","5:35","8:08","4:25","5:10","4:41","6:51","4:50","3:35","5:19"],"y23":["5:27","9:03","9:02","4:46","13:55","4:56","8:16","4:05","4:10"],"y24":["7:26","5:49","3:05","13:47","6:16","3:32","4:24","4:41"],"p1":["4:12","3:08","3:09","2:46","4:27","3:06","9:41","2:14","3:42","2:11","3:22"],"p2":["5:39","4:33","5:27","4:12","12:00","4:37","3:00"],"p3":["5:15","3:25","3:32","2:11","2:57","4:48","1:07","5:28","3:17","2:13","7:13","1:05","2:16"],"p4":["8:30","7:27","4:58","12:50","1:08"],"p5":["23:45","4:31","5:28","5:23","13:01"],"p6":["5:56","5:13","6:08","3:43","2:15","23:35"],"p7":["3:05","2:31","3:30","3:08","5:09","4:19","4:38","4:17","4:07","5:54"],"p8":["1:08","2:49","3:51","6:50","4:44","6:23","7:50","3:26","3:47","2:12"],"p9":["20:21","12:35","18:12","6:11","7:11"],"p10":["1:26","17:07","11:27","10:17","1:35"],"p11":["4:18","2:32","3:19","1:24","4:20","5:43","2:42","5:39","2:03","1:40","4:19","1:21","1:04","4:44","2:45","3:22","1:39","1:20","6:31","1:37","4:18","4:20","4:06","0:31","5:21","1:47"],"p12":["3:04","4:23","1:22","2:58","5:06","3:43","1:16","4:12","2:08","4:49","5:02","5:20"],"p13":["4:24","4:52","6:04","5:09","5:42","6:13","1:13","1:46","6:15","0:39","8:47"],"p14":["5:59","4:22","7:05","5:28","4:18","6:49","6:12","6:19","6:11","5:15","7:58"],"p15":["4:27","6:17","1:55","4:48","2:37","1:07","3:17","1:43","1:42","1:42","1:57","1:35","1:32","3:29","3:38","1:51","2:46","6:37"],"b1":["2:52","1:50","2:58","2:26","2:28","2:28","2:03","2:23","2:08","2:38","1:59","2:05","1:53","2:33"],"b2":["2:13","2:05","2:10","2:29","1:48","2:17","2:35","2:48","2:33","3:03","1:59","2:28","2:08","2:48"],"b3":["2:33","2:44","2:22","1:59","2:31","2:10","2:15","2:13","1:48","2:39","2:18","2:38","2:21"],"b4":["2:18","2:34","2:08","2:34","1:51","2:37","2:33","2:45","2:15","3:00","2:05","2:36","2:35","2:24"],"b5":["2:21","2:37","2:11","2:32","2:08","2:20","3:13","2:33","1:59","2:39","2:40","2:07","2:07","2:54"],"b6":["2:27","2:02","3:20","2:41","2:16","2:42","2:42","2:45","2:28","2:23","2:23","2:12","2:20","2:20"],"b7":["2:40","2:08","3:03","3:01","2:26","2:41","2:39","2:11","2:02","2:02","2:17","2:30","2:31","3:01"],"b8":["2:02","2:44","3:28","2:48","2:37","3:35","2:37","5:05","2:38","2:42","2:41","1:19","5:34"],"b9":["2:52","3:00","2:17","3:57","2:30","4:37","3:31","4:10","3:03","3:04","3:48"],"b10":["2:55","2:03","2:22","2:06","2:04","2:36","2:07","2:35","2:49","2:28","2:30","2:21","2:31","2:10","2:14","2:37","2:37","2:02","2:23","2:11","2:17","2:32","2:07","1:50","2:33","2:45","2:32","2:20","2:42","3:02"],"b11":["2:39","3:24","2:11","3:11","6:25","3:51"],"b12":["4:21","3:03","3:27","3:27","2:51","7:47","3:06","2:46","4:02","2:26","1:06","1:13","1:58","1:32","1:37","2:20","0:23"],"b13":["3:37","3:55","3:48","2:26","0:50","4:03","0:40","3:38","2:54","3:38","2:32","3:09"]};</script>
+<script>window.__DURATIONS={"d1":["3:16","3:45","4:18","4:39","3:33","3:27","3:27","2:38","3:21","3:34","3:30","3:30","1:59"],"d2":["7:08","6:46","6:55","8:51","4:14","9:00"],"d3":["10:26","1:45","8:10","5:10","2:59","2:55","7:53"],"d4":["7:22","4:47","8:36","5:46","1:43","22:50"],"d5":["8:04","4:08","9:37","3:11","11:48","4:16","11:05","1:32"],"d6":["4:50","4:22","0:33","2:11","8:13","2:45","5:24","2:31","3:40","5:15","5:41","2:42","5:24","3:07","2:59","6:56","3:06","8:13","2:04","3:32","3:56","2:26","4:15"],"d7":["5:58","6:27","6:30","7:35","6:19","8:05","4:35","5:52"],"d8":["7:45","10:01","6:18","3:20","6:39","5:28","2:24","4:50","4:13"],"d9":["5:26","4:46","4:50","4:31","7:10","5:15","3:31","3:30","4:21","6:08","3:59"],"d10":["5:32","6:38","1:21","5:37","3:15","4:59","3:45","3:57","5:06","4:04","8:40","2:09"],"d11":["6:58","4:39","6:00","4:31","7:30","3:25","4:25","4:53","4:21"],"d12":["4:37","6:53","11:59","5:19","3:59","4:10","3:32","10:50","3:53"],"d13":["3:29","8:54","4:46","5:03","4:09","10:45","3:51","4:51"],"d14":["6:42","4:18","10:11","4:03","3:53","7:17","5:00","5:43","4:40","5:40","4:12","10:16"],"d15":["5:46","4:52","4:24","7:52","4:39","5:13","7:46","5:30","5:03","7:55","8:46"],"y1":["4:52","6:47","2:49","3:58","5:40","5:41","4:31","6:18"],"y2":["4:51","5:47","6:10","3:52","6:37","2:08","5:55","4:30"],"y3":["9:42","3:18","9:35","6:56","3:19","8:55"],"y4":["8:35","1:43","1:40","7:57","0:38","3:30","2:42","3:02","11:24"],"y5":["18:36","10:13","8:57"],"y6":["20:23","20:33","18:32","21:31"],"y7":["21:52","9:29","9:09"],"y8":["5:32","7:37","6:12","3:50","15:27"],"y9":["6:46","3:55","2:27","5:44","6:07","4:31","4:05","7:47"],"y10":["10:26","1:23","6:36","8:35","4:45","5:17"],"y11":["4:29","5:18","5:29","6:20","2:07","4:14","4:19","4:52","7:36"],"y12":["4:51","4:33","7:04","5:02","4:50","6:28","7:37","3:21"],"y13":["6:33","5:09","2:17","6:30","5:19","4:42","7:30","4:00","4:54","5:24","3:38","5:25","0:52","3:12","4:29"],"y14":["6:56","7:26","8:49","5:01","4:57","6:09","15:44"],"y15":["10:16","20:32"],"y16":["18:39","9:09","7:25","19:41","3:28"],"y17":["6:00","5:14","6:17","4:56","5:01","4:41","6:08","2:43","4:38","4:47","23:47"],"y18":["9:36","4:22","4:36","1:34","5:05","5:45","5:09","6:03","5:15","9:21","3:20"],"y19":["7:16","6:02","4:27","7:44","2:59","6:30","2:17","10:46","10:24","2:09"],"y20":["1:53","6:00","6:41","5:16","2:15","1:44","5:07","5:01","3:07","3:30","6:54"],"y21":["8:02","6:52","5:34","4:44","5:20","7:41","4:13","9:03"],"y22":["7:03","5:58","5:35","8:08","4:25","5:10","4:41","6:51","4:50","3:35","5:19"],"y23":["5:27","9:03","9:02","4:46","13:55","4:56","8:16","4:05","4:10"],"y24":["7:26","5:49","3:05","13:47","6:16","3:32","4:24","4:41"],"p1":["4:12","3:08","3:09","2:46","4:27","3:06","9:41","2:14","3:42","2:11","3:22"],"p2":["5:39","4:33","5:27","4:12","12:00","4:37","3:00"],"p3":["5:15","3:25","3:32","2:11","2:57","4:48","1:07","5:28","3:17","2:13","7:13","1:05","2:16"],"p4":["8:30","7:27","4:58","12:50","1:08"],"p5":["23:45","4:31","5:28","5:23","13:01"],"p6":["5:56","5:13","6:08","3:43","2:15","23:35"],"p7":["3:05","2:31","3:30","3:08","5:09","4:19","4:38","4:17","4:07","5:54"],"p8":["1:08","2:49","3:51","6:50","4:44","6:23","7:50","3:26","3:47","2:12"],"p9":["20:21","12:35","18:12","6:11","7:11"],"p10":["1:26","17:07","11:27","10:17","1:35"],"p11":["4:18","2:32","3:19","1:24","4:20","5:43","2:42","5:39","2:03","1:40","4:19","1:21","1:04","4:44","2:45","3:22","1:39","1:20","6:31","1:37","4:18","4:20","4:06","0:31","5:21","1:47"],"p12":["3:04","4:23","1:22","2:58","5:06","3:43","1:16","4:12","2:08","4:49","5:02","5:20"],"p13":["4:24","4:52","6:04","5:09","5:42","6:13","1:13","1:46","6:15","0:39","8:47"],"p14":["5:59","4:22","7:05","5:28","4:18","6:49","6:12","6:19","6:11","5:15","7:58"],"p15":["4:27","6:17","1:55","4:48","2:37","1:07","3:17","1:43","1:42","1:42","1:57","1:35","1:32","3:29","3:38","1:51","2:46","6:37"],"b1":["2:52","1:50","2:58","2:26","2:28","2:28","2:03","2:23","2:08","2:38","1:59","2:05","1:53","2:33"],"b2":["2:13","2:05","2:10","2:29","1:48","2:17","2:35","2:48","2:33","3:03","1:59","2:28","2:08","2:48"],"b3":["2:33","2:44","2:22","1:59","2:31","2:10","2:15","2:13","1:48","2:39","2:18","2:38","2:21"],"b4":["2:18","2:34","2:08","2:34","1:51","2:37","2:33","2:45","2:15","3:00","2:05","2:36","2:35","2:24"],"b5":["2:21","2:37","2:11","2:32","2:08","2:20","3:13","2:33","1:59","2:39","2:40","2:07","2:07","2:54"],"b6":["2:27","2:02","3:20","2:41","2:16","2:42","2:42","2:45","2:28","2:23","2:23","2:12","2:20","2:20"],"b7":["2:40","2:08","3:03","3:01","2:26","2:41","2:39","2:11","2:02","2:02","2:17","2:30","2:31","3:01"],"b8":["2:02","2:44","3:28","2:48","2:37","3:35","2:37","5:05","2:38","2:42","2:41","1:19","5:34"],"b9":["2:52","3:00","2:17","3:57","2:30","4:37","3:31","4:10","3:03","3:04","3:48"],"b10":["2:55","2:03","2:22","2:06","2:04","2:36","2:07","2:35","2:49","2:28","2:30","2:21","2:31","2:10","2:14","2:37","2:37","2:02","2:23","2:11","2:17","2:32","2:07","1:50","2:33","2:45","2:32","2:20","2:42","3:02"],"b11":["2:39","3:24","2:11","3:11","6:25","3:51"],"b12":["4:21","3:03","3:27","3:27","2:51","7:47","3:06","2:46","4:02","2:26","1:06","1:13","1:58","1:32","1:37","2:20","0:23"],"b13":["3:37","3:55","3:48","2:26","0:50","4:03","0:40","3:38","2:54","3:38","2:32","3:09"],"t1":["3:48","2:42","4:19","2:00","6:01","4:11","4:56","5:36","3:18","0:50"],"t2":["4:09","2:12","3:47","3:50","4:21","4:24","2:52","3:59","4:06","4:13"],"t3":["6:18","5:12","3:49","2:50","3:49","6:12","2:43","3:49","3:48","4:30"],"t4":["6:38","4:10","1:23","3:54","1:56","3:16","7:13","3:19","1:13","4:26","6:05"],"t5":["22:37","21:03"],"t6":["3:24","4:28","4:28","1:11","4:20","1:56","4:35","1:34","1:12","5:08","1:12","5:08","3:58","3:56","1:04","3:53","0:44"],"t7":["4:34","3:02","3:20","5:29","3:37","3:58","3:37","1:30","4:51","5:09"],"t8":["8:18","4:20","6:53","3:45","4:39","16:42","0:36"],"t9":["5:12","4:47","2:52","3:59","4:11","2:13","3:35","5:43","4:35","5:26"],"t10":["4:56","2:31","4:34","5:13","3:46","6:05","3:32","8:37","2:28"],"t11":["3:14","3:25","7:55","3:27","3:58","4:16","3:23","8:59","4:03"],"t12":["3:11","4:00","2:46","9:12","3:58","4:30","4:24","2:42","7:43","3:37"],"t13":["3:55","4:36","5:04","6:35","3:37","3:53","3:34","3:42","3:28","4:21"],"t14":["3:57","4:12","3:13","4:40","3:39","4:51","3:53","3:40","5:11","1:01"],"t15":["3:36","4:03","3:23","3:53","3:33","3:42","4:08","5:38","2:14","3:48","5:30"],"t16":["3:35","6:29","4:52","3:40","10:00","6:21","4:06"],"t17":["3:33","4:02","4:55","5:24","6:54","4:12","3:32","7:53","5:59","4:10"],"t18":["3:56","3:48","5:30","3:31","4:30","4:34","3:36","5:21","4:25","3:38"],"t19":["5:13","3:35","3:25","4:05","6:08","5:35","5:50","7:50","7:55","4:06","6:22"],"t20":["3:53","4:27","5:21","0:57","4:43","4:03","3:52","4:43","4:59","1:16","4:54","4:09","3:35","9:30"],"t21":["3:41","4:17","2:47","3:32","4:35","3:38","4:49","4:17","4:19","4:58","2:39","2:27","3:17","4:05","4:25","4:57"],"t22":["5:54","2:13","5:40","3:55","3:41","3:42","3:38","4:05","3:53","3:30","3:02","3:41"],"t23":["3:44","3:50","2:46","3:40","3:09","4:58","3:51","3:01","3:53","4:28","3:31","4:00"],"t24":["4:04","6:00","4:17","3:31","3:13","4:16","5:55","16:42","2:33"]};</script>
 <!--DURATIONS-END-->
 <script>
   (function(){
@@ -2721,7 +3490,8 @@
       y16:[250,'islands'], y17:[205,'orbit'], y18:[150,'islands'], y19:[230,'orbit'], y20:[200,'horizon'],
       y21:[185,'islands'], y22:[195,'islands'], y23:[220,'islands'], y24:[265,'orbit'],
       p1:[290,'bloom'], p2:[265,'orbit'], p3:[130,'horizon'], p4:[30,'portal'], p5:[90,'horizon'], p6:[200,'waves'], p7:[25,'prism'], p8:[250,'prism'], p9:[20,'horizon'], p10:[210,'monolith'], p11:[0,'monolith'], p12:[5,'monolith'], p13:[205,'horizon'], p14:[195,'monolith'], p15:[215,'waves'],
-      b1:[20,'horizon'], b2:[265,'monolith'], b3:[40,'portal'], b4:[200,'horizon'], b5:[190,'prism'], b6:[30,'islands'], b7:[280,'orbit'], b8:[335,'bloom'], b9:[210,'waves'], b10:[0,'monolith'], b11:[195,'waves'], b12:[150,'horizon'], b13:[230,'portal']
+      b1:[20,'horizon'], b2:[265,'monolith'], b3:[40,'portal'], b4:[200,'horizon'], b5:[190,'prism'], b6:[30,'islands'], b7:[280,'orbit'], b8:[335,'bloom'], b9:[210,'waves'], b10:[0,'monolith'], b11:[195,'waves'], b12:[150,'horizon'], b13:[230,'portal'],
+      t1:[0,'horizon'], t2:[138,'orbit'], t3:[275,'islands'], t4:[53,'portal'], t5:[190,'prism'], t6:[328,'monolith'], t7:[105,'bloom'], t8:[243,'waves'], t9:[20,'horizon'], t10:[158,'orbit'], t11:[295,'islands'], t12:[73,'portal'], t13:[210,'prism'], t14:[348,'monolith'], t15:[125,'bloom'], t16:[263,'waves'], t17:[40,'horizon'], t18:[178,'orbit'], t19:[315,'islands'], t20:[93,'portal'], t21:[230,'prism'], t22:[8,'monolith'], t23:[145,'bloom'], t24:[283,'waves']
     };
     function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
     var __N=0;
@@ -2799,7 +3569,7 @@
       var sp = SPEC[det.id]; if(!sp) return;
       var t = (b.querySelector('.t')||{}).textContent || '';
       var yr = (b.querySelector('.yr')||{}).textContent || '';
-      var band = {d:'GENESIS',y:'YES',p:'PINK FLOYD',b:'THE BEATLES'}[det.id.charAt(0)] || 'GENESIS';
+      var band = {d:'GENESIS',y:'YES',p:'PINK FLOYD',b:'THE BEATLES',t:'JETHRO TULL'}[det.id.charAt(0)] || 'GENESIS';
       var o = {t:t.trim(), yr:yr.trim(), hue:sp[0], motif:sp[1], band:band};
       var alb = b.querySelector('.alb');
       if(alb && !alb.classList.contains('has-art')){
@@ -2833,7 +3603,7 @@
   })();
 
   (function(){
-    var BIOS = {"Tony Banks": ["Born in 1950, Tony Banks met his future bandmates at Charterhouse School and became Genesis's keyboardist and — alongside Mike Rutherford — one of only two members present on every album the band ever made. His lush organ, piano and analogue-synth textures were the harmonic foundation of Genesis across both their sprawling progressive era and their later pop incarnation, and he co-wrote a huge share of the catalogue.", "Famously private and reserved, Banks was the quiet architect behind the scenes rather than a frontman. Away from Genesis he recorded several solo rock albums in the 1980s before turning, in later years, to orchestral and classical composition with works such as Seven, Six and Five."], "Mike Rutherford": ["Mike Rutherford, born in 1950, was a founding member and, with Tony Banks, the band's other ever-present. A schoolmate of Banks and Peter Gabriel at Charterhouse, he anchored Genesis on bass and twelve-string guitar in the early years before shifting increasingly to lead guitar as the line-up shrank.", "In the mid-1980s he launched the parallel band Mike + The Mechanics, which scored major hits including 'The Living Years' — a song tied to the loss of his father, the subject of his later memoir of the same name. He has remained one of rock's most understated and dependable craftsmen."], "Peter Gabriel": ["Peter Gabriel, born in 1950, was Genesis's original lead singer and a master of theatrical performance, donning elaborate costumes and spinning surreal stories on stage in the early 1970s. He left the band in 1975 after the ambitious concept album The Lamb Lies Down on Broadway.", "His solo career proved enormously influential, moving from art rock into world music and producing landmark records like So and groundbreaking videos such as 'Sledgehammer.' Beyond music he founded the WOMAD festival and Real World Studios and co-founded the human-rights organisation Witness, cementing a reputation as one of rock's restless innovators."], "Anthony Phillips": ["Anthony Phillips, born in 1951, was a founding guitarist of Genesis and, with Rutherford, co-wrote much of the band's earliest material. He left in 1970 following the album Trespass, worn down in part by severe stage fright.", "Rather than chase the spotlight he built a quietly prolific solo career rooted in acoustic and pastoral instrumental music — most notably the long-running Private Parts & Pieces series — and composed extensively for television and library music, becoming a respected craftsman well away from the rock mainstream."], "Phil Collins": ["Phil Collins, born in 1951, joined Genesis as its drummer in 1970 and stepped up to become lead singer in 1975 after Gabriel's exit. A child actor before he turned to music, he possessed a distinctive voice and formidable drumming chops admired across rock and jazz alike.", "Through the 1980s he became one of the biggest pop stars in the world, both with Genesis and as a solo artist behind songs such as 'In the Air Tonight' and 'Against All Odds.' Serious health problems later limited his playing, and on the band's farewell tour his son Nic took over the drum stool."], "Steve Hackett": ["Steve Hackett, born in 1950, was Genesis's lead guitarist from 1971 to 1977 and an early innovator of techniques like tapping and sweep picking. His melodic, atmospheric playing helped define the classic-era albums from Nursery Cryme to Wind & Wuthering.", "After leaving he embarked on a remarkably prolific solo career spanning rock, classical guitar and world music — some thirty albums in all — and he continues to tour Genesis material to devoted audiences. In 1986 he briefly formed the supergroup GTR with Yes guitarist Steve Howe."], "Ray Wilson": ["Ray Wilson, born in Scotland in 1968, became Genesis's third lead singer for their final studio album, Calling All Stations, in 1997, after Phil Collins departed. He had already found success fronting the band Stiltskin and its chart-topping single 'Inside.'", "When that incarnation of Genesis wound down, Wilson returned to solo and band projects, touring widely across Europe and frequently performing Genesis songs in his own arrangements for a loyal following."], "Early drummers": ["Three drummers passed through Genesis before Phil Collins settled the role for good — none of them lasting more than a single album.", "Chris Stewart, a schoolfriend of the founders, played on the band's 1968 debut single 'The Silent Sun' and left soon after; he went on to become a best-selling travel writer, most famously with Driving Over Lemons, about life on a farm in southern Spain.", "John Silver drummed on the first album, From Genesis to Revelation (1969), before leaving to study in the United States.", "John Mayhew played on Trespass (1970) and departed just as Collins arrived; he later worked as a carpenter in Australia and died in 2009."], "Chris Squire": ["Chris Squire (1948–2015) was Yes's bassist, a co-founder, and the only musician to appear on every one of the band's studio albums up to his death. His bright, trebly, intensely melodic bass playing — often on a Rickenbacker — was a cornerstone of the Yes sound and proved hugely influential on rock bassists everywhere.", "Beyond his playing, Squire was the band's organisational anchor through decades of line-up upheaval, and he co-wrote much of its material. He released one solo album, the well-regarded Fish Out of Water (1975). He died of leukaemia in 2015, the first break in a constant that had held since 1968."], "Jon Anderson": ["Jon Anderson, born in 1944, is the soaring high tenor and co-founder whose mystical, cosmic lyrics did much to shape Yes's identity. He came and went from the band across several decades, his voice remaining one of its most recognisable signatures.", "Alongside Yes he recorded a celebrated run of albums with Vangelis as Jon & Vangelis, and built a deep solo catalogue stretching from Olias of Sunhillow (1976) to recent collaborations with The Band Geeks. He recovered from a serious respiratory illness in 2008 to keep performing."], "Steve Howe": ["Steve Howe, born in 1947, joined Yes in 1970 and brought an extraordinary stylistic range — rock, classical, country and jazz all folded into one guitarist. His playing on The Yes Album and the records that followed became some of progressive rock's most admired.", "He was also a founding member of the chart-conquering Asia and the supergroup GTR, and has released a large body of solo work. As the longest-serving member of the current line-up, he has become the principal keeper of the Yes legacy."], "Rick Wakeman": ["Rick Wakeman, born in 1949, is the flamboyant, cape-wearing keyboard virtuoso who joined Yes in 1971. Classically trained and a natural showman, he surrounded the band with banks of synthesisers, organ and Mellotron.", "He is equally famous for extravagant solo concept albums such as The Six Wives of Henry VIII and Journey to the Centre of the Earth — part of a catalogue numbering well over a hundred records — and for a second career as a witty, much-loved British television and radio raconteur."], "Bill Bruford": ["Bill Bruford, born in 1949, was Yes's founding drummer, his crisp, jazz-informed style shaping the band's earliest records. In 1972, at the very height of their success, he made the daring choice to leave and join King Crimson, putting musical adventure ahead of stardom.", "He later led his own jazz group, Earthworks, and is widely regarded as one of progressive rock's most intelligent and influential drummers. He retired from public performance in 2009 to write and study."], "Alan White": ["Alan White (1949–2022) replaced Bruford in 1972 and went on to hold the drum stool for fifty years. Before Yes he had played with John Lennon's Plastic Ono Band and with George Harrison, lending him a pedigree few rock drummers could match.", "His powerful, song-serving style anchored the band from Tales from Topographic Oceans onward through every era that followed. He remained a member until his death in 2022, which came just days before a planned anniversary tour."], "Tony Kaye": ["Tony Kaye, born in 1945, was Yes's founding keyboardist, favouring the warm growl of the Hammond organ over the synthesiser arsenals that later defined the band. He left in 1971 as the music grew more elaborate.", "He returned a decade later for the blockbuster 90125 era of the 1980s, and over the years also played in the bands Badger and Circa, remaining a quietly important figure in the Yes story."], "Peter Banks": ["Peter Banks (1947–2013) was Yes's founding guitarist, appearing on the first two albums before being replaced by Steve Howe in 1970. An inventive, exploratory player, he has sometimes been called 'the architect of progressive music.'", "After Yes he led the band Flash and pursued numerous other projects, though wide commercial success largely eluded him. He died in 2013."], "Trevor Rabin": ["Trevor Rabin, born in South Africa in 1954, is the guitarist, singer and songwriter who reinvented Yes for the 1980s, writing their biggest hit, 'Owner of a Lonely Heart.' He joined for the album 90125 in 1983 and steered the band to its greatest commercial success.", "He later became a sought-after Hollywood film composer, scoring blockbusters such as Armageddon, Remember the Titans and National Treasure, and in the 2010s reunited with Anderson and Wakeman in the trio ARW."], "Geoff Downes": ["Geoff Downes, born in 1952, first joined Yes for the album Drama in 1980 alongside Trevor Horn — the pair having already topped charts worldwide as The Buggles with 'Video Killed the Radio Star.'", "He went on to co-found the hugely successful Asia, and returned to Yes in 2011, where he has been a keyboard mainstay ever since across the band's recent run of albums."], "Trevor Horn": ["Trevor Horn, born in 1949, joined Yes as bassist and singer for Drama in 1980. He is, however, far better known as one of the most influential record producers of the 1980s.", "Behind the desk he shaped era-defining records for Frankie Goes to Hollywood, ABC, Seal and many others — and produced Yes's own comeback smash 90125 — earning a reputation as a defining architect of modern pop production."], "Patrick Moraz": ["Patrick Moraz, born in Switzerland in 1948, is the keyboard virtuoso who replaced Rick Wakeman for the album Relayer in 1974, bringing pronounced jazz and Latin influences to the band's sound.", "After leaving Yes he spent many years as a member of The Moody Blues and recorded a long series of adventurous solo keyboard albums."], "Billy Sherwood": ["Billy Sherwood, born in 1965, is an American multi-instrumentalist and producer who was a member of Yes in the late 1990s and again from 2015 onward. Chris Squire personally chose him to take over on bass after Squire's death.", "A tireless collaborator and producer within the progressive-rock world, he has anchored the band's low end through its most recent studio albums."], "Jon Davison": ["Jon Davison is the American singer who became Yes's lead vocalist in 2012, reportedly recommended in part by Foo Fighters drummer Taylor Hawkins. His clear, high voice carries an obvious kinship with Jon Anderson's.", "He also fronts the band Glass Hammer, and has sung on Yes's recent sequence of studio albums from Heaven & Earth onward."], "Also featured": ["Three more musicians left their mark on Yes across its modern decades.", "Benoît David, a Canadian singer discovered fronting a Yes tribute act, led the band from 2008 to 2012 and sang on Fly from Here (2011) before throat trouble ended his tenure.", "Igor Khoroshev, a Russian keyboardist, played with Yes in the late 1990s, appearing on Open Your Eyes and The Ladder.", "Jay Schellen, an American drummer, supported and then shared drumming duties with the band from the late 2010s, becoming its studio drummer after Alan White's death."], "Nick Mason": ["Nick Mason, born in 1944, is the drummer and the only constant member of Pink Floyd, present on every album since 1967. Within a band famous for its feuds, he was often the steady peacemaker who kept the others talking.", "A devoted motor-racing enthusiast and collector of historic cars, he also wrote the warm, candid band memoir Inside Out. In recent years he has toured the earliest, most experimental Floyd material with his own group, Saucerful of Secrets."], "Roger Waters": ["Roger Waters, born in 1943, was the bassist and singer who, from the early 1970s, became Pink Floyd's conceptual driving force and chief lyricist — the architect of The Dark Side of the Moon, Wish You Were Here, Animals and The Wall.", "He left the band in 1985 amid bitter acrimony and a legal battle over the rights to the name. Since then he has pursued a substantial solo career built around large-scale political rock operas, and has become a prominent and frequently controversial political activist."], "David Gilmour": ["David Gilmour, born in 1946, joined Pink Floyd in early 1968 to cover for the faltering Syd Barrett. His soaring, intensely melodic guitar and warm voice became the defining sound of the band's most successful years.", "After Waters departed, Gilmour led Pink Floyd onward through albums and tours, and has sustained an acclaimed solo career, from On an Island to Luck and Strange in 2024. He is widely revered as one of rock's great guitarists and is married to the novelist Polly Samson, who often writes his lyrics."], "Richard Wright": ["Richard Wright (1943–2008) was Pink Floyd's keyboardist and a founding member, whose lush chords and atmospheric textures were essential to the band's identity — heard at their most beautiful on 'The Great Gig in the Sky' and 'Us and Them.'", "Pushed out during the making of The Wall, he later returned, and was restored as a full member for The Division Bell in 1994. He died of cancer in 2008; the band's final album, The Endless River, stands partly as a tribute to him."], "Syd Barrett": ["Syd Barrett (1946–2006) was Pink Floyd's founder, original singer, guitarist and primary songwriter. He gave the band its name and shaped its early psychedelic sound, full of whimsical, childlike and surreal imagery.", "Heavy drug use and deteriorating mental health led to his departure in 1968. After two strange, fragile solo albums he withdrew from music entirely, living quietly in Cambridge until his death in 2006. His memory haunts much of the band's later work, above all 'Shine On You Crazy Diamond.'"], "John Lennon": ["John Lennon (1940–1980) founded the band that became the Beatles and, with Paul McCartney, formed one of the most successful songwriting partnerships in history. He played rhythm guitar and shared lead vocals, his sharp wit and restless, confessional voice shaping classics from 'Help!' to 'Strawberry Fields Forever' to 'A Day in the Life.'", "After the Beatles he made bold, raw solo records — Plastic Ono Band and Imagine among them — and, with Yoko Ono, became a tireless if controversial peace activist. He was shot and killed outside his New York home in December 1980, aged 40."], "Paul McCartney": ["Paul McCartney, born in 1942, was the Beatles' bassist and a melodic genius whose songs — 'Yesterday,' 'Hey Jude,' 'Let It Be' and countless more — are among the best known ever written. A natural multi-instrumentalist, he supplied much of the band's tunefulness and drive, and shared the writing credit with Lennon on nearly everything either wrote.", "After the break-up he formed Wings, scoring a string of 1970s hits including 'Band on the Run,' and built one of the most enduring solo careers in popular music, still touring stadiums into his eighties. He was knighted in 1997."], "George Harrison": ["George Harrison (1943–2001), the youngest Beatle, was the lead guitarist often called 'the quiet one.' Initially overshadowed as a songwriter by Lennon and McCartney, he grew into a major one, contributing 'Taxman,' 'Here Comes the Sun' and 'Something' — and pioneering the use of the sitar and Indian music in Western pop.", "His first post-Beatles solo album, the triple set All Things Must Pass (1970), was a landmark. He organised the pioneering Concert for Bangladesh, co-founded the Traveling Wilburys, and became a film producer. He died of cancer in 2001."], "Ringo Starr": ["Ringo Starr, born Richard Starkey in 1940, joined the Beatles in 1962, replacing Pete Best, and gave the band its steady, inventive and instantly recognisable drumming. His relaxed feel and distinctive fills underpinned the group's wildest studio experiments, and he took the occasional lead vocal on songs like 'Yellow Submarine' and 'With a Little Help from My Friends.'", "After the Beatles he enjoyed solo hits in the 1970s and, from 1989, has toured almost continuously with his rotating All-Starr Band. Warm and good-humoured, he was knighted in 2018."], "Pete Best": ["Pete Best, born in 1941, was the Beatles' drummer from 1960, through their formative residencies in Hamburg and the Cavern Club in Liverpool. He was, for two crucial years, part of the group as it sharpened into a tight live band.", "In August 1962, on the eve of their fame, he was abruptly dismissed and replaced by Ringo Starr — one of rock's most famous sackings. After years out of music he eventually returned to drumming, and the 1990s Anthology releases brought him belated recognition and royalties."], "Stuart Sutcliffe": ["Stuart Sutcliffe (1940–1962) was the Beatles' original bass player and a close art-school friend of John Lennon. A gifted painter more than a musician, he is often credited with helping shape the band's early image and even suggesting its name.", "He left the group in 1961 to stay in Hamburg with his fiancée and pursue painting, and died suddenly of a brain haemorrhage in April 1962, aged just 21 — a loss that haunted Lennon for years."]};
+    var BIOS = {"Tony Banks": ["Born in 1950, Tony Banks met his future bandmates at Charterhouse School and became Genesis's keyboardist and — alongside Mike Rutherford — one of only two members present on every album the band ever made. His lush organ, piano and analogue-synth textures were the harmonic foundation of Genesis across both their sprawling progressive era and their later pop incarnation, and he co-wrote a huge share of the catalogue.", "Famously private and reserved, Banks was the quiet architect behind the scenes rather than a frontman. Away from Genesis he recorded several solo rock albums in the 1980s before turning, in later years, to orchestral and classical composition with works such as Seven, Six and Five."], "Mike Rutherford": ["Mike Rutherford, born in 1950, was a founding member and, with Tony Banks, the band's other ever-present. A schoolmate of Banks and Peter Gabriel at Charterhouse, he anchored Genesis on bass and twelve-string guitar in the early years before shifting increasingly to lead guitar as the line-up shrank.", "In the mid-1980s he launched the parallel band Mike + The Mechanics, which scored major hits including 'The Living Years' — a song tied to the loss of his father, the subject of his later memoir of the same name. He has remained one of rock's most understated and dependable craftsmen."], "Peter Gabriel": ["Peter Gabriel, born in 1950, was Genesis's original lead singer and a master of theatrical performance, donning elaborate costumes and spinning surreal stories on stage in the early 1970s. He left the band in 1975 after the ambitious concept album The Lamb Lies Down on Broadway.", "His solo career proved enormously influential, moving from art rock into world music and producing landmark records like So and groundbreaking videos such as 'Sledgehammer.' Beyond music he founded the WOMAD festival and Real World Studios and co-founded the human-rights organisation Witness, cementing a reputation as one of rock's restless innovators."], "Anthony Phillips": ["Anthony Phillips, born in 1951, was a founding guitarist of Genesis and, with Rutherford, co-wrote much of the band's earliest material. He left in 1970 following the album Trespass, worn down in part by severe stage fright.", "Rather than chase the spotlight he built a quietly prolific solo career rooted in acoustic and pastoral instrumental music — most notably the long-running Private Parts & Pieces series — and composed extensively for television and library music, becoming a respected craftsman well away from the rock mainstream."], "Phil Collins": ["Phil Collins, born in 1951, joined Genesis as its drummer in 1970 and stepped up to become lead singer in 1975 after Gabriel's exit. A child actor before he turned to music, he possessed a distinctive voice and formidable drumming chops admired across rock and jazz alike.", "Through the 1980s he became one of the biggest pop stars in the world, both with Genesis and as a solo artist behind songs such as 'In the Air Tonight' and 'Against All Odds.' Serious health problems later limited his playing, and on the band's farewell tour his son Nic took over the drum stool."], "Steve Hackett": ["Steve Hackett, born in 1950, was Genesis's lead guitarist from 1971 to 1977 and an early innovator of techniques like tapping and sweep picking. His melodic, atmospheric playing helped define the classic-era albums from Nursery Cryme to Wind & Wuthering.", "After leaving he embarked on a remarkably prolific solo career spanning rock, classical guitar and world music — some thirty albums in all — and he continues to tour Genesis material to devoted audiences. In 1986 he briefly formed the supergroup GTR with Yes guitarist Steve Howe."], "Ray Wilson": ["Ray Wilson, born in Scotland in 1968, became Genesis's third lead singer for their final studio album, Calling All Stations, in 1997, after Phil Collins departed. He had already found success fronting the band Stiltskin and its chart-topping single 'Inside.'", "When that incarnation of Genesis wound down, Wilson returned to solo and band projects, touring widely across Europe and frequently performing Genesis songs in his own arrangements for a loyal following."], "Early drummers": ["Three drummers passed through Genesis before Phil Collins settled the role for good — none of them lasting more than a single album.", "Chris Stewart, a schoolfriend of the founders, played on the band's 1968 debut single 'The Silent Sun' and left soon after; he went on to become a best-selling travel writer, most famously with Driving Over Lemons, about life on a farm in southern Spain.", "John Silver drummed on the first album, From Genesis to Revelation (1969), before leaving to study in the United States.", "John Mayhew played on Trespass (1970) and departed just as Collins arrived; he later worked as a carpenter in Australia and died in 2009."], "Chris Squire": ["Chris Squire (1948–2015) was Yes's bassist, a co-founder, and the only musician to appear on every one of the band's studio albums up to his death. His bright, trebly, intensely melodic bass playing — often on a Rickenbacker — was a cornerstone of the Yes sound and proved hugely influential on rock bassists everywhere.", "Beyond his playing, Squire was the band's organisational anchor through decades of line-up upheaval, and he co-wrote much of its material. He released one solo album, the well-regarded Fish Out of Water (1975). He died of leukaemia in 2015, the first break in a constant that had held since 1968."], "Jon Anderson": ["Jon Anderson, born in 1944, is the soaring high tenor and co-founder whose mystical, cosmic lyrics did much to shape Yes's identity. He came and went from the band across several decades, his voice remaining one of its most recognisable signatures.", "Alongside Yes he recorded a celebrated run of albums with Vangelis as Jon & Vangelis, and built a deep solo catalogue stretching from Olias of Sunhillow (1976) to recent collaborations with The Band Geeks. He recovered from a serious respiratory illness in 2008 to keep performing."], "Steve Howe": ["Steve Howe, born in 1947, joined Yes in 1970 and brought an extraordinary stylistic range — rock, classical, country and jazz all folded into one guitarist. His playing on The Yes Album and the records that followed became some of progressive rock's most admired.", "He was also a founding member of the chart-conquering Asia and the supergroup GTR, and has released a large body of solo work. As the longest-serving member of the current line-up, he has become the principal keeper of the Yes legacy."], "Rick Wakeman": ["Rick Wakeman, born in 1949, is the flamboyant, cape-wearing keyboard virtuoso who joined Yes in 1971. Classically trained and a natural showman, he surrounded the band with banks of synthesisers, organ and Mellotron.", "He is equally famous for extravagant solo concept albums such as The Six Wives of Henry VIII and Journey to the Centre of the Earth — part of a catalogue numbering well over a hundred records — and for a second career as a witty, much-loved British television and radio raconteur."], "Bill Bruford": ["Bill Bruford, born in 1949, was Yes's founding drummer, his crisp, jazz-informed style shaping the band's earliest records. In 1972, at the very height of their success, he made the daring choice to leave and join King Crimson, putting musical adventure ahead of stardom.", "He later led his own jazz group, Earthworks, and is widely regarded as one of progressive rock's most intelligent and influential drummers. He retired from public performance in 2009 to write and study."], "Alan White": ["Alan White (1949–2022) replaced Bruford in 1972 and went on to hold the drum stool for fifty years. Before Yes he had played with John Lennon's Plastic Ono Band and with George Harrison, lending him a pedigree few rock drummers could match.", "His powerful, song-serving style anchored the band from Tales from Topographic Oceans onward through every era that followed. He remained a member until his death in 2022, which came just days before a planned anniversary tour."], "Tony Kaye": ["Tony Kaye, born in 1945, was Yes's founding keyboardist, favouring the warm growl of the Hammond organ over the synthesiser arsenals that later defined the band. He left in 1971 as the music grew more elaborate.", "He returned a decade later for the blockbuster 90125 era of the 1980s, and over the years also played in the bands Badger and Circa, remaining a quietly important figure in the Yes story."], "Peter Banks": ["Peter Banks (1947–2013) was Yes's founding guitarist, appearing on the first two albums before being replaced by Steve Howe in 1970. An inventive, exploratory player, he has sometimes been called 'the architect of progressive music.'", "After Yes he led the band Flash and pursued numerous other projects, though wide commercial success largely eluded him. He died in 2013."], "Trevor Rabin": ["Trevor Rabin, born in South Africa in 1954, is the guitarist, singer and songwriter who reinvented Yes for the 1980s, writing their biggest hit, 'Owner of a Lonely Heart.' He joined for the album 90125 in 1983 and steered the band to its greatest commercial success.", "He later became a sought-after Hollywood film composer, scoring blockbusters such as Armageddon, Remember the Titans and National Treasure, and in the 2010s reunited with Anderson and Wakeman in the trio ARW."], "Geoff Downes": ["Geoff Downes, born in 1952, first joined Yes for the album Drama in 1980 alongside Trevor Horn — the pair having already topped charts worldwide as The Buggles with 'Video Killed the Radio Star.'", "He went on to co-found the hugely successful Asia, and returned to Yes in 2011, where he has been a keyboard mainstay ever since across the band's recent run of albums."], "Trevor Horn": ["Trevor Horn, born in 1949, joined Yes as bassist and singer for Drama in 1980. He is, however, far better known as one of the most influential record producers of the 1980s.", "Behind the desk he shaped era-defining records for Frankie Goes to Hollywood, ABC, Seal and many others — and produced Yes's own comeback smash 90125 — earning a reputation as a defining architect of modern pop production."], "Patrick Moraz": ["Patrick Moraz, born in Switzerland in 1948, is the keyboard virtuoso who replaced Rick Wakeman for the album Relayer in 1974, bringing pronounced jazz and Latin influences to the band's sound.", "After leaving Yes he spent many years as a member of The Moody Blues and recorded a long series of adventurous solo keyboard albums."], "Billy Sherwood": ["Billy Sherwood, born in 1965, is an American multi-instrumentalist and producer who was a member of Yes in the late 1990s and again from 2015 onward. Chris Squire personally chose him to take over on bass after Squire's death.", "A tireless collaborator and producer within the progressive-rock world, he has anchored the band's low end through its most recent studio albums."], "Jon Davison": ["Jon Davison is the American singer who became Yes's lead vocalist in 2012, reportedly recommended in part by Foo Fighters drummer Taylor Hawkins. His clear, high voice carries an obvious kinship with Jon Anderson's.", "He also fronts the band Glass Hammer, and has sung on Yes's recent sequence of studio albums from Heaven & Earth onward."], "Also featured": ["Three more musicians left their mark on Yes across its modern decades.", "Benoît David, a Canadian singer discovered fronting a Yes tribute act, led the band from 2008 to 2012 and sang on Fly from Here (2011) before throat trouble ended his tenure.", "Igor Khoroshev, a Russian keyboardist, played with Yes in the late 1990s, appearing on Open Your Eyes and The Ladder.", "Jay Schellen, an American drummer, supported and then shared drumming duties with the band from the late 2010s, becoming its studio drummer after Alan White's death."], "Nick Mason": ["Nick Mason, born in 1944, is the drummer and the only constant member of Pink Floyd, present on every album since 1967. Within a band famous for its feuds, he was often the steady peacemaker who kept the others talking.", "A devoted motor-racing enthusiast and collector of historic cars, he also wrote the warm, candid band memoir Inside Out. In recent years he has toured the earliest, most experimental Floyd material with his own group, Saucerful of Secrets."], "Roger Waters": ["Roger Waters, born in 1943, was the bassist and singer who, from the early 1970s, became Pink Floyd's conceptual driving force and chief lyricist — the architect of The Dark Side of the Moon, Wish You Were Here, Animals and The Wall.", "He left the band in 1985 amid bitter acrimony and a legal battle over the rights to the name. Since then he has pursued a substantial solo career built around large-scale political rock operas, and has become a prominent and frequently controversial political activist."], "David Gilmour": ["David Gilmour, born in 1946, joined Pink Floyd in early 1968 to cover for the faltering Syd Barrett. His soaring, intensely melodic guitar and warm voice became the defining sound of the band's most successful years.", "After Waters departed, Gilmour led Pink Floyd onward through albums and tours, and has sustained an acclaimed solo career, from On an Island to Luck and Strange in 2024. He is widely revered as one of rock's great guitarists and is married to the novelist Polly Samson, who often writes his lyrics."], "Richard Wright": ["Richard Wright (1943–2008) was Pink Floyd's keyboardist and a founding member, whose lush chords and atmospheric textures were essential to the band's identity — heard at their most beautiful on 'The Great Gig in the Sky' and 'Us and Them.'", "Pushed out during the making of The Wall, he later returned, and was restored as a full member for The Division Bell in 1994. He died of cancer in 2008; the band's final album, The Endless River, stands partly as a tribute to him."], "Syd Barrett": ["Syd Barrett (1946–2006) was Pink Floyd's founder, original singer, guitarist and primary songwriter. He gave the band its name and shaped its early psychedelic sound, full of whimsical, childlike and surreal imagery.", "Heavy drug use and deteriorating mental health led to his departure in 1968. After two strange, fragile solo albums he withdrew from music entirely, living quietly in Cambridge until his death in 2006. His memory haunts much of the band's later work, above all 'Shine On You Crazy Diamond.'"], "John Lennon": ["John Lennon (1940–1980) founded the band that became the Beatles and, with Paul McCartney, formed one of the most successful songwriting partnerships in history. He played rhythm guitar and shared lead vocals, his sharp wit and restless, confessional voice shaping classics from 'Help!' to 'Strawberry Fields Forever' to 'A Day in the Life.'", "After the Beatles he made bold, raw solo records — Plastic Ono Band and Imagine among them — and, with Yoko Ono, became a tireless if controversial peace activist. He was shot and killed outside his New York home in December 1980, aged 40."], "Paul McCartney": ["Paul McCartney, born in 1942, was the Beatles' bassist and a melodic genius whose songs — 'Yesterday,' 'Hey Jude,' 'Let It Be' and countless more — are among the best known ever written. A natural multi-instrumentalist, he supplied much of the band's tunefulness and drive, and shared the writing credit with Lennon on nearly everything either wrote.", "After the break-up he formed Wings, scoring a string of 1970s hits including 'Band on the Run,' and built one of the most enduring solo careers in popular music, still touring stadiums into his eighties. He was knighted in 1997."], "George Harrison": ["George Harrison (1943–2001), the youngest Beatle, was the lead guitarist often called 'the quiet one.' Initially overshadowed as a songwriter by Lennon and McCartney, he grew into a major one, contributing 'Taxman,' 'Here Comes the Sun' and 'Something' — and pioneering the use of the sitar and Indian music in Western pop.", "His first post-Beatles solo album, the triple set All Things Must Pass (1970), was a landmark. He organised the pioneering Concert for Bangladesh, co-founded the Traveling Wilburys, and became a film producer. He died of cancer in 2001."], "Ringo Starr": ["Ringo Starr, born Richard Starkey in 1940, joined the Beatles in 1962, replacing Pete Best, and gave the band its steady, inventive and instantly recognisable drumming. His relaxed feel and distinctive fills underpinned the group's wildest studio experiments, and he took the occasional lead vocal on songs like 'Yellow Submarine' and 'With a Little Help from My Friends.'", "After the Beatles he enjoyed solo hits in the 1970s and, from 1989, has toured almost continuously with his rotating All-Starr Band. Warm and good-humoured, he was knighted in 2018."], "Pete Best": ["Pete Best, born in 1941, was the Beatles' drummer from 1960, through their formative residencies in Hamburg and the Cavern Club in Liverpool. He was, for two crucial years, part of the group as it sharpened into a tight live band.", "In August 1962, on the eve of their fame, he was abruptly dismissed and replaced by Ringo Starr — one of rock's most famous sackings. After years out of music he eventually returned to drumming, and the 1990s Anthology releases brought him belated recognition and royalties."], "Stuart Sutcliffe": ["Stuart Sutcliffe (1940–1962) was the Beatles' original bass player and a close art-school friend of John Lennon. A gifted painter more than a musician, he is often credited with helping shape the band's early image and even suggesting its name.", "He left the group in 1961 to stay in Hamburg with his fiancée and pursue painting, and died suddenly of a brain haemorrhage in April 1962, aged just 21 — a loss that haunted Lennon for years."], "Ian Anderson":["Ian Anderson, born 10 August 1947 in Dunfermline, Scotland and raised in Edinburgh and then Blackpool, founded Jethro Tull in December 1967 and has led it, as sole constant member and principal songwriter, ever since. His trademark one-legged flute stance turned an unlikely rock instrument into the band’s signature.","He launched a parallel solo career in 1983 and has also run salmon-farming businesses in Scotland and Chile. In 2017 he began touring and recording as “Ian Anderson’s Jethro Tull” with an entirely new supporting band, and remains the band’s only member present on every studio album from 1968 to 2025."],"Martin Barre":["Martin Barre, born 17 November 1946 in Kings Heath, Birmingham, studied architecture before turning to music, joining Tull in late 1968 in time for Stand Up. He deliberately avoided formal guitar lessons to develop an unaccompanied style, and his solo on “Aqualung” is routinely ranked among rock’s greatest.","He remained through The Jethro Tull Christmas Album (2003) — the band’s longest tenure after Anderson’s — but was not invited back for the 2017 revival. He has since led his own band, releasing albums including Roads Less Travelled and Order of Play."],"Mick Abrahams":["Mick Abrahams, born 7 April 1943 in Luton, was Tull’s original guitarist, appearing on the 1968 debut This Was before a split with Anderson over musical direction — Abrahams wanted blues-rock, Anderson wanted folk and jazz influences.","He immediately founded Blodwyn Pig, releasing Ahead Rings Out (1969) and Getting to This (1970), and continued performing for decades afterward, including reunions of Blodwyn Pig. He died on 19 December 2025, aged 82, after years of declining health."],"Glenn Cornick":["Glenn Cornick, born 1947, was Tull’s original bassist, playing on the band’s first three studio albums before departing in 1970 amid lifestyle friction with his bandmates.","He went on to found or join Wild Turkey, Karthago and Paris, and kept playing into the 1990s. He died in 2014, aged 67, of congestive heart failure at his home in Hawaii."],"Clive Bunker":["Clive Bunker, born 12 December 1946 in Luton, was Tull’s original drummer, appearing on the first four studio albums through Aqualung before leaving in 1971 to marry and step back from constant touring.","He became a prolific session and touring drummer afterward, working with Blodwyn Pig, Robin Trower, Steve Howe, Manfred Mann’s Earth Band and Jack Bruce, and co-founded the band Aviator in 1978."],"John Evan":["John Evan, born 28 March 1948, was a Blackpool schoolfriend of Anderson and Jeffrey Hammond. He joined as a session pianist on Benefit (1970) before becoming a full member, and his piano intro opens “Locomotive Breath.” His perpetual white suit earned him Anderson’s nickname “everyone’s favourite ice cream salesman.”","He largely left music after departing Tull in 1980, ran a construction company, and now lives in Melbourne, Australia."],"Jeffrey Hammond":["Jeffrey Hammond, born 30 July 1946 in Blackpool, was a grammar-school friend of Anderson’s who was written about in Tull songs before he ever joined the band. He played bass on Aqualung and Thick as a Brick, and narrated “The Story of the Hare Who Lost His Spectacles” on A Passion Play under the stage name Jeffrey Hammond-Hammond.","On leaving Tull in 1975 he quit music entirely to become a full-time landscape painter, a career he has pursued ever since."],"Barriemore Barlow":["Barriemore Barlow, born 10 September 1949 in Birmingham (he adopted the more theatrical “Barriemore” for the stage), drummed for Tull through its classic-lineup peak, from Thick as a Brick to Stormwatch — a run marred at the start by a tear-gassing incident at his debut gig, at Denver’s Red Rocks.","He left in 1980 following the death of close friend and bandmate John Glascock, and went on to session work with Robert Plant, Jimmy Page, Kerry Livgren and Yngwie Malmsteen."],"Dee Palmer":["Dee Palmer, born David Palmer on 2 July 1937 in Hendon, London, studied composition at the Royal Academy of Music and arranged strings, brass and woodwinds for Tull from their earliest albums, becoming an official touring and performing member in 1976 for Songs from the Wood, Heavy Horses and Stormwatch.","She came out as transgender in 1998. She later arranged orchestral versions of Pink Floyd, Genesis, Yes, Beatles and Queen material, and released a solo album, Through Darkened Glass, in 2018. She died in June 2026, aged 88."],"John Glascock":["John Glascock, born 2 May 1951 in Islington, joined Tull in 1976 after his band Carmen supported them on the War Child tour, having previously played in The Gods, Toe Fat and Chicken Shack. Ritchie Blackmore once called him “the best in the business in rock.”","He died on 17 November 1979, aged 28, from a congenital heart-valve defect worsened by a tooth-abscess infection — reportedly near-penniless, with bandmate Barriemore Barlow paying for his funeral."],"Dave Pegg":["Dave Pegg, born 2 November 1947 in Acocks Green, Birmingham, stood in for the ailing John Glascock on the 1979 Stormwatch tour and then formally joined. He pioneered playing jigs and reels on bass guitar, bringing folk technique into a rock rhythm section.","He is simultaneously the longest-serving member of Fairport Convention, which he joined in 1969, holding both chairs from 1985 to 1995 before the strain led him to leave Tull for Fairport full-time. He co-founded Woodworm Records and helped build Fairport’s Cropredy Festival; his son Matt Pegg is also a bassist and has occasionally deputised for him with Tull."],"Peter-John Vettese":["Peter-John Vettese, born 15 August 1956 in Brechin, Angus, started piano at age four and discovered Tull via a Melody Maker ad while gigging in Scottish pubs. He joined for The Broadsword and the Beast (1982) and was a major co-writer on Under Wraps (1984).","He went on to become an in-demand songwriter and producer for the Bee Gees, Simple Minds and Annie Lennox among others, and once played session guitar for Paul McCartney, turning down an invitation to join a reformed Wings."],"Andrew Giddings":["Andrew Giddings joined Jethro Tull’s keyboard chair in the early 1990s, appearing on Catfish Rising, Roots to Branches, J-Tull Dot Com and The Jethro Tull Christmas Album through to the early 2000s — the band’s keyboardist across its most stripped-back, blues-facing era and into the internet age.","A credited writer on the band’s instrumental “Nothing @ All,” he has otherwise kept a lower public profile than many of his Tull predecessors, working since largely outside the spotlight."],"Jonathan Noyce":["Jonathan Noyce took over the bass chair from Dave Pegg in the mid-1990s, playing on Roots to Branches, J-Tull Dot Com and The Jethro Tull Christmas Album and carrying the band’s low end across the turn of the millennium.","He remained with the touring band into the 2000s before the lineup transitioned toward the players — O’Hara and Goodier — who would eventually carry Tull through its 2011 hiatus and 2017 revival."],"Doane Perry":["Doane Perry, born 16 June 1954 in Mount Kisco, New York, joined Tull in 1984 replacing Gerry Conway and went on to serve some 27 years — through the 2011/2012 hiatus — making him the third longest-serving member after Anderson and Barre, and only the second American-born Tull member.","He taught at Hollywood’s Musicians Institute from 1988 to 1996 and released the widely used instructional video Creative Listening in 1992."],"John O’Hara":["John O’Hara, born 1962 in Liverpool, is classically trained — a National Youth Orchestra of Wales and Royal Northern College of Music alumnus — and spent a decade as Composer/Musical Director in residence at Bristol Old Vic, later composing three operas for Welsh National Opera.","He joined Ian Anderson’s orchestral touring in 2003 and Jethro Tull itself from 2007, becoming one of only two musicians, alongside David Goodier, retained from the pre-hiatus band into the 2017 revival."],"David Goodier":["David Goodier, born 13 September 1954 near Stonehenge, Wiltshire, trained and qualified as a drama teacher before turning to bass full-time. He joined Anderson’s touring band in 2002 and Jethro Tull proper from 2007, playing on Anderson’s solo albums Thick as a Brick 2 and Homo Erraticus during the band’s hiatus.","His first appearance on an actual Jethro Tull studio album came with The Zealot Gene (2022); alongside John O’Hara, he is one of only two carryover members into the post-2017 lineup."],"Scott Hammond":["Scott Hammond, born 4 June 1973 in Bristol, trained at the City of Leeds College of Music with a primarily jazz-and-funk background before beginning to tour with Ian Anderson in 2010. He became a full-time Jethro Tull member in 2017.","His first studio album with the band was The Zealot Gene (2022), followed by RökFlöte (2023); he was voted the world’s fifth-best rock drummer in MusicRadar’s 2022 public poll."],"Also featured":["Several more musicians shaped Tull’s sound without becoming long-term fixtures. On A (1980) — originally conceived as an Ian Anderson solo record before being released as a Tull album — Mark Craney played drums and Eddie Jobson contributed keyboards and electric violin; Gerry Conway drummed on The Broadsword and the Beast (1982) before Doane Perry took over the stool.","On guitar after Martin Barre’s departure, Florian Opahle toured with Anderson and the reformed Tull from 2003 to 2019; Joe Parrish-James held the chair from 2020 to 2024, appearing on The Zealot Gene and RökFlöte; and Jack Clark took over from 2024. Ian Anderson’s son, session drummer James Duncan, has periodically filled in live since 2002, including a 2013 tour leg while Scott Hammond recovered from surgery."]};
     // section hint above each roster
     document.querySelectorAll('.roster').forEach(function(r){
       if(r.previousElementSibling && r.previousElementSibling.classList && r.previousElementSibling.classList.contains('bio-hint')) return;
@@ -2871,7 +3641,7 @@
   })();
 
   (function(){
-    var BAND={d:'Genesis', y:'Yes', p:'Pink Floyd', b:'The Beatles'};
+    var BAND={d:'Genesis', y:'Yes', p:'Pink Floyd', b:'The Beatles', t:'Jethro Tull'};
     var SP='<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1ED760"/><g fill="none" stroke="#0b0b0b" stroke-width="1.9" stroke-linecap="round"><path d="M5.8 9.3c4.3-1.25 8.6-0.85 11.9 1.1"/><path d="M6.7 12.6c3.5-1 7-0.65 9.6 0.95"/><path d="M7.4 15.6c2.7-0.75 5.4-0.45 7.5 0.8"/></g></svg>';
     var YT='<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#FF0033"/><circle cx="12" cy="12" r="6.8" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M10.2 8.9 L15.3 12 L10.2 15.1 Z" fill="#fff"/></svg>';
     function svc(href, title, aria, svg, small){
@@ -2921,7 +3691,7 @@
 
   // per-track lyrics links (to Genius) + track durations (from __DURATIONS)
   (function(){
-    var BAND={d:'Genesis', y:'Yes', p:'Pink Floyd', b:'The Beatles'};
+    var BAND={d:'Genesis', y:'Yes', p:'Pink Floyd', b:'The Beatles', t:'Jethro Tull'};
     var DUR = window.__DURATIONS || {};
     document.querySelectorAll('.album-block').forEach(function(b){
       var det=b.querySelector('.detail'); if(!det) return;
