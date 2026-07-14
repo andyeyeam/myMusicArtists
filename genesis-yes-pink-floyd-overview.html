@@ -79,6 +79,12 @@
   .hint .pulse{width:8px;height:8px;border-radius:50%;background:var(--oxblood);display:inline-block;position:relative;flex-shrink:0;}
   .hint .pulse::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--oxblood);animation:ping 1.9s ease-out infinite;}
   @keyframes ping{0%{transform:scale(1);opacity:.55;}100%{transform:scale(3.4);opacity:0;}}
+
+  .sort-bar{display:flex;align-items:center;gap:10px;margin:0 0 18px;}
+  .sort-bar label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .sort-select{font-family:var(--mono);font-size:12px;letter-spacing:.02em;color:var(--ink);background:var(--parch-2);border:1px solid var(--ink-line);border-radius:3px;padding:7px 30px 7px 11px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M4 6l4 4 4-4' fill='none' stroke='%234c4456' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat:no-repeat;background-position:right 9px center;background-size:12px;transition:border-color .15s ease;}
+  .sort-select:hover{border-color:var(--gold);}
+  .sort-select:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
   .matrix{width:100%;color:var(--parch);border:1px solid var(--ink-line);border-radius:5px;background:var(--ink);overflow:hidden;}
   .mhead{display:grid;grid-template-columns:54px minmax(190px,1.4fr) repeat(8,1fr) 46px;align-items:center;background:var(--ink-2);border-bottom:1px solid var(--ink-line);}
   .mhead .cell{padding:13px 4px;}
@@ -371,7 +377,17 @@
 
     <p class="hint"><span class="pulse"></span> Click any album row to expand it&nbsp;&nbsp;▾&nbsp;&nbsp;<span style="color:var(--muted)">tracklist · who played on it · lyrics link</span></p>
 
-    <div class="matrix chips">
+    <div class="sort-bar">
+      <label for="sort-genesis">Sort by</label>
+      <select id="sort-genesis" class="sort-select" data-target="matrix-genesis">
+        <option value="year-asc" selected>Year (oldest first)</option>
+        <option value="year-desc">Year (newest first)</option>
+        <option value="title-asc">Title (A–Z)</option>
+        <option value="title-desc">Title (Z–A)</option>
+      </select>
+    </div>
+
+    <div class="matrix chips" id="matrix-genesis">
 
       <!-- 1 -->
       <div class="album-block">
@@ -983,7 +999,17 @@
 
     <p class="hint"><span class="pulse"></span> Click any album row to expand it&nbsp;&nbsp;▾&nbsp;&nbsp;<span style="color:var(--muted)">tracklist · who played on it · lyrics link</span></p>
 
-    <div class="matrix chips">
+    <div class="sort-bar">
+      <label for="sort-yes">Sort by</label>
+      <select id="sort-yes" class="sort-select" data-target="matrix-yes">
+        <option value="year-asc" selected>Year (oldest first)</option>
+        <option value="year-desc">Year (newest first)</option>
+        <option value="title-asc">Title (A–Z)</option>
+        <option value="title-desc">Title (Z–A)</option>
+      </select>
+    </div>
+
+    <div class="matrix chips" id="matrix-yes">
       <div class="album-block">
         <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="y1">
           <div class="yr">1969</div>
@@ -1786,7 +1812,17 @@
 
     <p class="hint"><span class="pulse"></span> Click any album row to expand it&nbsp;&nbsp;▾&nbsp;&nbsp;<span style="color:var(--muted)">tracklist · who played on it · lyrics link</span></p>
 
-    <div class="matrix chips">
+    <div class="sort-bar">
+      <label for="sort-floyd">Sort by</label>
+      <select id="sort-floyd" class="sort-select" data-target="matrix-floyd">
+        <option value="year-asc" selected>Year (oldest first)</option>
+        <option value="year-desc">Year (newest first)</option>
+        <option value="title-asc">Title (A–Z)</option>
+        <option value="title-desc">Title (Z–A)</option>
+      </select>
+    </div>
+
+    <div class="matrix chips" id="matrix-floyd">
       <div class="album-block">
         <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="p1">
           <div class="yr">1967</div>
@@ -2290,7 +2326,17 @@
 
     <p class="hint"><span class="pulse"></span> Click any album row to expand it&nbsp;&nbsp;▾&nbsp;&nbsp;<span style="color:var(--muted)">tracklist · who played on it · lyrics link</span></p>
 
-    <div class="matrix chips">
+    <div class="sort-bar">
+      <label for="sort-beatles">Sort by</label>
+      <select id="sort-beatles" class="sort-select" data-target="matrix-beatles">
+        <option value="year-asc" selected>Year (oldest first)</option>
+        <option value="year-desc">Year (newest first)</option>
+        <option value="title-asc">Title (A–Z)</option>
+        <option value="title-desc">Title (Z–A)</option>
+      </select>
+    </div>
+
+    <div class="matrix chips" id="matrix-beatles">
 
       <div class="album-block">
         <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="b1">
@@ -2744,7 +2790,17 @@
 
     <p class="hint"><span class="pulse"></span> Click any album row to expand it&nbsp;&nbsp;▾&nbsp;&nbsp;<span style="color:var(--muted)">tracklist · who played on it · lyrics link</span></p>
 
-    <div class="matrix chips">
+    <div class="sort-bar">
+      <label for="sort-tull">Sort by</label>
+      <select id="sort-tull" class="sort-select" data-target="matrix-tull">
+        <option value="year-asc" selected>Year (oldest first)</option>
+        <option value="year-desc">Year (newest first)</option>
+        <option value="title-asc">Title (A–Z)</option>
+        <option value="title-desc">Title (Z–A)</option>
+      </select>
+    </div>
+
+    <div class="matrix chips" id="matrix-tull">
   <div class="album-block">
     <div class="mrow" role="button" tabindex="0" aria-expanded="false" aria-controls="t1">
       <div class="yr">1968</div>
@@ -3458,6 +3514,29 @@
       row.addEventListener('click', toggle);
       row.addEventListener('keydown', function(e){
         if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+      });
+    });
+  })();
+
+  (function(){
+    function albumYear(block){ var el = block.querySelector('.yr'); return el ? (parseInt(el.textContent, 10) || 0) : 0; }
+    function albumTitle(block){ var el = block.querySelector('.alb .t'); return el ? el.textContent.trim().toLowerCase() : ''; }
+    function sortMatrix(container, mode){
+      var blocks = Array.prototype.slice.call(container.querySelectorAll('.album-block'));
+      blocks.sort(function(a, b){
+        switch(mode){
+          case 'year-desc': return albumYear(b) - albumYear(a);
+          case 'title-asc': return albumTitle(a).localeCompare(albumTitle(b));
+          case 'title-desc': return albumTitle(b).localeCompare(albumTitle(a));
+          default: return albumYear(a) - albumYear(b);
+        }
+      });
+      blocks.forEach(function(b){ container.appendChild(b); });
+    }
+    document.querySelectorAll('.sort-select').forEach(function(sel){
+      sel.addEventListener('change', function(){
+        var container = document.getElementById(sel.getAttribute('data-target'));
+        if(container) sortMatrix(container, sel.value);
       });
     });
   })();
